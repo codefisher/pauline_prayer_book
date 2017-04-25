@@ -14,6 +14,9 @@
 		604F18751EAF9C4E00B65336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604F18731EAF9C4E00B65336 /* LaunchScreen.storyboard */; };
 		604F18801EAF9C4E00B65336 /* Pauline_Prayer_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F187F1EAF9C4E00B65336 /* Pauline_Prayer_BookTests.swift */; };
 		604F188B1EAF9C4E00B65336 /* Pauline_Prayer_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F188A1EAF9C4E00B65336 /* Pauline_Prayer_BookUITests.swift */; };
+		604F189F1EAFB5E500B65336 /* prayers in Resources */ = {isa = PBXBuildFile; fileRef = 604F189E1EAFB5E500B65336 /* prayers */; };
+		604F18A31EAFD21E00B65336 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F18A21EAFD21E00B65336 /* MenuTableViewCell.swift */; };
+		604F18A51EAFD60C00B65336 /* MenuItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F18A41EAFD60C00B65336 /* MenuItemTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		604F18861EAF9C4E00B65336 /* Pauline Prayer BookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pauline Prayer BookUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		604F188A1EAF9C4E00B65336 /* Pauline_Prayer_BookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pauline_Prayer_BookUITests.swift; sourceTree = "<group>"; };
 		604F188C1EAF9C4E00B65336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		604F189E1EAFB5E500B65336 /* prayers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = prayers; path = ../../../android_prayer_book/app/src/main/assets/prayers; sourceTree = "<group>"; };
+		604F18A21EAFD21E00B65336 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
+		604F18A41EAFD60C00B65336 /* MenuItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,12 @@
 		604F18691EAF9C4E00B65336 /* Pauline Prayer Book */ = {
 			isa = PBXGroup;
 			children = (
+				604F189E1EAFB5E500B65336 /* prayers */,
 				604F186A1EAF9C4E00B65336 /* AppDelegate.swift */,
 				604F186C1EAF9C4E00B65336 /* ViewController.swift */,
+				604F18A21EAFD21E00B65336 /* MenuTableViewCell.swift */,
 				604F186E1EAF9C4E00B65336 /* Main.storyboard */,
+				604F18A41EAFD60C00B65336 /* MenuItemTableViewController.swift */,
 				604F18711EAF9C4E00B65336 /* Assets.xcassets */,
 				604F18731EAF9C4E00B65336 /* LaunchScreen.storyboard */,
 				604F18761EAF9C4E00B65336 /* Info.plist */,
@@ -187,6 +196,9 @@
 		604F185F1EAF9C4E00B65336 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					www,
+				);
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				TargetAttributes = {
@@ -229,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				604F18751EAF9C4E00B65336 /* LaunchScreen.storyboard in Resources */,
+				604F189F1EAFB5E500B65336 /* prayers in Resources */,
 				604F18721EAF9C4E00B65336 /* Assets.xcassets in Resources */,
 				604F18701EAF9C4E00B65336 /* Main.storyboard in Resources */,
 			);
@@ -256,7 +269,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				604F186D1EAF9C4E00B65336 /* ViewController.swift in Sources */,
+				604F18A51EAFD60C00B65336 /* MenuItemTableViewController.swift in Sources */,
 				604F186B1EAF9C4E00B65336 /* AppDelegate.swift in Sources */,
+				604F18A31EAFD21E00B65336 /* MenuTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +415,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pauline Prayer Book/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.org.paulinefathers.Pauline-Prayer-Book";
@@ -411,6 +427,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Pauline Prayer Book/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "au.org.paulinefathers.Pauline-Prayer-Book";
