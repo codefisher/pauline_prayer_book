@@ -6,4 +6,11 @@
 .DS_Store
 /build
 /captures
+/android_prayer_book/build
+/android_prayer_book/local.properties
+/android_prayer_book/.idea/workspace.xml
+/android_prayer_book/.idea/libraries
 .externalNativeBuild
+/print
+/nechrology
+keystore.properties

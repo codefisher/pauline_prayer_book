@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Modlitewnik Pauliński</string>
+    <string name="settings">Ustawienia</string>
+    <string name="index">Indeks</string>
+    <string name="title_activity_settings">Ustawienia</string>
+    <string name="title_activity_index">Indeks</string>
+
+
+    <!-- Strings related to Settings -->
+    <string-array name="pref_language_titles">
+        <item>Angielski</item>
+        <item>Polski</item>
+        <item>Niemiecki</item>
+        <item>Łaciński</item>
+        <item>Włoski</item>
+    </string-array>
+    <string-array name="pref_language_values">
+        <item>en</item>
+        <item>pl</item>
+        <item>de</item>
+        <item>la</item>
+        <item>it</item>
+    </string-array>
+    <string name="pref_language">Język Modlitewnika</string>
+    <string name="pref_language_default">pl</string>
+    <string name="pref_language_title">Język</string>
+
+    <string name="pref_settings_title">Ustawienia</string>
+    <string name="pref_font_size_default">14</string>
+    <string name="pref_font_size">Rozmiar Czcionki</string>
+
+    <string-array name="pref_font_size_titles">
+        <item>Bardzo mały</item>
+        <item>Mały</item>
+        <item>Średni</item>
+        <item>Duży</item>
+        <item>Bardzo duży</item>
+    </string-array>
+    <string-array name="pref_font_size_values">
+        <item>8</item>
+        <item>11</item>
+        <item>14</item>
+        <item>17</item>
+        <item>20</item>
+    </string-array>
+</resources>

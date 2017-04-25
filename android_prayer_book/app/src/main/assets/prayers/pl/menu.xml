@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <menuitem title="Modlitwy poranne" doc="morning.html" />
+    <menuitem title="Modlitwy południowe" doc="afternoon.html" />
+    <menuitem title="Drugie rozmyślanie" doc="meditation.html" />
+    <menuitem title="Modlitwy wieczorne" doc="evening.html" />
+    <menuitem title="Modlitwa na zakończenie dnia" doc="night.html" />
+    <menuitem title="Modlitwa przed snem" doc="repose.html" />
+    <menuitem title="Modlitwy w refektarzu" doc="refectory.html" />
+</menu>

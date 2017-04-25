@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <menuitem title="Morning Prayers" doc="morning.html" />
+    <menuitem title="Afternoon Prayers" doc="afternoon.html" />
+    <menuitem title="Second Meditation" doc="meditation.html" />
+    <menuitem title="Evening Prayers" doc="evening.html" />
+    <menuitem title="Night Prayers" doc="night.html" />
+    <menuitem title="Prayer Before Repose" doc="repose.html" />
+    <menuitem title="Prayers in the Refectory" doc="refectory.html" />
+
+    <!--<menu title="Life of Prayer and Sacrifice with Christ">
+        <menuitem title="Prayers Of Adoration" doc="adoration.html" />
+        <menuitem title="Divine Praises" doc="divine_praises.html" />
+    </menu>
+    <menu title="Mary, Mother and Patroness of the Order">
+        <menuitem title="Litany of the Blessed Virgin Mary" doc="litany_bvm.html" />
+    </menu>-->
+</menu>

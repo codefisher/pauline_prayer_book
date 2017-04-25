@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Pauliner Gebete</string>
+    <string name="settings">Einstellungen</string>
+    <string name="index">Index</string>
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="title_activity_index">Index</string>
+
+
+    <!-- Strings related to Settings -->
+    <string-array name="pref_language_titles">
+        <item>Englisch</item>
+        <item>Polieren</item>
+        <item>Deutsche</item>
+        <item>Lateinisch</item>
+        <item>Italienisch</item>
+    </string-array>
+    <string-array name="pref_language_values">
+        <item>en</item>
+        <item>pl</item>
+        <item>de</item>
+        <item>la</item>
+        <item>it</item>
+    </string-array>
+    <string name="pref_language">Gebetssprache</string>
+    <string name="pref_language_default">de</string>
+    <string name="pref_language_title">Sprache</string>
+
+    <string name="pref_settings_title">Einstellungen</string>
+    <string name="pref_font_size_default">14</string>
+    <string name="pref_font_size">Schriftgröße</string>
+
+    <string-array name="pref_font_size_titles">
+        <item>Sehr klein</item>
+        <item>Klein</item>
+        <item>Mittel</item>
+        <item>Groß</item>
+        <item>Sehr groß</item>
+    </string-array>
+    <string-array name="pref_font_size_values">
+        <item>8</item>
+        <item>11</item>
+        <item>14</item>
+        <item>17</item>
+        <item>20</item>
+    </string-array>
+</resources>

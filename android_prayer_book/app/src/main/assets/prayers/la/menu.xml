@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <menuitem title="Orationes" doc="prayers.html"/>
+    <menuitem title="Orationes Matutinae" doc="morning.html" />
+    <menuitem title="Antiphonae Marianae" doc="mary.html" />
+    <menuitem title="Litaniae Sancti Pauli Primi Eremitae" doc="litany.html" />
+    <menuitem title="Orationes in Refectorio" doc="refectory.html" />
+    <menuitem title="Benedictio Episcopalis" doc="bishop.html" />
+    <menuitem title="Benedictio Sacerdotalis" doc="priest.html" />
+</menu>
