@@ -3,7 +3,7 @@ function loadNecrology() {
     var url = "necrology.json";
 
     xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState == 4 && (this.status == 200 || this.status == 0)) { // Safari always gives 0
             var data = JSON.parse(this.responseText);
             loadTable(data);
         }
