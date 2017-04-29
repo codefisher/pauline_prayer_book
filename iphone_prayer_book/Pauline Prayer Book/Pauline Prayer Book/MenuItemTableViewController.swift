@@ -8,16 +8,76 @@
 
 import UIKit
 
-class MenuItemTableViewController: UITableViewController {
+class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
+    
+    var parser = NSXMLParser()
+    
+    class MenuItem {
+        var title: String = ""
+        var doc: String = ""
+        var children: [AnyObject] = [AnyObject]()
+        
+        init(aTitle: String, aDoc: String) {
+            title = aTitle
+            doc = aDoc
+        }
+        
+        init(aTitle: String, aChildren: [AnyObject]) {
+            title = aTitle
+            children = aChildren
+        }
+        
+        func getDoc() -> String {
+            return doc
+        }
+
+        func getTitle() -> String {
+            return title
+        }
+        
+        func getChildren() -> [AnyObject] {
+            return children
+        }
+        
+    }
+    
+    var menuitems = [MenuItem]()
+    var menuTitle = ""
+    var submenuitems = [MenuItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        var language = defaults.stringForKey("prayer_language")
+        if language == nil {
+            language = NSLocalizedString("default_locale", comment: "")
+        }
+        let menuFile = NSBundle.mainBundle().URLForResource("prayers/" + language! + "/menu", withExtension: "xml")
+        parser = NSXMLParser(contentsOfURL: menuFile!)!
+        parser.delegate = self
+        parser.parse()
+    }
+    
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        if elementName == "menuitem" {
+            if(menuTitle == "") {
+                menuitems.append(MenuItem(aTitle: attributeDict["title"]!, aDoc: attributeDict["doc"]!))
+            } else {
+                submenuitems.append(MenuItem(aTitle: attributeDict["title"]!, aDoc: attributeDict["doc"]!))
+            }
+        } else if elementName == "menu" && attributeDict["title"] != nil {
+            menuTitle = attributeDict["title"]!
+        }
+    }
+    
+    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if elementName == "menu" {
+            menuitems.append(MenuItem(aTitle: menuTitle, aChildren: submenuitems))
+            menuTitle = ""
+        }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,60 +88,34 @@ class MenuItemTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return menuitems.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCellWithIdentifier("MenuTableViewCell", forIndexPath: indexPath) as? MenuTableViewCell else { fatalError() }
+        cell.label.text = menuitems[indexPath.row].getTitle()
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let menuitem = menuitems[indexPath.row]
+        if menuitem.getDoc() == "" {
+            menuitems = (menuitem.getChildren() as? [MenuItem])!
+            tableView.reloadData()
+        } else {
+            navigationController?.popViewControllerAnimated(true)
+            let nav  = UIApplication.sharedApplication().keyWindow?.rootViewController as! UINavigationController
+            let view = nav.viewControllers[0] as! ViewController
+            print(menuitem.getDoc().stringByReplacingOccurrencesOfString(".html", withString: ""))
+            view.loadPage(menuitem.getDoc().stringByReplacingOccurrencesOfString(".html", withString: ""))
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
+    
     /*
     // MARK: - Navigation
 

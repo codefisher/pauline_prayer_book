@@ -11,12 +11,13 @@
 		604F186D1EAF9C4E00B65336 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F186C1EAF9C4E00B65336 /* ViewController.swift */; };
 		604F18701EAF9C4E00B65336 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604F186E1EAF9C4E00B65336 /* Main.storyboard */; };
 		604F18721EAF9C4E00B65336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 604F18711EAF9C4E00B65336 /* Assets.xcassets */; };
-		604F18751EAF9C4E00B65336 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 604F18731EAF9C4E00B65336 /* LaunchScreen.storyboard */; };
 		604F18801EAF9C4E00B65336 /* Pauline_Prayer_BookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F187F1EAF9C4E00B65336 /* Pauline_Prayer_BookTests.swift */; };
 		604F188B1EAF9C4E00B65336 /* Pauline_Prayer_BookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F188A1EAF9C4E00B65336 /* Pauline_Prayer_BookUITests.swift */; };
 		604F189F1EAFB5E500B65336 /* prayers in Resources */ = {isa = PBXBuildFile; fileRef = 604F189E1EAFB5E500B65336 /* prayers */; };
 		604F18A31EAFD21E00B65336 /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F18A21EAFD21E00B65336 /* MenuTableViewCell.swift */; };
 		604F18A51EAFD60C00B65336 /* MenuItemTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F18A41EAFD60C00B65336 /* MenuItemTableViewController.swift */; };
+		604F18A71EB23BD400B65336 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 604F18A61EB23BD400B65336 /* MenuViewController.swift */; };
+		604F18AC1EB270C900B65336 /* Local.strings in Resources */ = {isa = PBXBuildFile; fileRef = 604F18AE1EB270C900B65336 /* Local.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		604F186C1EAF9C4E00B65336 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		604F186F1EAF9C4E00B65336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		604F18711EAF9C4E00B65336 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		604F18741EAF9C4E00B65336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		604F18761EAF9C4E00B65336 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		604F187B1EAF9C4E00B65336 /* Pauline Prayer BookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pauline Prayer BookTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		604F187F1EAF9C4E00B65336 /* Pauline_Prayer_BookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pauline_Prayer_BookTests.swift; sourceTree = "<group>"; };
@@ -53,6 +53,8 @@
 		604F189E1EAFB5E500B65336 /* prayers */ = {isa = PBXFileReference; lastKnownFileType = folder; name = prayers; path = ../../../android_prayer_book/app/src/main/assets/prayers; sourceTree = "<group>"; };
 		604F18A21EAFD21E00B65336 /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
 		604F18A41EAFD60C00B65336 /* MenuItemTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemTableViewController.swift; sourceTree = "<group>"; };
+		604F18A61EB23BD400B65336 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		604F18AD1EB270C900B65336 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Local.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +110,10 @@
 				604F186C1EAF9C4E00B65336 /* ViewController.swift */,
 				604F18A21EAFD21E00B65336 /* MenuTableViewCell.swift */,
 				604F186E1EAF9C4E00B65336 /* Main.storyboard */,
+				604F18A61EB23BD400B65336 /* MenuViewController.swift */,
+				604F18AE1EB270C900B65336 /* Local.strings */,
 				604F18A41EAFD60C00B65336 /* MenuItemTableViewController.swift */,
 				604F18711EAF9C4E00B65336 /* Assets.xcassets */,
-				604F18731EAF9C4E00B65336 /* LaunchScreen.storyboard */,
 				604F18761EAF9C4E00B65336 /* Info.plist */,
 			);
 			path = "Pauline Prayer Book";
@@ -222,6 +225,8 @@
 			knownRegions = (
 				en,
 				Base,
+				it,
+				de,
 			);
 			mainGroup = 604F185E1EAF9C4E00B65336;
 			productRefGroup = 604F18681EAF9C4E00B65336 /* Products */;
@@ -240,7 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				604F18751EAF9C4E00B65336 /* LaunchScreen.storyboard in Resources */,
+				604F18AC1EB270C900B65336 /* Local.strings in Resources */,
 				604F189F1EAFB5E500B65336 /* prayers in Resources */,
 				604F18721EAF9C4E00B65336 /* Assets.xcassets in Resources */,
 				604F18701EAF9C4E00B65336 /* Main.storyboard in Resources */,
@@ -272,6 +277,7 @@
 				604F18A51EAFD60C00B65336 /* MenuItemTableViewController.swift in Sources */,
 				604F186B1EAF9C4E00B65336 /* AppDelegate.swift in Sources */,
 				604F18A31EAFD21E00B65336 /* MenuTableViewCell.swift in Sources */,
+				604F18A71EB23BD400B65336 /* MenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,12 +321,12 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		604F18731EAF9C4E00B65336 /* LaunchScreen.storyboard */ = {
+		604F18AE1EB270C900B65336 /* Local.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				604F18741EAF9C4E00B65336 /* Base */,
+				604F18AD1EB270C900B65336 /* Base */,
 			);
-			name = LaunchScreen.storyboard;
+			name = Local.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
