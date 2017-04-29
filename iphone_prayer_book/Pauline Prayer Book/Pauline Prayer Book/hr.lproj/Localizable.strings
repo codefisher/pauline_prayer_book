@@ -1,0 +1,21 @@
+/*
+ Local.strings
+ Pauline Prayer Book
+ 
+ Created by Eremita on 27/04/17.
+ 
+ */
+
+"default_locale"="hr";
+"English"="Engleski";
+"Polish"="Poljski";
+"Latin"="Latinski";
+"Italian"="Talijanski";
+"German"="Njemački";
+"Croation"="Hrvatski";
+
+"Very Small"="Vrlo mala";
+"Small"="Mala";
+"Medium"="Srednja";
+"Large"="Velika";
+"Very Large"="Vrlo velika";
