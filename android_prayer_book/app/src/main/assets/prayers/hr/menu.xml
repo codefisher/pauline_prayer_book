@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <menuitem title="Jutarnje Molitve" doc="morning.html" />
+    <menuitem title="Drugo Razmatranje" doc="meditation.html" />
+    <menuitem title="Večernje Molitve" doc="evening.html" />
+    <menuitem title="Molitva na Svršetku Dana" doc="night.html" />
+    <menuitem title="Molitva Prije Počinka" doc="repose.html" />
+</menu>

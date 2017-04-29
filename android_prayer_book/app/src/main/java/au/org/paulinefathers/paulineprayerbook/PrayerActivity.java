@@ -2,6 +2,8 @@ package au.org.paulinefathers.paulineprayerbook;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.MailTo;
+import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -68,6 +70,16 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
                     String language = getPrefSetting("language_list", getString(R.string.pref_language_default));
                     view.loadUrl("file:///android_asset/prayers/" + language + "/front.html");
                 }
+            }
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url)
+            {
+                if (url.startsWith("http://") || url.startsWith("mailto:")) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                    return true;
+                }
+                return false;
             }
         });
 
@@ -156,6 +168,11 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
                 Intent intent = new Intent(this, IndexActivity.class);
                 int requestCode = 109;
                 startActivityForResult(intent, requestCode);
+                return true;
+            case R.id.action_about:
+                WebView webView = (WebView) findViewById(R.id.webView);
+                String language = getPrefSetting("language_list", getString(R.string.pref_language_default));
+                webView.loadUrl("file:///android_asset/prayers/" + language + "/about.html");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

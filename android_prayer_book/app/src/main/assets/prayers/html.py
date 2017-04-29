@@ -1,13 +1,19 @@
 # -*- coding: utf-8 -*-
 
-import html5lib
 from lxml import html
-from html5lib import sanitizer
 from os import listdir
 from os.path import isfile, join
 from lxml.etree import Element
 import re
 import codecs
+import sys
+import getopt
+import os
+
+opts, args = getopt.getopt(sys.argv[1:], "p",
+                           ["input=", "output="])
+
+command_opts = dict(opts)
 
 class Library(object):
     tags = {}
@@ -15,27 +21,6 @@ class Library(object):
     @classmethod
     def tag(cls, name=None, func=None):
         cls.tags[name] = func
-
-"""
-try:
-    from pygments import highlight
-    from pygments.lexers import get_lexer_by_name
-    from pygments.formatters import HtmlFormatter
-
-    def format_code(node):
-        if not node.attrib.get('codelang'):
-            return None
-        lexer = get_lexer_by_name(node.attrib.get('codelang'), stripall=True)
-        formatter = HtmlFormatter(linenos=True)
-        code = node.text + ''.join(html.tostring(n) for n in node)
-        result = highlight(code, lexer, formatter)
-        code_node = html.fromstring(result)
-        return code_node
-
-    Library.tag("//code", format_code)
-except ImportError:
-    pass
-"""
 
 def format_prayer(node):
     text = (node.text if node.text else '') + ''.join(html.tostring(n).decode() for n in node)
@@ -67,6 +52,17 @@ def format_head(node):
 
 Library.tag("//head", format_head)
 
+if "-p" in command_opts:
+    def format_print(node):
+        root = Element("div")
+        for n in node:
+            root.append(n)
+        return root
+else:
+    def format_print(node):
+        return None
+Library.tag("//print", format_print)
+
 def format_litany(node):
     root = Element("div")
     root.attrib["class"] = "litany"
@@ -92,11 +88,17 @@ def extended_html(text, *args, **kwargs):
             new = func(n)
             if new is not None:
                 n.getparent().replace(n, new)
+            else:
+                n.getparent().remove(n)
     return nodes.getroottree()
 
 
-pathroot = "src"
+pathroot = command_opts.get("--input", "./src/")
+path_output = command_opts.get("--output", "./")
+
 for filename in (f for f in listdir(pathroot) if isfile(join(pathroot, f))):
+    if filename == "empty.html":
+        continue
     with codecs.open(join(pathroot, filename), "r", encoding='utf8') as fp:
         text = fp.read()
         text = text.replace("ę", "&#x119;").replace("Ȩ", "&#x228;") # does not display otherwise
@@ -106,4 +108,4 @@ for filename in (f for f in listdir(pathroot) if isfile(join(pathroot, f))):
         except Exception as e:
             print(filename)
             raise  e
-    doc.write(filename)
+    doc.write(os.path.join(path_output, filename))

@@ -2,23 +2,26 @@
     <string name="app_name">Modlitewnik Pauliński</string>
     <string name="settings">Ustawienia</string>
     <string name="index">Indeks</string>
+    <string name="about">Informacje</string>
     <string name="title_activity_settings">Ustawienia</string>
     <string name="title_activity_index">Indeks</string>
 
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
-        <item>Angielski</item>
         <item>Polski</item>
-        <item>Niemiecki</item>
+        <item>Angielski</item>
+        <item>Chorwacki</item>
         <item>Łaciński</item>
+        <item>Niemiecki</item>
         <item>Włoski</item>
     </string-array>
     <string-array name="pref_language_values">
-        <item>en</item>
         <item>pl</item>
-        <item>de</item>
+        <item>en</item>
+        <item>hr</item>
         <item>la</item>
+        <item>de</item>
         <item>it</item>
     </string-array>
     <string name="pref_language">Język Modlitewnika</string>

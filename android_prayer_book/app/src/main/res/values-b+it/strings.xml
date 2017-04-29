@@ -2,24 +2,27 @@
     <string name="app_name">Preghiere Dell’Paulini</string>
     <string name="settings">Impostazioni</string>
     <string name="index">Indice</string>
+    <string name="about">Informazioni</string>
     <string name="title_activity_settings">Impostazioni</string>
     <string name="title_activity_index">Indice</string>
 
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
+        <item>Italiano</item>
+        <item>Croato</item>
         <item>Inglese</item>
+        <item>Latino</item>
         <item>Polacco</item>
         <item>Tedesco</item>
-        <item>Latino</item>
-        <item>Italiano</item>
     </string-array>
     <string-array name="pref_language_values">
+        <item>it</item>
+        <item>hr</item>
         <item>en</item>
+        <item>la</item>
         <item>pl</item>
         <item>de</item>
-        <item>la</item>
-        <item>it</item>
     </string-array>
     <string name="pref_language">Lingua delle Preghiere</string>
     <string name="pref_language_default">it</string>

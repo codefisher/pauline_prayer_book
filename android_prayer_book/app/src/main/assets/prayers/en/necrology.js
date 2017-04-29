@@ -1,6 +1,6 @@
-function loadNechrology() {
+function loadNecrology() {
     var xmlhttp = new XMLHttpRequest();
-    var url = "nechrology.json";
+    var url = "necrology.json";
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -28,9 +28,9 @@ function loadTable(data) {
     var key = month + "" + day;
     var info = data[key];
     if(!info || info.length == 0) {
-        document.getElementById('nechrology-not-found').style.display = "block";
+        document.getElementById('necrology-not-found').style.display = "block";
     } else {
-        var nechrology = document.getElementById('nechrology');
+        var necrology = document.getElementById('necrology');
 
         for(var i = 0; i < info.length; i++){
             var row = document.createElement('tr');
@@ -40,8 +40,8 @@ function loadTable(data) {
             var description = document.createElement('td');
             description.textContent = info[i]['description'];
             row.appendChild(description);
-            nechrology.appendChild(row);
+            necrology.appendChild(row);
         }
-        nechrology.style.display = "table";
+        necrology.style.display = "table";
     }
 }
