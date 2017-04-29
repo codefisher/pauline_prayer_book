@@ -1,0 +1,21 @@
+
+/* Class = "UILabel"; text = "Font Size"; ObjectID = "6sj-Q8-RPH"; */
+"6sj-Q8-RPH.text" = "Font Size";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "AuP-fl-DvX"; */
+"AuP-fl-DvX.text" = "Label";
+
+/* Class = "UILabel"; text = "Prayer Language"; ObjectID = "E6K-sx-SMt"; */
+"E6K-sx-SMt.text" = "Prayer Language";
+
+/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "MIi-tQ-cQg"; */
+"MIi-tQ-cQg.title" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "WRG-eJ-jFT"; */
+"WRG-eJ-jFT.normalTitle" = "About";
+
+/* Class = "UIBarButtonItem"; title = "Index"; ObjectID = "eWL-4x-dhf"; */
+"eWL-4x-dhf.title" = "Index";
+
+/* Class = "UINavigationItem"; title = "Pauline Prayer Book"; ObjectID = "nEH-7Z-7cR"; */
+"nEH-7Z-7cR.title" = "Pauline Prayer Book";
