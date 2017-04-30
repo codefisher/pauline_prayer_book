@@ -111,7 +111,6 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
             navigationController?.popViewControllerAnimated(true)
             let nav  = UIApplication.sharedApplication().keyWindow?.rootViewController as! UINavigationController
             let view = nav.viewControllers[0] as! ViewController
-            print(menuitem.getDoc().stringByReplacingOccurrencesOfString(".html", withString: ""))
             view.loadPage(menuitem.getDoc().stringByReplacingOccurrencesOfString(".html", withString: ""))
         }
     }

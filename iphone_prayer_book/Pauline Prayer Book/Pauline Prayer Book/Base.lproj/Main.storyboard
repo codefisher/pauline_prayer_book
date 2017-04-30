@@ -140,8 +140,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Prayer Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6K-sx-SMt">
-                                <rect key="frame" x="8" y="72" width="584" height="32"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prayer Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6K-sx-SMt">
+                                <rect key="frame" x="8" y="72" width="592" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="W0h-ye-KhA"/>
                                 </constraints>
@@ -149,13 +149,13 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AFI-vB-0FQ">
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFI-vB-0FQ">
                                 <rect key="frame" x="0.0" y="104" width="600" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="M2Q-eJ-jGS"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sj-Q8-RPH">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Font Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6sj-Q8-RPH">
                                 <rect key="frame" x="8" y="250" width="584" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="zn2-Y7-3af"/>
@@ -164,15 +164,15 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-eJ-jFT">
-                                <rect key="frame" x="8" y="446" width="584" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-eJ-jFT">
+                                <rect key="frame" x="32" y="450" width="536" height="30"/>
                                 <state key="normal" title="About"/>
                                 <connections>
                                     <action selector="about:" destination="ZD0-eX-Ygb" eventType="touchUpInside" id="yfN-So-x2h"/>
                                 </connections>
                             </button>
-                            <pickerView contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="il1-me-KSd">
-                                <rect key="frame" x="0.0" y="289" width="600" height="149"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="il1-me-KSd">
+                                <rect key="frame" x="0.0" y="293" width="600" height="149"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="149" id="uXI-eK-pLS"/>
                                 </constraints>
@@ -180,16 +180,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AFI-vB-0FQ" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" id="0JY-mx-gG2"/>
+                            <constraint firstItem="AFI-vB-0FQ" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leading" id="0JY-mx-gG2"/>
                             <constraint firstItem="il1-me-KSd" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leading" id="968-ec-cky"/>
                             <constraint firstItem="6sj-Q8-RPH" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" constant="-12" id="Bmv-VZ-toR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="E6K-sx-SMt" secondAttribute="trailing" constant="-12" id="DTd-0O-lBJ"/>
+                            <constraint firstAttribute="trailing" secondItem="E6K-sx-SMt" secondAttribute="trailing" id="DTd-0O-lBJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6sj-Q8-RPH" secondAttribute="trailing" constant="-12" id="F4K-1m-ZPs"/>
+                            <constraint firstItem="WRG-eJ-jFT" firstAttribute="top" secondItem="il1-me-KSd" secondAttribute="bottom" constant="8" id="NOu-0q-jeb"/>
                             <constraint firstItem="WRG-eJ-jFT" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" constant="12" id="Zle-Qe-pAr"/>
+                            <constraint firstItem="il1-me-KSd" firstAttribute="top" secondItem="6sj-Q8-RPH" secondAttribute="bottom" constant="8" id="c78-Pz-E9Z"/>
                             <constraint firstItem="E6K-sx-SMt" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" constant="-12" id="jCz-bh-PFh"/>
                             <constraint firstAttribute="trailingMargin" secondItem="WRG-eJ-jFT" secondAttribute="trailing" constant="12" id="q9m-7K-LWl"/>
+                            <constraint firstItem="AFI-vB-0FQ" firstAttribute="top" secondItem="E6K-sx-SMt" secondAttribute="bottom" id="qhf-iG-fD8"/>
                             <constraint firstAttribute="trailing" secondItem="il1-me-KSd" secondAttribute="trailing" id="r5U-TX-Ld7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="AFI-vB-0FQ" secondAttribute="trailing" id="xBn-zQ-oJ2"/>
+                            <constraint firstAttribute="trailing" secondItem="AFI-vB-0FQ" secondAttribute="trailing" id="xBn-zQ-oJ2"/>
+                            <constraint firstItem="AFI-vB-0FQ" firstAttribute="top" secondItem="bDX-EM-gT4" secondAttribute="top" constant="104" id="y3D-Gj-Tli"/>
+                            <constraint firstItem="6sj-Q8-RPH" firstAttribute="top" secondItem="AFI-vB-0FQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yQi-od-PPU"/>
                         </constraints>
                     </view>
                     <connections>
