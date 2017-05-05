@@ -8,11 +8,20 @@
     <menuitem title="Prayer Before Repose" doc="repose.html" />
     <menuitem title="Prayers in the Refectory" doc="refectory.html" />
 
-    <!--<menu title="Life of Prayer and Sacrifice with Christ">
+    <menu title="Life of Prayer and Sacrifice with Christ">
         <menuitem title="Prayers Of Adoration" doc="adoration.html" />
-        <menuitem title="Divine Praises" doc="divine_praises.html" />
+        <menuitem title="Divine Praises" doc="divine-praises.html" />
+        <menuitem title="An Act of Spiritual Communion" doc="spirtual-communion.html" />
+        <menuitem title="Preparation For Holy Mass" doc="before-holy-mass.html" />
+        <menuitem title="Thanksgiving After Holy Mass" doc="after-holy-mass.html" />
+        <menuitem title="Prayers for Special Occasions" doc="special-occasions.html" />
+        <menuitem title="Prayers to Christ Crucified" doc="christ-crucified.html" />
+        <menuitem title="Litanies" doc="litanies.html" />
     </menu>
     <menu title="Mary, Mother and Patroness of the Order">
-        <menuitem title="Litany of the Blessed Virgin Mary" doc="litany_bvm.html" />
-    </menu>-->
+        <menuitem title="Litany of the Blessed Virgin Mary" doc="loreto.html" />
+        <menuitem title="Prayer of St. Bernard (The Memorare)" doc="memorate.html" />
+        <menuitem title="Litany of Our Blessed Virgin Mary 'Kleczki Jasnagorskie'" doc="kleczki.html" />
+        <menuitem title="Marian Antiphones" doc="marian-antiphones.html" />
+    </menu>
 </menu>

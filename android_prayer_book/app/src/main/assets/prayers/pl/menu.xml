@@ -7,4 +7,12 @@
     <menuitem title="Modlitwa na zakończenie dnia" doc="night.html" />
     <menuitem title="Modlitwa przed snem" doc="repose.html" />
     <menuitem title="Modlitwy w refektarzu" doc="refectory.html" />
+
+    <menu title="Maryja - Matka i Patronka Zakonu">
+        <menuitem title="Litania do Najświętszej Maryi Panny" doc="loreto.html" />
+        <menuitem title="Modlitwa Św. Bernarda" doc="memorate.html" />
+        <menuitem title="Litania do Najświȩtszej Maryi Panny «Klȩczki Jasnagórskie»" doc="kleczki.html" />
+        <menuitem title="Antyfony Maryjne" doc="marian-antiphones.html" />
+    </menu>
+
 </menu>
