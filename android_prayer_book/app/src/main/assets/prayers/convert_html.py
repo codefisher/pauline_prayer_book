@@ -82,6 +82,8 @@ def from_string(text):
 def format_litany(node):
     root = Element("div")
     root.attrib["class"] = "litany"
+    if "class" in node.attrib:
+        root.attrib["class"] += " " + node.attrib.get("class")
     text = (node.text if node.text else '') + ''.join(html.tostring(n).decode() for n in node)
     for i, row in enumerate(text.strip().split("\n")):
         row_node = Element("div")
