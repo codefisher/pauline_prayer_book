@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
     <menuitem title="Morgengebet" doc="morning.html" />
-    <menuitem title="Abendgebete" doc="evening.html" />
+    <menuitem title="Anrufungen zum hl. Paulus I. Einsiedler" doc="evening.html" />
+    <menuitem title="Totengedenken" doc="dead.html" />
+    <menu title="Litaneien">
+        <menuitem title="Litanei zum hl. Paulus dem Ersten Eremiten" doc="st-paul.html" />
+        <menuitem title="Anrufungen zu den hl. Schutzengeln" doc="angels.html" />
+        <menuitem title="Litanei zum sel. Eusebius" doc="eusebius.html" />
+    </menu>
+    <menuitem title="Tischgebete" doc="refectory.html" />
+    <menuitem title="Konventkapitel" doc="chapter.html" />
+    <menuitem title="Visitation" doc="visitation.html" />
+    <menuitem title="Professerneuerung zum Paulusfest" doc="profession.html" />
+    <menuitem title="Barmherzigkeits-Rosenkranz" doc="divine-mercy.html" />
+    <menu title="Mariengebete">
+        <menuitem title="Erneuerung der Mariaenweihe am 16. Januar" doc="mother-god.html" />
+        <menuitem title="Lauretanische Litanei" doc="loreto.html" />
+        <menuitem title="Weihegebet an Maria" doc="act-mary.html" />
+        <menuitem title="Weihegebet an die Mutter Gottes nach Johannes Paul II" doc="john-paul.html" />
+        <menuitem title="Weihegebet an die Mutter Gottes nach Stefan Wyszyński" doc="consecration.html" />
+        <menuitem title="Hilf, o Mutter unserem Glauben" doc="mary-help.html" />
+    </menu>
+    <menuitem title="Gebet um geistl. Berufe" doc="vocation.html" />
+    <menuitem title="Hymnus vom hl. Paulus" doc="st-paul-hymn.html" />
+    <menuitem title="Gesänge" doc="antiphons.html" />
 </menu>
