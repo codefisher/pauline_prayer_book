@@ -7,4 +7,7 @@
     <menuitem title="Orationes in Refectorio" doc="refectory.html" />
     <menuitem title="Benedictio Episcopalis" doc="bishop.html" />
     <menuitem title="Benedictio Sacerdotalis" doc="priest.html" />
+    <menuitem title="Præparatio ad Missam" doc="before-holy-mass.html" />
+    <menuitem title="Gratiarum Actio Post Missam" doc="after-holy-mass.html" />
+    <menuitem title="Orationes dicendæ cum sacerdos induitur sacerdotalibus paramentis" doc="vesting.html" />
 </menu>
