@@ -1,0 +1,92 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass[11pt]{article}
+\RequirePackage[paperheight=6.75in,paperwidth=5in,top=0cm,left=0cm,right=0cm,bottom=0cm]{geometry}
+
+\usepackage[autocompile]{gregoriotex}
+\usepackage[savepos]{zref}
+\usepackage{libertine}
+
+
+\pagestyle{empty}
+\columnseprule=0.4pt
+
+\makeatletter  
+\newcounter{score}
+\newcounter{tabstop}[score]
+\newcommand{\grealign}{%
+	\@bsphack%
+	\ifgre@boxing\else%
+		\kern\gre@dimen@begindifference%
+		\stepcounter{tabstop}%
+		\expandafter\zsavepos{stop-\thescore-\thetabstop}%
+		\kern-\gre@dimen@begindifference%
+	\fi%
+	\@esphack%
+}
+
+\newcommand{\setstops}{%
+  \gdef\nstabbing@stops{%
+    \hspace*{-\oddsidemargin}\hspace{-1in}%
+    \hspace*{\zposx{stop-\thescore-1} sp}\=%
+  }%
+  \count@=\@ne
+  \loop\ifnum\count@<\value{tabstop}%
+    \begingroup\edef\x{\endgroup
+      \noexpand\g@addto@macro\noexpand\nstabbing@stops{%
+        \noexpand\hspace{-\noexpand\zposx{stop-\thescore-\the\count@} sp}%
+        \noexpand\hspace{\noexpand\zposx{stop-\thescore-\the\numexpr\count@+1} sp}\noexpand\=%
+      }%
+    }\x
+    \advance\count@\@ne
+  \repeat
+  \nstabbing@stops\kill
+}
+\makeatother
+
+\newenvironment{nstabbing}
+  {\setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
+   \tabbing%
+   \setstops}
+  {\endtabbing\stepcounter{score}}
+
+\gresetlastline{justified}
+
+\begin{document}
+
+
+\gresethyphen{force}
+\gresetinitiallines{0}
+\gregorioscore{omni-die-dic-mariae-i}%
+\begin{nstabbing}
+\>2. Con-temp-\>pla- re \>et \>mi- \hspace{1mm} ra- \hspace{1mm}re \>E- ius \>cel- \hspace{2mm} si-\>tu- di- nem, \\
+\end{nstabbing}
+
+\gregorioscore{omni-die-dic-mariae-ii}%
+\begin{nstabbing}
+\>Dic fe-\>li-cem \>Ge- ni-\>tri- \>cem, Dic \>be- \hspace{3mm} a- \>tam \>Vir- gi- nem. \\
+\end{nstabbing}
+
+\gregorioscore{omni-die-dic-mariae-iii}%
+\begin{nstabbing}
+\>4. Prop-ter \> Her-am \> ho-mo \hspace{2mm} sae- vam \>ac- \hspace{2mm} ce- \> pit \>sen- \>ten- ti- am; \\
+\end{nstabbing}
+
+\gregorioscore{omni-die-dic-mariae-iv}%
+\begin{nstabbing}
+\>Per \>Ma- ri- am \>ha- \hspace{1mm}bet \>vi- am, \>quae duc- cit ad \>pa- tri- am. \\
+\end{nstabbing}
+
+
+\gregorioscore{omni-die-dic-mariae-v}%
+\begin{nstabbing}
+\>6. Vir- \hspace{1mm}ga \>Ies-se \>spes op- \>res-sae \>men- tis \>et \>re-  \hspace{2mm} fu- \hspace{1mm} gi- um \\
+\end{nstabbing}
+
+\gregorioscore{omni-die-dic-mariae-vi}%
+\begin{nstabbing}
+\>De-cus \>mun-di \>lux pro-fun-di \>Do- mi- \>ni \>sa- cra- ri-um. \>A- men. \\
+\end{nstabbing}
+
+\end{document}
