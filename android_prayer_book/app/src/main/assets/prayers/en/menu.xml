@@ -20,8 +20,39 @@
     </menu>
     <menu title="Mary, Mother and Patroness of the Order">
         <menuitem title="Litany of the Blessed Virgin Mary" doc="loreto.html" />
-        <menuitem title="Prayer of St. Bernard (The Memorare)" doc="memorate.html" />
+        <menuitem title="Prayer of St. Bernard (The Memorare)" doc="memorare.html" />
         <menuitem title="Litany of Our Blessed Virgin Mary 'Kleczki Jasnagorskie'" doc="kleczki.html" />
         <menuitem title="Marian Antiphones" doc="marian-antiphones.html" />
+        <menuitem title="The Holy Rosary" doc="rosary.html" />
+        <menuitem title="An act of Consecration to the Mother of God" doc="consecration.html" />
+        <menuitem title="Invocation to Implore the Intercession of the Immaculate Conception" doc="mary-invocation.html" />
+        <menuitem title="An act of Expiation to the Immaculate Heart of Mary" doc="mary-expiation.html" />
+        <menuitem title="Filial and Apostolic Consecration to the Heart of Mary" doc="consecration-heart-mary.html" />
+        <menuitem title="Prayer to the Queen of Hermits for our Order" doc="queen-hermits.html" />
+        <menuitem title="An Act of Consecration to Mary the Queen and Protectress of the Order" doc="queen-order.html" />
+        <menuitem title="An Act of self-offering" doc="act-self-offering.html" />
+        <menuitem title="An act of Consecration of Seminarians of the Pauline Order
+to the Queen of Jasna Gora" doc="seminarians-consecration.html" />
+        <menuitem title="An act of self-offering to the Most Blessed Virgin Mary" doc="act-self-offering-bvm.html" />
+        <menuitem title="Renewal of Covenant with Mary the Mother and Protectress
+of the Order" doc="renewal-covenant.html" />
+        <menuitem title=" An act of consecration of the Order to the Most Holy Mother of God" doc="consecration-order.html" />
+    </menu>
+
+    <menu title="Joined to the Guardian Angels">
+        <menuitem title="Invocations to the Holy Angels" doc="invocations-angels.html" />
+        <menuitem title="Litany to the Guardian Angel
+" doc="litany-guardian-angels.html" />
+        <menuitem title="St. Michael the Archangel" doc="litany-michael-angel.html" />
+    </menu>
+
+    <menu title="Latin Prayers">
+        <menuitem title="Prayers" doc="prayers-la.html" />
+        <menuitem title="Morning Prayers" doc="morning-la.html" />
+        <menuitem title="Marian Antiphons" doc="mary-la.html" />
+        <menuitem title="Litany to St. Paul the First Hermit" doc="paul-la.html" />
+        <menuitem title="Prayers in the Refectory" doc="refectory-la.html" />
+        <menuitem title="Blessing by a Bishop" doc="bishop-la.html" />
+        <menuitem title="Blessing by a Priest" doc="priest-la.html" />
     </menu>
 </menu>
