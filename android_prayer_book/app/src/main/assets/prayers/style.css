@@ -22,6 +22,7 @@ h1.section {
 h2, h3 {
     text-align:center;
     font-size:1em;
+    clear:both;
 }
 
 h2 span, h3 span {
@@ -34,6 +35,7 @@ h4 {
     text-align:center;
     text-transform: uppercase;
     font-size:1em;
+    clear:both
 }
 
 .compact-paragraph p, p.compact-paragraph {
@@ -50,6 +52,10 @@ h4 {
     margin-left:-3em;
     float:left;
     font-style:italic;
+}
+
+.rubric {
+    color:red;
 }
 
 .prayer {
@@ -79,6 +85,9 @@ h4 {
 .ref {
     text-align:right;
     color:red;
+    font-weight:normal;
+    display:block;
+    float:right;
 }
 
 .cross {
@@ -106,6 +115,7 @@ h4 {
 .litany_responce {
     float:right;
     font-weight:bold;
+    padding-left:1em;
 }
 
 .litany_item {
@@ -127,14 +137,22 @@ h4 {
     display:none;
 }
 
+#necrology td {
+    border-bottom:1px solid #000000;
+}
+
+#necrology td:first-child {
+    font-weight: bold;
+}
+
 td {
     vertical-align:top;
 }
 
 hr {
     display:block;
-    height:3px;
-    border:1px solid #000000;
+    border:0 solid #000000;
+    border-bottom:1px solid #000000;
     max-width:250px;
     margin:1em auto;
 }

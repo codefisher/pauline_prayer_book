@@ -127,6 +127,7 @@ def format_psalm(node):
         stanza_node = Element("div")
         stanza_node.attrib["class"] = "stanza"
         for line in stanza.strip().split("\n"):
+            line = line.strip()
             line_node = Element("div")
             line_node.attrib["class"] = "psalm-line"
             text = line
