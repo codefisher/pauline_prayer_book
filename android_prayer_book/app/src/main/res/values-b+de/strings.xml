@@ -9,12 +9,12 @@
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
-        <item>Deutsche</item>
+        <item>Deutsch</item>
         <item>Englisch</item>
         <item>Italienisch</item>
         <item>Kroatisch</item>
         <item>Lateinisch</item>
-        <item>Polieren</item>
+        <item>Polnisch</item>
     </string-array>
     <string-array name="pref_language_values">
         <item>de</item>
