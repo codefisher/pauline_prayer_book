@@ -46,6 +46,11 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="St. Michael the Archangel" doc="litany-michael-angel.html" />
     </menu>
 
+    <menu title="Contemplation of God in His Saints">
+        <menuitem title="Saints" doc="saints.html" />
+        <menuitem title="Saint Joseph" doc="saint-joseph.html" />
+    </menu>
+
     <menu title="Latin Prayers">
         <menuitem title="Prayers" doc="prayers-la.html" />
         <menuitem title="Morning Prayers" doc="morning-la.html" />
