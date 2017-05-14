@@ -8,11 +8,50 @@
     <menuitem title="Modlitwa przed snem" doc="repose.html" />
     <menuitem title="Modlitwy w refektarzu" doc="refectory.html" />
 
+    <menu title="Życie modlitwy i ofiary
+z chrystusem">
+        <menuitem title="Modlitwy adoracyjne" doc="adoration.html" />
+        <menuitem title="Akty strzeliste" doc="divine-praises.html" />
+        <menuitem title="Akt komunii duchowej" doc="spirtual-communion.html" />
+        <menuitem title="Przygotowanie do Mszy
+        Świętej" doc="before-holy-mass.html" />
+        <menuitem title="Dziękczynienie po Mszy
+Świętej" doc="after-holy-mass.html" />
+        <menuitem title="Modlitwy w różnych
+potrzebach" doc="special-occasions.html" />
+        <menuitem title="Modlitwy do chrystusa
+ukrzyżowanego" doc="christ-crucified.html" />
+        <menuitem title="Litanie" doc="litanies.html" />
+    </menu>
+
     <menu title="Maryja - Matka i Patronka Zakonu">
         <menuitem title="Litania do Najświętszej Maryi Panny" doc="loreto.html" />
         <menuitem title="Modlitwa Św. Bernarda" doc="memorare.html" />
         <menuitem title="Litania do Najświȩtszej Maryi Panny «Klȩczki Jasnagórskie»" doc="kleczki.html" />
         <menuitem title="Antyfony Maryjne" doc="marian-antiphones.html" />
+        <menuitem title="Różaniec Święty" doc="rosary.html" />
+        <menuitem title="Akt całkowitego oddania
+się Najświętszej Maryi Pannie" doc="consecration.html" />
+        <menuitem title="Wzywając wstawiennictwa
+niepokalanego poczęcia Najświętszej Maryi Panny" doc="mary-invocation.html" />
+        <menuitem title="Akt wynagrodzenia
+niepokalanemu sercu Maryi" doc="mary-expiation.html" />
+        <menuitem title="Synowskie i apostolskie poświęcenie się sercu Maryi" doc="consecration-heart-mary.html" />
+        <menuitem title="Modlitwa do Królowej
+pustelników za Zakon" doc="queen-hermits.html" />
+        <menuitem title="Akt oddania Maryi -
+Królowej i opiekunce Zakonu" doc="queen-order.html" />
+        <menuitem title="Akt oddania" doc="act-self-offering.html" />
+        <menuitem title="Akt poświęcenia
+klerykatu Zakonu Paulinów
+Jasnogórskiej Królowej" doc="seminarians-consecration.html" />
+        <menuitem title="Zaofiarowanie się
+Najświętszej Maryi Pannie" doc="act-self-offering-bvm.html" />
+        <menuitem title="Ponowienie przymierza
+z Maryją - Matką i opiekunką
+Zakonu" doc="renewal-covenant.html" />
+        <menuitem title="Akt poświęcenia Zakonu
+Matce Najświętszej" doc="consecration-order.html" />
     </menu>
 
 </menu>
