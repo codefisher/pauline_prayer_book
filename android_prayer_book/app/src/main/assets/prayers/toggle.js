@@ -70,3 +70,27 @@ function angelusToggle() {
     prefObject.set("season-angelus", angelusCurrent);
     setup();
 }
+
+var currentHymn = prefObject.get("paul-hymn", "hymn-1");
+
+function setupHymn() {
+    var hymnOne = document.getElementById('hymn-1');
+    var hymnTwo =  document.getElementById('hymn-2');
+    if(currentHymn == "hymn-1"){
+        hymnOne.style.display = "block";
+        hymnTwo.style.display = "none";
+    } else {
+        hymnOne.style.display = "none";
+        hymnTwo.style.display = "block";
+    }
+}
+
+function hymnToggle() {
+    if(currentHymn == "hymn-1"){
+        currentHymn = "hymn-2";
+    } else {
+        currentHymn = "hymn-1";
+    }
+    prefObject.set("paul-hymn", currentHymn);
+    setupHymn();
+}
