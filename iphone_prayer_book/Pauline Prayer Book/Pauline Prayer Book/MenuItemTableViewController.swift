@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
+class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate, UINavigationBarDelegate {
     
     var parser = NSXMLParser()
     
@@ -44,10 +44,12 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
     var menuitems = [MenuItem]()
     var menuTitle = ""
     var submenuitems = [MenuItem]()
+    var currentMenuitems = [MenuItem]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //self.navigationController?.navigationBar.delegate = self
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         
         var language = defaults.stringForKey("prayer_language")
@@ -58,6 +60,8 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
         parser = NSXMLParser(contentsOfURL: menuFile!)!
         parser.delegate = self
         parser.parse()
+        
+        currentMenuitems = menuitems
     }
     
     func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
@@ -76,6 +80,7 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
         if elementName == "menu" {
             menuitems.append(MenuItem(aTitle: menuTitle, aChildren: submenuitems))
             menuTitle = ""
+            submenuitems = [MenuItem]()
         }
 
     }
@@ -92,20 +97,20 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return menuitems.count
+        return currentMenuitems.count
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCellWithIdentifier("MenuTableViewCell", forIndexPath: indexPath) as? MenuTableViewCell else { fatalError() }
-        cell.label.text = menuitems[indexPath.row].getTitle()
+        cell.label.text = currentMenuitems[indexPath.row].getTitle()
         return cell
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let menuitem = menuitems[indexPath.row]
+        let menuitem = currentMenuitems[indexPath.row]
         if menuitem.getDoc() == "" {
-            menuitems = (menuitem.getChildren() as? [MenuItem])!
+            currentMenuitems = (menuitem.getChildren() as? [MenuItem])!
             tableView.reloadData()
         } else {
             navigationController?.popViewControllerAnimated(true)
@@ -114,6 +119,37 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate {
             view.loadPage(menuitem.getDoc().stringByReplacingOccurrencesOfString(".html", withString: ""))
         }
     }
+    /*
+    func navigationBar(navigationBar: UINavigationBar, shouldPopItem item: UINavigationItem) -> Bool {
+        let result = zip(currentMenuitems, menuitems).enumerate().filter() {
+            $1.0 === $1.1
+            }.map{$0.0}
+        if(result.count == menuitems.count) {
+            return true
+        } else {
+            currentMenuitems = menuitems
+            tableView.reloadData()
+            return false
+        }
+    }
+    
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        print("moved")
+        //navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        print("disapear")
+    }
+    
+    override func viewWillDisappear(animated : Bool) {
+        // this is not yet working
+        super.viewWillDisappear(animated)
+        if (self.isMovingFromParentViewController()){
+            print("moving")
+        }
+    }
+    */
     
     /*
     // MARK: - Navigation
