@@ -54,4 +54,42 @@ Zakonu" doc="renewal-covenant.html" />
 Matce Najświętszej" doc="consecration-order.html" />
     </menu>
 
+    <menu title="Łącząc się z chórami aniołów">
+        <menuitem title="Wezwania do aniołów stróżów" doc="invocations-angels.html" />
+        <menuitem title="Litania do anioła stróża" doc="litany-guardian-angels.html" />
+        <menuitem title="Litania do Św. Michała
+Archanioła" doc="litany-michael-angel.html" />
+    </menu>
+
+    <menu title="Kontemplując Boga
+w świętych">
+        <menuitem title="Kontemplując Boga
+w świętych" doc="saints.html" />
+        <menuitem title="Święty Józef" doc="saint-joseph.html" />
+        <menuitem title="Święty Paweł Pierwszy
+Pustelnik" doc="saint-paul.html" />
+        <menuitem title="Nowenna do świętego Pawła" doc="saint-paul-novena.html" />
+        <menuitem title="Pieśni o świętym Pawle" doc="saint-paul-hymns.html" />
+        <menuitem title="Błogosławiony Euzebiusz" doc="blessed-eusebius.html" />
+        <menuitem title="Święty Augustyn" doc="saint-augustine.html" />
+        <menuitem title="Święty Kazimierz" doc="saint-casimir.html" />
+        <menuitem title="Święta Jadwiga" doc="saint-hedwig.html" />
+    </menu>
+
+    <menuitem title="Modlitwy o powołania" doc="vocations.html" />
+
+    <menuitem title="Rozmyślanie" doc="method-meditation.html" />
+    <menuitem title="Propozycja Przebiegu Lectio
+Divina" doc="lectio-divina.html" />
+
+    <menu title="Modlitwy po Łacinie">
+        <menuitem title="Pacierz" doc="prayers-la.html" />
+        <menuitem title="Modlitwy Codzienne" doc="morning-la.html" />
+        <menuitem title="Antyfony Maryjne" doc="mary-la.html" />
+        <menuitem title="Litania do Świętego Pawła Pustelnika" doc="paul-la.html" />
+        <menuitem title="Modlitwy w Refektarzu" doc="refectory-la.html" />
+        <menuitem title="Błogosławieństwo Biskupa" doc="bishop-la.html" />
+        <menuitem title="Błogosławieństwo Kapłana" doc="priest-la.html" />
+    </menu>
+
 </menu>
