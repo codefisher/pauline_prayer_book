@@ -1,0 +1,33 @@
+body {
+    margin:0;
+    font-family: "serif";
+}
+
+.prayer-line, .litany_item, .short-prayer {
+    page-break-inside: avoid !important;
+}
+
+.menu {
+    display:none;
+}
+
+h1,h2,h3,h4 {
+    page-break-after:avoid !important;
+}
+
+.break-before {
+    page-break-before: always;
+}
+
+a {
+    text-decoration:none;
+    color:inherit;
+}
+
+.gregorian-notation {
+    display:none;
+}
+
+.prayer strong {
+    page-break-after:avoid !important;
+}
