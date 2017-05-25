@@ -2,6 +2,9 @@ package au.org.paulinefathers.paulineprayerbook;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.AssetFileDescriptor;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.net.MailTo;
 import android.net.Uri;
 import android.os.Build;
@@ -18,6 +21,8 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import java.io.IOException;
 
 public class PrayerActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
@@ -36,6 +41,23 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
         public void set(String name, String value) {
             setPrefSetting(name, value);
         }
+
+    }
+
+    MediaPlayer mediaPlayer = null;
+
+    @JavascriptInterface
+    public void play(String name) {
+        if(mediaPlayer != null) {
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+        if(name.equals("monstra-audio")) {
+            mediaPlayer = MediaPlayer.create(this, R.raw.monstra_te);
+        }
+        if(mediaPlayer != null) {
+            mediaPlayer.start();
+        }
     }
 
 
@@ -47,6 +69,8 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
         WebView webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new JsPrefObject(), "prefObject");
+        webView.addJavascriptInterface(this, "chantPlayer");
+
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setDefaultFontSize(Integer.parseInt(getPrefSetting("font_size_list", getString(R.string.pref_font_size_default))));
@@ -95,6 +119,15 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
             webView.loadUrl("file:///android_asset/prayers/" + language + "/front.html");
         }
     }
+
+    @Override
+    public void onDestroy() {
+        if (mediaPlayer != null) {
+            mediaPlayer.release();
+        }
+        super.onDestroy();
+    }
+
 
     @Override
     public void onSaveInstanceState(Bundle out) {
