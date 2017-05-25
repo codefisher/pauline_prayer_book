@@ -21,7 +21,7 @@
     <menu title="Mary, Mother and Patroness of the Order">
         <menuitem title="Litany of the Blessed Virgin Mary" doc="loreto.html" />
         <menuitem title="Prayer of St. Bernard (The Memorare)" doc="memorare.html" />
-        <menuitem title="Litany of Our Blessed Virgin Mary 'Kleczki Jasnagorskie'" doc="kleczki.html" />
+        <menuitem title="Litany of Our Blessed Virgin Mary “Kleczki Jasnagorskie”" doc="kleczki.html" />
         <menuitem title="Marian Antiphones" doc="marian-antiphones.html" />
         <menuitem title="The Holy Rosary" doc="rosary.html" />
         <menuitem title="An act of Consecration to the Mother of God" doc="consecration.html" />
@@ -36,13 +36,12 @@ to the Queen of Jasna Gora" doc="seminarians-consecration.html" />
         <menuitem title="An act of self-offering to the Most Blessed Virgin Mary" doc="act-self-offering-bvm.html" />
         <menuitem title="Renewal of Covenant with Mary the Mother and Protectress
 of the Order" doc="renewal-covenant.html" />
-        <menuitem title=" An act of consecration of the Order to the Most Holy Mother of God" doc="consecration-order.html" />
+        <menuitem title="An act of consecration of the Order to the Most Holy Mother of God" doc="consecration-order.html" />
     </menu>
 
     <menu title="Joined to the Guardian Angels">
         <menuitem title="Invocations to the Holy Angels" doc="invocations-angels.html" />
-        <menuitem title="Litany to the Guardian Angel
-" doc="litany-guardian-angels.html" />
+        <menuitem title="Litany to the Guardian Angel" doc="litany-guardian-angels.html" />
         <menuitem title="St. Michael the Archangel" doc="litany-michael-angel.html" />
     </menu>
 
@@ -53,7 +52,16 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Novena to St. Paul the First Hermit" doc="saint-paul-novena.html" />
         <menuitem title="Hymns in honour of St. Paul the First Hermit" doc="saint-paul-hymns.html" />
         <menuitem title="Blessed Eusebius" doc="blessed-eusebius.html" />
+        <menuitem title="Saint Augustine" doc="saint-augustine.html" />
+        <menuitem title="Saint Casimir" doc="saint-casimir.html" />
+        <menuitem title="Saint Hedwig" doc="saint-hedwig.html" />
     </menu>
+
+
+    <menuitem title="Prayers for Vocations" doc="vocations.html" />
+
+    <menuitem title="Meditation" doc="method-meditation.html" />
+    <menuitem title="A proposed mediation" doc="lectio-divina.html" />
 
     <menu title="Latin Prayers">
         <menuitem title="Prayers" doc="prayers-la.html" />
