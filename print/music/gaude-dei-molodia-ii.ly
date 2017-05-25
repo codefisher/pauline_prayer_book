@@ -40,10 +40,10 @@ verseOne = \lyricmode {
   Vir -- go im -- ma -- cu -- la -- ta Gau -- de quae
   ab an -- ge -- lo gau -- di -- um sus -- ce -- pi -- sti
   gau -- de quae ge -- nu -- is -- ti ae -- ter _ -- ni
-  lu -- mi -- nis cla -- re _ -- ta -- tem gau -- de ma -- ter
+  lu -- mi -- nis cla -- ri _ -- ta -- tem gau -- de ma -- ter
   gau -- de san _ -- cta De -- i Ge -- ni -- trix _  tu so -- la _
   ma -- ter es in tac -- ta. Te lau -- dat om -- nis
-  cre -- a -- tu _  _ -- ra ge -- ni -- trix  lu -- cis
+  cre -- a -- tu -- _  _ ra ge -- ni -- trix  lu -- cis
   sis pro no _ -- bis, quae _  -- su -- mus per _ -- pe -- tu -- a
   in _ -- ter -- ven -- trix ad Do -- mi -- num Je -- sum Chris _ -- tum
   al -- le -- lu -- ia al -- le -- lu -- ia

@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-#(set! paper-alist (cons '("boolet size" . (cons (* 5 in) (* 5.25 in))) paper-alist))
+#(set! paper-alist (cons '("boolet size" . (cons (* 5 in) (* 5 in))) paper-alist))
 
 \paper {
    #(set-paper-size "boolet size")
