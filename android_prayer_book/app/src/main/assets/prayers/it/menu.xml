@@ -2,4 +2,14 @@
 <menu>
     <menuitem title="Preghiere del Mattino" doc="morning.html" />
     <menuitem title="Preghiere della Sera" doc="evening.html" />
+    <menuitem title="Rinnovo Della Professione Religiosa" doc="renewal-profession.html" />
+    <menuitem title="Atto del Rinnovo Dell’Alleanza con Maria Protettrice dell’Ordine" doc="renewal-covenant.html" />
+    <menuitem title="Le Viste Eucristice" doc="eucharist-visits.html" />
+    <menuitem title="Litanie" doc="litanies.html" />
+    <menuitem title="Atto di Consacrazione e Riparazione
+al Cuore Immacolato di Maria" doc="consecration-immaculate-heart.html" />
+    <menuitem title="Gli Angeli" doc="angels.html" />
+    <menuitem title="San Giuseppe" doc="saint-jospeh.html" />
+    <menuitem title="Preghiere per le Vocazioni" doc="vocations.html" />
+    <menuitem title="Sant’Agostino" doc="saint-agustine.html" />
 </menu>
