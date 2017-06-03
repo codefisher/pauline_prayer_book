@@ -90,7 +90,7 @@ def format_litany(node):
         row_node.append(from_string(row))
         row_node.attrib["class"] = "litany_item"
         root.append(row_node)
-        if i == 0 and "responce" in node.attrib:
+        if (i == 0 and "responce" in node.attrib) or "all" in node.attrib:
             res_node = Element("div")
             res_node.text = node.attrib.get("responce", "")
             row_node.attrib["class"] = "litany_first litany_item"
