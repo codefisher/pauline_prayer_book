@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Modlitwy wieczorne</title>
+    <script type="text/javascript" src="necrology.js"><!-- // --></script>
 </head>
 <body>
 
@@ -88,7 +89,18 @@
 
 <div class="prayer-group">
     <prayer red="P.">Zmarli Współbracia nasi, których rocznica
-        śmierci przypada jutro:.......<br />
+        śmierci przypada jutro: &hellip;
+    </prayer>
+    <table id="necrology">
+
+    </table>
+    <p id="necrology-not-found" class="instruction">
+        (Na jutrzejszy dzień nie ma żadnych wpisów w nekrologii)
+    </p>
+    <script type="text/javascript">
+        loadNecrology();
+    </script>
+    <prayer>
         Módlmy się za wszystkich naszych zmarłych
         Współbraci.
     </prayer>
