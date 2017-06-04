@@ -74,6 +74,19 @@ function angelusToggle() {
 var currentHymn = prefObject.get("paul-hymn", "hymn-1");
 
 function setupHymn() {
+    ["hymn-1", "hymn-2"].forEach(function(element) {
+        var cong = document.querySelectorAll("#" + element + " .congregation");
+        var width = 0;
+        for(var i = 0; i < cong.length; i++){
+            var w = parseInt(getComputedStyle(cong[i]).width.replace(/[a-z]/g, ''));
+            if(w > width) {
+                width = w;
+            }
+        }
+        for(var i = 0; i < cong.length; i++){
+            cong[i].style.width = width + "px";
+        }
+    });
     var hymnOne = document.getElementById('hymn-1');
     var hymnTwo =  document.getElementById('hymn-2');
     if(currentHymn == "hymn-1"){
