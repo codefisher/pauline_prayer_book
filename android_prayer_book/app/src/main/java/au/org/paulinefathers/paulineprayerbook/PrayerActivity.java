@@ -49,17 +49,84 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
     @JavascriptInterface
     public void play(String name) {
         if(mediaPlayer != null) {
+            mediaPlayer.stop();
             mediaPlayer.release();
             mediaPlayer = null;
         }
-        if(name.equals("monstra-audio")) {
-            mediaPlayer = MediaPlayer.create(this, R.raw.monstra_te);
+        switch (name) {
+            case "monstra-te":
+                mediaPlayer = MediaPlayer.create(this, R.raw.monstra_te);
+                break;
+            case "agnus-die":
+                mediaPlayer = MediaPlayer.create(this, R.raw.agnus_die);
+                break;
+            case "de-profundis":
+                mediaPlayer = MediaPlayer.create(this, R.raw.de_profundis);
+                break;
+            case "kyrie":
+                mediaPlayer = MediaPlayer.create(this, R.raw.kyrie);
+                break;
+            case "o-maria-virgo-honesta":
+                mediaPlayer = MediaPlayer.create(this, R.raw.o_maria_virgo_honesta);
+                break;
+            case "orationes-i":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_i);
+                break;
+            case "orationes-ii":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_ii);
+                break;
+            case "orationes-iii":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_iii);
+                break;
+            case "orationes-iv":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_iv);
+                break;
+            case "orationes-v-i":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_v_i);
+                break;
+            case "orationes-v-ii":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_v_ii);
+                break;
+            case "orationes-vi":
+                mediaPlayer = MediaPlayer.create(this, R.raw.orationes_vi);
+                break;
+            case "salve-regina":
+                mediaPlayer = MediaPlayer.create(this, R.raw.salve_regina);
+                break;
+            case "sub-tuum-praesidium":
+                mediaPlayer = MediaPlayer.create(this, R.raw.sub_tuum_praesidium);
+                break;
+            case "versus-et-responsiones-i":
+                mediaPlayer = MediaPlayer.create(this, R.raw.versus_et_responsiones_i);
+                break;
+            case "versus-et-responsiones-ii":
+                mediaPlayer = MediaPlayer.create(this, R.raw.versus_et_responsiones_ii);
+                break;
+            case "versus-et-responsiones-iii":
+                mediaPlayer = MediaPlayer.create(this, R.raw.versus_et_responsiones_iii);
+                break;
+            case "versus-et-responsiones-iv":
+                mediaPlayer = MediaPlayer.create(this, R.raw.versus_et_responsiones_iv);
+                break;
+            case "versus-et-responsiones-v":
+                mediaPlayer = MediaPlayer.create(this, R.raw.versus_et_responsiones_v);
+                break;
+            default:
+                return;
         }
         if(mediaPlayer != null) {
             mediaPlayer.start();
         }
     }
 
+    @JavascriptInterface
+    public void stop() {
+        if(mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.release();
+            mediaPlayer = null;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
