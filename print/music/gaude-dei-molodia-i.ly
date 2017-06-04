@@ -34,10 +34,10 @@ musicOne = \relative c' {
   
 }
 verseOne = \lyricmode {
-  Gau -- de De -- i Ge -- ni -- trix, Vir -- go mi -- ma -- cu -- la -- ta;
+  Gau -- de De -- i Ge -- ni -- trix, Vir -- go im -- ma -- cu -- la -- ta;
   Gau -- de, _ quae gau -- di -- um ab An -- ge -- lo su -- sce -- pis -- ti
-  Gau -- de, quae gen -- nu -- is  -- ti ae -- ter -- ni lu -- mi -- nis
-  clar -- ri -- ta -- tem; Gau -- de Ma -- ter, gau -- de san -- cta
+  Gau -- de, quae ge -- nu -- is  -- ti ae -- ter -- ni lu -- mi -- nis
+  cla -- ri -- ta -- tem; Gau -- de Ma -- ter, gau -- de san -- cta
   De -- i Ge -- ni -- trix Vir -- go; tu so -- la Ma -- ter
   in -- nu -- pta;  te lau -- dat om -- nis fa -- ctu -- ra, 
   Ge -- ni -- tri -- cem lu -- cis; sis pro no -- bis quae -- sum -- us,

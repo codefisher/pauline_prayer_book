@@ -1,4 +1,3 @@
-for f in *.gabc ; do ~/Downloads/gabc2mid-master/sound.sh "$f" ; done
-
+for f in *.gabc ; do ~/Downloads/gabc2mid-master/sound.sh "$f" 
 rm sound/*.mid
-rm sound/*.wav
+rm sound/*.wav; done
