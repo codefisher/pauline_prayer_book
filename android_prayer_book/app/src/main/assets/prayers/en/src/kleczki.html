@@ -1,6 +1,7 @@
 <html>
 <head>
     <title>Litany of Our Blessed Virgin Mary “Kleczki Jasnagorskie”</title>
+    <link href="../play-music.css" rel="stylesheet">
     <script style="text/javascript" src="../numes.js"><!-- // --></script>
     <script style="text/javascript" src="../play-music.js"><!-- // --></script>
 </head>
@@ -8,7 +9,7 @@
 
 <h1>3. Litany of Our Blessed Virgin Mary <br />“Kleczki Jasnagorskie”</h1>
 
-<div><img class="img-content" src="../music/kyrie.svg"/></div>
+<player mutiple="[4, 1]">kyrie</player>
 
 <div class="prayer-group">
     <litany responce="ora pro nobis.">
@@ -68,7 +69,7 @@
     </litany>
 </div>
 
-<img class="img-content" src="../music/agnus-die.svg"/>
+<player mutiple="[6]">agnus-die</player>
 
 <div class="prayer-group">
     <prayer class="leader" red="V.">Ora pro nobis sancta Dei Genitrix.</prayer>
@@ -88,47 +89,42 @@
 
 <h2>3.1. Sub tuum praesidium</h2>
 
-<div><img class="img-content" src="../music/sub-tuum-praesidium.svg"/></div>
-
+<player>sub-tuum-praesidium</player>
 
 <h2>3.2. Monstra Te<span>(Cantatur: expansis manibus)</span></h2>
 
-<img class="menu" src="../control-play-blue.svg" width="16" height="16" onclick="playSong('monstra-svg', 'monstra-audio', '../sound/monstra-te.json');" />
-
-<div>
-    <object class="img-content" id="monstra-svg" data="../music/monstra-te.svg" type="image/svg+xml">&nbsp;</object>
-</div>
+<player>monstra-te</player>
 
 <h2>3.3. Versus et responsiones</h2>
 
-<div><img class="img-content" src="../music/versus-et-responsiones-i.svg"/></div>
-<div><img class="img-content" src="../music/versus-et-responsiones-ii.svg"/></div>
-<div><img class="img-content" src="../music/versus-et-responsiones-iii.svg"/></div>
-<div><img class="img-content" src="../music/versus-et-responsiones-iv.svg"/></div>
+<player mutiple="[6, 3, 3, 4]">versus-et-responsiones-i</player>
+<player mutiple="[3, 6, 5]">versus-et-responsiones-ii</player>
+<player mutiple="[5, 3]">versus-et-responsiones-iii</player>
+<player mutiple="[5, 6]">versus-et-responsiones-iv</player>
 
 <h2>Tempore aestivo <span>
 (Pro serenitate vel pluvia)</span></h2>
 
-<div><img class="img-content" src="../music/versus-et-responsiones-v.svg"/></div>
+<player mutiple="[3, 1, 4, 3]">versus-et-responsiones-v</player>
 
 <h2>3.4. Orationes</h2>
 
-<div><img class="img-content" src="../music/orationes-i.svg"/></div>
-<div><img class="img-content" src="../music/orationes-ii.svg"/></div>
-<div><img class="img-content" src="../music/orationes-iii.svg"/></div>
-<div><img class="img-content" src="../music/orationes-iv.svg"/></div>
-<div><img class="img-content" src="../music/orationes-v-i.svg"/></div>
-<div><img class="img-content" src="../music/orationes-v-ii.svg"/></div>
-<div><img class="img-content" src="../music/orationes-vi.svg"/></div>
+<player mutiple="[8, 13, 9, 6, 15]">orationes-i</player>
+<player mutiple="[19, 11, 9, 11, 27]">orationes-ii</player>
+<player mutiple="[21, 14, 24, 9]">orationes-iii</player>
+<player mutiple="[16, 24, 5, 8, 28, 8, 5, 24, 4]">orationes-iv</player>
+<player mutiple="[8, 2, 10, 27, 2]">orationes-v-i</player>
+<player mutiple="[20, 13, 8]">orationes-v-ii</player>
+<player mutiple="[8, 2, 8, 5]">orationes-vi</player>
 
 <h2 class="break-before">3.5. Chorale</h2>
 
-<div><img class="img-content" src="../music/o-maria-virgo-honesta.svg"/></div>
+<player>o-maria-virgo-honesta</player>
 
 <h2 class="break-before">3.6. Psalmus 129
 <span>De profundis</span></h2>
 
-<div><img class="img-content" src="../music/de-profundis.svg"/></div>
+<player mutiple="[1, 0]">de-profundis</player>
 
 <psalm>
 Fiant aures tuae intendéntes *
@@ -161,7 +157,7 @@ Requiem aeternam * dona eis Domine.
 
 <h2 class="break-before">Salve Regina</h2>
 
-<div><img class="img-content" src="../music/salve-regina.svg"/></div>
+<player>salve-regina</player>
 
 <div class="prayer-group">
     <prayer class="leader" red="V.">Ora pro nobis Sancta Dei Genitrix.</prayer>

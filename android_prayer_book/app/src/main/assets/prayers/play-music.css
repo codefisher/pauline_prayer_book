@@ -1,0 +1,19 @@
+button.play {
+    border:0;
+    background:#fff url("control-play-blue.svg") no-repeat;
+    width:16px;
+    height:16px;
+}
+button.play[disabled] {
+    background:#fff url("control-play.svg") no-repeat;
+}
+
+button.stop {
+    border:0;
+    background:#fff url("control-stop-blue.svg") no-repeat;
+    width:16px;
+    height:16px;
+}
+button.stop[disabled] {
+    background:#fff url("control-stop.svg") no-repeat;
+}

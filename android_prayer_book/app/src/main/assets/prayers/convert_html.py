@@ -42,6 +42,24 @@ def format_prayer(node):
 
 Library.tag("//prayer", format_prayer)
 
+def format_player(node):
+    name = node.text_content()
+    if "mutiple" in node.attrib:
+        mutiple = ", " + node.attrib.get("mutiple")
+    else:
+        mutiple = ""
+    return html.fromstring("""
+    <div class="menu">
+        <button class="play" id="{0}-play" onclick="playSong('{0}-svg', '{0}', '../sound/{0}.json'{1});" >&nbsp;</button>
+        <button disabled="disabled" class="stop" id="{0}-stop" onclick="stopSong('{0}-svg', '{0}');" >&nbsp;</button>
+    </div>
+    <div>
+        <object class="img-content" id="{0}-svg" data="../music/{0}.svg" type="image/svg+xml">&nbsp;</object>
+    </div>
+    """.format(name, mutiple))
+
+Library.tag("//player", format_player)
+
 def format_head(node):
     code_nodes = html.fragments_fromstring("""
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">

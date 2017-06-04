@@ -1,4 +1,33 @@
 var TEMP = 140;
+var MP3_PATH = "/res/raw/";
+
+if (typeof chantPlayer == "undefined") {
+    // fall back if we are not in Android where prefObject
+    // is gives access to application settings
+    var chantPlayer = {
+        play: function(songName) {
+            var src = MP3_PATH + songName.replace(new RegExp('-', 'g'), '_') + ".mp3";
+            var oldAudio = document.getElementById('audio-element');
+            if(oldAudio != null) {
+                oldAudio.pause();
+                oldAudio.parentNode.removeChild(oldAudio);
+            }
+            var audio = document.createElement('audio');
+            audio.id = "audio-element";
+            audio.setAttribute('src', src);
+            audio.setAttribute('type', 'audio/mpeg');
+            document.body.appendChild(audio);
+            audio.play();
+        },
+        stop: function() {
+            var oldAudio = document.getElementById('audio-element');
+            if(oldAudio) {
+                oldAudio.pause();
+                oldAudio.parentNode.removeChild(oldAudio);
+            }
+        }
+    }
+}
 
 function documentPositionComparator (a, b) {
     if (a === b) {
@@ -16,29 +45,48 @@ function documentPositionComparator (a, b) {
     }
 }
 
+function stopSong(svgId, audioId) {
+    chantPlayer.stop();
+    var svgTarget = document.getElementById(svgId);
+    var svgDoc = svgTarget.getSVGDocument();
+    var oldCircle = svgDoc.getElementById("note-marker");
+    if(oldCircle != null) {
+        oldCircle.parentNode.removeChild(oldCircle);
+    }
+    document.getElementById(audioId + "-play").removeAttribute('disabled');
+    document.getElementById(audioId + "-stop").setAttribute('disabled', 'disabled');
+}
+
 function playSong(svgId, audioId, url, mutiple) {
+    document.getElementById(audioId + "-stop").removeAttribute('disabled');
+    document.getElementById(audioId + "-play").setAttribute('disabled', 'disabled');
+
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
         if (this.readyState == 4 && (this.status == 200 || this.status == 0)) { // Safari always gives 0
-
             var pitches = JSON.parse(this.responseText);
             var svgTarget = document.getElementById(svgId);
             var notesNodes = [];
 
                 var svgDoc = svgTarget.getSVGDocument();
+                var oldCircle = svgDoc.getElementById("note-marker");
+                if(oldCircle != null) {
+                    oldCircle.parentNode.removeChild(oldCircle);
+                }
                 var circle = svgDoc.createElementNS('http://www.w3.org/2000/svg', 'circle');
                 circle.setAttribute('r', '6');
                 circle.setAttribute('cx', '6');
                 circle.setAttribute('cy', '6');
+                circle.id = "note-marker";
                 circle.setAttribute('fill', '#ffaaaa');
                 var top = svgDoc.getElementById('surface1');
                 top.insertBefore(circle, top.childNodes[0]);
 
                 for(var i = 0; i < notes.length; i++) {
                     var glyphs = svgDoc.querySelectorAll(notes[i]["path"])
-                        if(glyphs.length != 0) {
-                        var glyph = glyphs[0].parentNode.id;
+                    for(var l = 0; l < glyphs.length; l++) {
+                        var glyph = glyphs[l].parentNode.id;
                         var nodes = svgDoc.querySelectorAll('[*|href="#' + glyph + '"]');
                         for(var j = 0; j < nodes.length; j++) {
                             notesNodes.push(nodes[j]);
@@ -46,7 +94,6 @@ function playSong(svgId, audioId, url, mutiple) {
                             if(notes[i]['notes']) {
                                 nodes[j].notePostions = notes[i]['notes'];
                             }
-                            //nodes[j].parentNode.innerNote = nodes[j]
                         }
                     }
                 }
@@ -58,7 +105,7 @@ function playSong(svgId, audioId, url, mutiple) {
                 function duraction(l) {
                     var count = parseInt(notesNodes[l].notes);
                     var length = 0;
-                    if(count == 0) {
+                    if(count == 0 && typeof mutiple != 'undefined') {
                         count = mutiple[multi_pos];
                         multi_pos++;
                     }
@@ -69,30 +116,33 @@ function playSong(svgId, audioId, url, mutiple) {
                     return length * (60 / TEMP * 1000);
                 }
                 function highlight() {
-                    var bBox = notesNodes[i].getBBox();
+                    if(circle.parentNode == null) {
+                        // it got deleted out of the document because we started again
+                        return;
+                    }
                     var x = parseInt(notesNodes[i].getAttribute('x'));
                     var y = parseInt(notesNodes[i].getAttribute('y'));
-                    if(notesNodes[i].notePostions == null) {
-                        circle.setAttribute('cx', x + bBox.width *  0.5);
-                        circle.setAttribute('cy', y);
-                    } else {
-                        var pos = notesNodes[i].notePostions;
-                        
-                        function update(n) {
-                            if(n >= pos.length) {
-                                return;
-                            }
-                            var notePos = pos[n];
-                            circle.setAttribute('cx', x + bBox.width * notePos[0]);
-                            circle.setAttribute('cy', y - (bBox.height * notePos[1]));
-                            if(n < pos.length && pitches[j + n] != null) {
-                                setTimeout(function() {
-                                    update(n+1); 
-                                }, pitches[j + n][1] * (60 / TEMP * 1000));
-                            }
+
+                    var pos = notesNodes[i].notePostions;
+
+                    function update(n) {
+                        if(circle.parentNode == null) {
+                            return;
                         }
-                        update(0);
+                        if(n >= pos.length) {
+                            return;
+                        }
+                        var notePos = pos[n];
+                        circle.setAttribute('cx', x + notePos[0]);
+                        circle.setAttribute('cy', y + notePos[1]);
+                        if(n < pos.length && pitches[j + n] != null) {
+                            setTimeout(function() {
+                                update(n+1);
+                            }, pitches[j + n][1] * (60 / TEMP * 1000));
+                        }
                     }
+                    update(0);
+
                     i++;
                     if(i < notesNodes.length) {
                         setTimeout(function() {
@@ -101,14 +151,11 @@ function playSong(svgId, audioId, url, mutiple) {
                     } else {
                         setTimeout(function() {
                             circle.parentNode.removeChild(circle);
+                            stopSong(svgId, audioId)
                         }, duraction(i-1));
                     }
                 }
-                try {
-                    chantPlayer.play(audioId);
-                } catch(e) {
-                    document.getElementById(audioId).play();
-                }
+                chantPlayer.play(audioId);
                 highlight(); 
         }
     };
