@@ -60,6 +60,17 @@ def format_player(node):
 
 Library.tag("//player", format_player)
 
+# such a tag might seem useless, but it was needed for
+# the script that converted the html to tex
+def format_music(node):
+    name = node.text_content()
+    return html.fromstring("""
+    <img class="img-content" src="../music/{}.svg" />
+    """.format(name))
+
+Library.tag("//music", format_music)
+Library.tag("//gregorian", format_music)
+
 def format_head(node):
     code_nodes = html.fragments_fromstring("""
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">

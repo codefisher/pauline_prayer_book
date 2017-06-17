@@ -1,12 +1,12 @@
 var TEMP = 140;
-var MP3_PATH = "/res/raw/";
+var MP3_PATH = "/mp3/";
 
 if (typeof chantPlayer == "undefined") {
     // fall back if we are not in Android where prefObject
     // is gives access to application settings
     var chantPlayer = {
         play: function(songName) {
-            var src = MP3_PATH + songName.replace(new RegExp('-', 'g'), '_') + ".mp3";
+            var src = MP3_PATH + songName + ".mp3";
             var oldAudio = document.getElementById('audio-element');
             if(oldAudio != null) {
                 oldAudio.pause();
@@ -26,22 +26,6 @@ if (typeof chantPlayer == "undefined") {
                 oldAudio.parentNode.removeChild(oldAudio);
             }
         }
-    }
-}
-
-function documentPositionComparator (a, b) {
-    if (a === b) {
-        return 0;
-    }
-    var position = a.compareDocumentPosition(b);
-    if (position & Node.DOCUMENT_POSITION_FOLLOWING 
-            || position & Node.DOCUMENT_POSITION_CONTAINED_BY) {
-        return -1;
-    } else if (position & Node.DOCUMENT_POSITION_PRECEDING 
-            || position & Node.DOCUMENT_POSITION_CONTAINS) {
-        return 1;
-    } else {
-        return 0;
     }
 }
 
@@ -83,22 +67,23 @@ function playSong(svgId, audioId, url, mutiple) {
                 var top = svgDoc.getElementById('surface1');
                 top.insertBefore(circle, top.childNodes[0]);
 
-                for(var i = 0; i < notes.length; i++) {
-                    var glyphs = svgDoc.querySelectorAll(notes[i]["path"])
-                    for(var l = 0; l < glyphs.length; l++) {
-                        var glyph = glyphs[l].parentNode.id;
-                        var nodes = svgDoc.querySelectorAll('[*|href="#' + glyph + '"]');
-                        for(var j = 0; j < nodes.length; j++) {
-                            notesNodes.push(nodes[j]);
-                            nodes[j].notes = notes[i]['count'];
-                            if(notes[i]['notes']) {
-                                nodes[j].notePostions = notes[i]['notes'];
+                var possibleNotes = svgDoc.querySelectorAll('use');
+                
+                for(var i = 0; i < possibleNotes.length; i++) {
+                    var xlink = possibleNotes[i].getAttributeNS('http://www.w3.org/1999/xlink', 'href');
+                    if(xlink) {
+                        var glyph = xlink.split("#")[1];
+                        var data = notes[glyph]
+                        if(data) {
+                            notesNodes.push(possibleNotes[i]);
+                            possibleNotes[i].notes = notes[glyph]['count'];
+                            if(notes[glyph]['notes']) {
+                                possibleNotes[i].notePostions = notes[glyph]['notes'];
                             }
                         }
                     }
                 }
 
-                notesNodes.sort(documentPositionComparator);
                 var i = 0;
                 var j = 0;
                 var multi_pos = 0;
