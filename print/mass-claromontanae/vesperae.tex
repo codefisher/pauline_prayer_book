@@ -1,0 +1,270 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass[a5paper]{article}
+\RequirePackage[includehead,includefoot,top=0.5in,left=0.5in,right=0.5in,bottom=0.5in]{geometry}
+
+
+\usepackage[autocompile]{gregoriotex}
+\usepackage{libertine}
+\usepackage[center]{titlesec}
+
+\newcommand*{\red}[1]{\textcolor{red}{#1}}
+\newcommand*{\redit}[1]{\textit{\textcolor{red}{#1}}}
+
+\makeatletter
+\newenvironment{litany}
+  {\list{\topsep=0pt}{%
+   \setlength{\topsep}{0pt}%
+   \setlength{\leftmargin}{2em}%
+   \setlength{\listparindent}{-2em}%
+   \setlength{\itemindent}{-2em}%
+   \setlength{\parsep}{\parskip}}%
+   \item[]}%
+  {\endlist}
+\makeatother
+
+\usepackage{changepage}
+
+\newcommand{\prayer}[3][3em]{%
+  \begin{adjustwidth}{#1}{0pt}%
+    \makebox[0pt][r]{\makebox[#1][l]{\bfseries \redit{#2}}}%
+    \ignorespaces #3
+  \end{adjustwidth}
+}
+
+\newcommand{\redcommentary}[1]{
+ \grecommentary{\GreColored{\emph{#1}}}
+}
+
+
+\begin{document}
+
+
+\section*{Vespere Beatæ Mariæ Virginis Claromontanæ Częstochoviensis}
+
+\gregorioscore{../music/vesperae-bvm-cc-deus-in-adiutorum}
+
+\subsection*{Hymnus}
+
+\smallbreak
+\gresetlastline{justified}
+\gresetinitiallines{1}
+\gresethyphen{force}
+\gregorioscore{../music/vesperae-bvm-cc-hymnus}
+
+\bigbreak
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ant-i}\gresetlastline{ragged}
+\gresetinitiallines{0}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ps-i}
+\medbreak
+\begin{adjustwidth}{0.75em}{0pt}
+\begin{litany}Donec ponam inimícos tuos, \red{*}\par
+\hspace{1em}scabéllum pedum tuórum.\par
+Virgam virtútis tuæ emíttet Dóminus ex Sion: \red{*}\par
+\hspace{1em}domináre in médio inimicórum tuórum.\par
+Tecum princípium in die virtútis tuæ in splendóribus sanctórum: \red{*}\par
+\hspace{1em}ex útero ante lucíferum génui te.\par
+Jurávit Dóminus, et non pœnitébit eum: \red{*}\par
+\hspace{1em}Tu es sacérdos in ætérnum secúndum órdinem Melchísedech.\par
+Dóminus a dextris tuis, \red{*}\par
+\hspace{1em}confrégit in die iræ suæ reges.\par
+Judicábit in natiónibus, implébit ruínas: \red{*}\par
+\hspace{1em}conquassábit cápita in terra multórum.\par
+\end{litany}
+\end{adjustwidth}
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ant-i}
+
+\bigbreak
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ant-ii}
+\gresetlastline{ragged}
+\gresetinitiallines{0}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ps-ii}
+\medbreak
+\begin{adjustwidth}{0.75em}{0pt}
+\begin{litany}Sit nomen Dómini benedíctum, \red{*}\par
+\hspace{1em}ex hoc nunc, et usque in sǽculum.\par
+A solis ortu usque ad occásum, \red{*}\par
+\hspace{1em}laudábile nomen Dómini.\par
+Excélsus super omnes gentes Dóminus, \red{*}\par
+\hspace{1em}et super cælos glória ejus.\par
+Quis sicut Dóminus, Deus noster, qui in altis hábitat, \red{*}\par
+\hspace{1em}et humília réspicit in cælo et in terra?\par
+Súscitans a terra ínopem, \red{*}\par
+\hspace{1em}et de stércore érigens páuperem:\par
+Ut cóllocet eum cum princípibus, \red{*}\par
+\hspace{1em}cum princípibus pópuli sui.\par
+Qui habitáre facit stérilem in domo, \red{*}\par
+\hspace{1em}matrem filiórum lætántem.\par
+\end{litany}
+\end{adjustwidth}
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ant-ii}
+
+\bigbreak
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ant-iii}
+\gresetlastline{justified}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-canticle}
+\medbreak
+\begin{adjustwidth}{0.75em}{0pt}
+\begin{litany}Sicut elegit nos in ipso ante mundi constitutionem, \red{\GreDagger}\par
+\hspace{1em}ut essemus sancti et immaculati \red{*}\par
+\hspace{1em}in conspectu ejus in caritate,\par
+Qui praedestinavit nos in adoptionem filiorum \red{\GreDagger}\par
+\hspace{1em}per Jesum Christum in ipsum, \red{*}\par
+\hspace{1em}secundum propositum voluntatis suae,\par
+In laudem gloriae gratiae suae, \red{*}\par
+\hspace{1em}in qua gratificavit nos in dilecto Filio suo.\par
+In quo habemus redemptionem per sanguinem ejus, \red{*}\par
+\hspace{1em}remissionem peccatorum\par
+Secundum divitias gratiae ejus, \red{\GreDagger}\par
+\hspace{1em}quae superabundavit in nobis \red{*}\par
+\hspace{1em}in omni sapientia et prudentia;\par
+Ut notum faceret nobis sacramentum voluntatis suae, \red{*}\par
+\hspace{1em} secundum beneplacitum ejus,\par
+Quod proposuit in eo, \red{\GreDagger}\par
+\hspace{1em}in dispensatione plenitudinis temporum, instaurare omnia in Christo, \red{*}\par
+\hspace{1em}quae in caelis et quae in terra sunt.\par
+\end{litany}
+\end{adjustwidth}
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-ant-iii}
+
+\subsection*{Lectio Brevis}
+
+Et erit in novissimis diebus: praeparatus mons domus Domini in vertice montium, et fluent ad eum omnes gentes, et dicent: Venite, et ascendamus ad montem Domini, et ad domum Dei Jacob; et docebit nos vias suas, et ambulabimus in semitis ejus.
+\smallbreak
+
+\subsection*{Responsorium}
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gregorioscore{../music/vesperae-bvm-cc-res}
+
+\subsection*{Canticum  Mariae Verginis}
+
+\gresetlastline{justified}
+\gresetinitiallines{1}
+\gresethyphen{force}
+\gregorioscore{../music/vesperae-bvm-cc-sub-tuum}\gresetlastline{justified}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
+\greillumination{\fontsize{56pt}{56pt}\selectfont \goudy M}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{../music/vesperae-bvm-cc-magnificat}
+\medbreak
+\begin{adjustwidth}{0.75em}{0pt}
+\begin{litany}Et exultavit spiritus meus \red{*}\par
+\hspace{1em}in Deo salvatore meo,\par
+Quia respexit humilitatem ancillae suae \red{*}\par
+\hspace{1em}ecce enim ex hoc beatam me dicent omnes generationes,\par
+Quia fecit mihi magna, qui potens est, \red{*}\par
+\hspace{1em}et sanctum nomen eius,\par
+Et misericordia eius in progenies et progenies \red{*}\par
+\hspace{1em}timentibus eum.\par
+Fecit potentiam in brachio su, \red{*}\par
+\hspace{1em}dispersit superbos mente cordis sui;\par
+Deposuit potentes de sede \red{*}\par
+\hspace{1em}et exaltavit humiles\par
+Esurientes implevit bonis, \red{*}\par
+\hspace{1em}et divites dimisit inanes.\par
+Suscepit Israel puerum suum, \red{*}\par
+\hspace{1em}recordatus misericordiae suae,\par
+Sicut locutus est ad patres nostros, \red{*}\par
+\hspace{1em}Abraham et semini eius in saecula\par
+Gloria Patri, et Filio, \red{*}\par
+\hspace{1em}et Spiritui Sancto,\par
+Sicut erat in principio, Et nunc, et semper, \red{*}\par
+\hspace{1em}et in Saecula saeculorum. Amen.\par
+\end{litany}
+\end{adjustwidth}
+\gresetlastline{justified}
+\gresetinitiallines{1}
+\gresethyphen{force}
+\gregorioscore{../music/vesperae-bvm-cc-sub-tuum}
+
+\subsection*{Preces}
+
+Deum Patrem omnipotentem magnis laudibus extollamus, qui Mariam Matrem Filii sui ab omnibus generationibus celebrari voluit et ab eo supplices petamus:
+\smallbreak
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gregorioscore{../music/vesperae-bvm-cc-preces}\smallbreak
+
+\begin{litany}
+Deus mirabilium patrator, qui immaculatam Virginem Mariam corpore et animam caelestis gloriae Christi fecisti consortem \par 
+\hspace{0.5em}\red{--} filiorum tuorum corda ad eandem gloriam dirige.
+\smallbreak
+
+Qui Mariam dedisti nobis Matrem, ipsa intercedente, concede medelam languidis, solamen maerentibus, maerentibus, veniam peccatoribus,\par 
+\hspace{0.5em}\red{--}  et omnibus salutem et pacem.
+\smallbreak
+
+Qui Mariam Plenam gratia fecisti, \par 
+\hspace{0.5em}\red{--}  laetam gratiae tuae copiam omnibus concede.
+\smallbreak
+
+Ecclesia tua sit cor unum et anima una in veritate,\par 
+\hspace{0.5em}\red{--}  et fideles perseverent unanimes in oratione cum Maria. Matre Jesu.
+\smallbreak
+
+Qui Mariam caeli coronasti reginam, \par 
+\hspace{0.5em}\red{--}  fac ut defuncti in regno tuo cum sanctorum agminae gaudeant in aeternum.
+\smallbreak
+\end{litany}
+
+\noindent\textit{Pater noster\ldots }
+\smallbreak
+
+\subsection*{Oratio}
+
+Omnipotens et misericors Deus, qui ad defensionem populi polonici in beatissima Virginae Maria perpetuum auxilium mirabiliter constituisti, eiusque sacram Imaginem Claromontanam solemni fidelium veneratione insignem reddidisti: \red{\GreDagger} concede propitius; ut tali praesidio muniti, certantes in vita, \red{*} victoriam de hoste maligno consequi valeamus in morte. Per Dominum etc.
+\smallbreak
+
+\prayer{\Rbar.}{\textbf{Dominus vobiscum.}}
+\prayer{\Vbar.}{Et cum spiritu tuo.}
+\smallbreak
+
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+\gregorioscore{../music/vesperae-bvm-cc-benedicamus}\newpage
+
+\end{document}
