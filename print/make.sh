@@ -1,16 +1,6 @@
+python3 prayer-to-tex.py index.xml ../android_prayer_book/app/src/main/assets/prayers/en/src/ prayer-book-content.tex
 
-python3 ../android_prayer_book/app/src/main/assets/prayers/convert_html.py -p --output=prayers --input=../android_prayer_book/app/src/main/assets/prayers/en/src/
-python3 ../android_prayer_book/app/src/main/assets/prayers/convert_html.py -p --output=prayers --input=../android_prayer_book/app/src/main/assets/prayers/en/print/
+lualatex --shell-escape prayer-book.tex
 
 
-cd prayers
-for f in *.html ; do wkhtmltopdf --page-width 5in --page-height 8in "$f" "../pdf/${f/%.html/}.pdf" ; done
-
-cd ../
-
-rm book.aux
-rm book.log
-rm book.out
-
-pdflatex book.tex
-pdflatex book.tex
+gs -o prayer-book-cmyk.pdf -dPDFX -sDEVICE=pdfwrite -sProcessColorModel=DeviceCMYK  -dOverrideICC=true  -sColorConversionStrategy=CMYK -sColorConversionStrategyForImages=CMYK -dPDFSETTINGS=/prepress -dAutoFilterColorImages=false -dColorImageFilter=/FlateEncode prayer-book.pdf

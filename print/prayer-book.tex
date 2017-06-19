@@ -1,0 +1,13 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass[twoside]{book}
+\RequirePackage[paperheight=8.25in,paperwidth=5.125in,includehead,includefoot,top=0.625in,inner=0.5in,outer=0.625in,bottom=0.625in]{geometry}
+
+\newcommand*{\includeimage}[1]{%
+\thispagestyle{empty}
+\checkoddpage\ifoddpage\else\newpage\mbox{}\fi%
+\includepdf[pagecommand={\thispagestyle{empty}},offset=0.125in 0,pages=1]{insert/book/#1}}
+
+
+\input{prayer-header}
+\input{prayer-book-content}

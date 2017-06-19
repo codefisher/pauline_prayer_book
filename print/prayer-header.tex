@@ -1,0 +1,135 @@
+
+\usepackage[toc]{appendix}
+\usepackage{scrextend}
+\usepackage[autocompile]{gregoriotex}
+\usepackage{libertine}
+
+%\usepackage[none]{hyphenat}
+\usepackage{indentfirst}
+\usepackage{ragged2e}
+\usepackage[center]{titlesec}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{pdfpages}
+\usepackage{environ}
+\usepackage{setspace}
+
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+\titleformat{\paragraph}
+  {\centering\normalfont\bfseries} % format
+  {}% label
+  {0pt} % sep
+  {\large}
+
+\input{music/multi-line}
+\input{music/repeat-notes}
+\input{music/functions}
+
+\makeatletter
+\def\@makechapterhead#1{%
+  \vspace*{50\p@}%
+  {\parindent \z@ \raggedright \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        %\huge\bfseries \@chapapp\space \thechapter
+        \Huge\bfseries \thechapter.\space%
+        %\par\nobreak
+        %\vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    \Huge \bfseries #1\par\nobreak
+    \vskip 40\p@
+  }}
+\makeatother
+
+\newcommand{\newpageheader}[2]{\fancypagestyle{#2}{%
+	\fancyhead{}
+	\fancyhead[CE]{#1}
+	\fancyhead[CO]{#2}
+	\fancyhead[LE,RO]{\thepage}
+	\fancyfoot{}}
+    \pagestyle{#2}
+}
+
+\renewcommand\thechapter{\Alph{chapter}}
+\renewcommand\thesection{\arabic{section}}
+
+\newcommand*{\red}[1]{\textcolor{red}{#1}}
+\newcommand*{\redit}[1]{\textit{\textcolor{red}{#1}}}
+\newcommand*{\instruction}[1]{\begin{addmargin}[\parindent]{0em}\textit{\textcolor{red}{#1}}\end{addmargin}}
+% \enlargethispage is a horrible hack to make sure there is always space for this
+\newcommand*{\reference}[1]{\enlargethispage{\baselineskip}\nopagebreak\hfill{\textcolor{red}{#1}}}
+
+\usepackage{changepage}
+
+\newcommand{\prayer}[3][3em]{%
+  \nopagebreak%
+  \begin{adjustwidth}{#1}{0pt}%
+    \makebox[0pt][r]{\makebox[#1][l]{\bfseries \redit{#2}}}%
+    \ignorespaces #3
+  \end{adjustwidth}%
+  \nopagebreak%
+}
+
+% add illumination to some chant
+\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
+
+\makeatletter
+\def\musicillumination{\@ifnextchar[{\@with}{\@without}}
+\def\@with[#1]#2{\greillumination{\fontsize{#1}{#1}\selectfont \goudy #2}}
+\def\@without#1{\greillumination{\fontsize{56pt}{56pt}\selectfont \goudy #1}}
+\makeatother
+
+
+\newcommand\responce[1]{%
+  \unskip\hfill\penalty100\relax\hspace*{0.5em}\hspace*{\fill}\mbox{\textbf{#1}}%
+}
+
+\usepackage{enumitem}
+
+\setlist[itemize]{noitemsep, topsep=0pt}
+
+
+\makeatletter
+\newenvironment{litany}
+  {\list{\topsep=0pt}{%
+   \setlength{\topsep}{0pt}%
+   \setlength{\leftmargin}{2em}%
+   \setlength{\listparindent}{-2em}%
+   \setlength{\itemindent}{-2em}%
+   \setlength{\parsep}{\parskip}}%
+   \item[]}%
+  {\endlist}
+\makeatother
+
+\usepackage{xpatch}
+\makeatletter
+\newlength{\abovefirstappchapskip}
+\newlength{\belowfirstappchapskip}
+\AtBeginEnvironment{appendices}{%
+  \xpatchcmd{\@makechapterhead}{%
+    \vspace*{50\p@}%
+  }{%
+    \ifnum1=\c@chapter
+    \vskip\abovefirstappchapskip%
+    \fi
+  }{}{}
+  \xpatchcmd{\@makechapterhead}{%
+    \parindent \z@ \raggedright \normalfont
+  }{%
+    \parindent \z@ \raggedright \normalfont
+    \ifnum1=\c@chapter
+    \begingroup 
+    \centering \Huge\bfseries \appendixname
+    \vskip\belowfirstappchapskip
+    \endgroup
+    \fi
+  }{}{}
+}
+\makeatother
+
+\setlength{\abovefirstappchapskip}{30pt}
+\setlength{\belowfirstappchapskip}{30pt}
