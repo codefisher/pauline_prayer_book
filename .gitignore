@@ -17,3 +17,4 @@
 keystore.properties
 *.mp3
 *.apk
+/web
