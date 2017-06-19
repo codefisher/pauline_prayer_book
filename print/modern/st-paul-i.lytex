@@ -1,0 +1,5 @@
+\documentclass{article}
+
+\begin{document}
+    \lilypondfile[noindent,quote]{st-paul-i.ly}
+\end{document}

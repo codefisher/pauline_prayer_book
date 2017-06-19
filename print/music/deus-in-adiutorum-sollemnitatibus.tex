@@ -1,0 +1,19 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage[autocompile]{gregoriotex}
+\usepackage{libertine}
+\gresetlastline{ragged}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+
+\begin{document}
+\begin{minipage}{4in}
+\ifdefined\musicillumination
+\musicillumination{D}
+\fi
+\gregorioscore{deus-in-adiutorum-sollemnitatibus}
+\end{minipage}
+\end{document}

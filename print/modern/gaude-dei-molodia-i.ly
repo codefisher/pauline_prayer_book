@@ -5,7 +5,7 @@
 \paper {
    #(set-paper-size "boolet size")
    indent = 0\cm
-   ragged-last = ##t
+   ragged-last = ##f
    top-margin = 0
    bottom-margin = 0
    right-margin = 0

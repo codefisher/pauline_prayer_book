@@ -1,0 +1,5 @@
+\documentclass{article}
+
+\begin{document}
+    \lilypondfile[noindent,quote]{paul-of-the-desert.ly}
+\end{document}

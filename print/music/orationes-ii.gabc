@@ -1,7 +1,13 @@
-name: orationes ii;
+name: Orationes II;
+book: Modlitwy Zakonu Świętego Pawła Pierwszego Pustelnika, page 117;
+transcriber:Br. Joseph Maria OSPPE (Michael Buckley);
+transcription-date:2017;
 annotation: II;
+def-m1: \begin{firstnote};
+def-m2: \end{firstnote};
 %%
-(cb4) De(g)us, qui conteris bella(hr) (,) et impugnatores in te sperantium(/[1]) (/[1]z)
-potentia tuae defensionis(hr) ex(h)pug(i)nas:(i.) (,) au(g)xiliare famulis tuis,(hr) (/[1]z)
-implorantibus misericordiam(hr) tu(i)am;(h.) (;) ut(g) inimicorum suorum(/[1]) (/[1]z)
-feritate depressa,(hr) (,) incessabili te gratiarum acti(/[1])o(i) ne(h) lau(g)de(h_0i)mus.(i.) (::)
+(cb4) De(g)us,(hr) qui([em1]hr[em2]) con([em1]hr[em2])te([em1]hr[em2])ris([em1]hr[em2]) bel([em1]hr[em2])la([em1]hr[em2],) et([em1]hr[em2]) im([em1]hr[em2])pug([em1]hr[em2])na([em1]hr[em2])to([em1]hr[em2])res([em1]hr[em2]) in([em1]hr[em2]z) te([em1]hr[em2]) 
+spe([em1]hr[em2])ran([em1]hr[em2])ti([em1]hr[em2])um([em1]hr[em2]) po([em1]hr[em2])ten([em1]hr[em2])ti([em1]hr[em2])a([em1]hr[em2]) tu([em1]hr[em2])ae([em1]hr[em2]) de([em1]hr[em2])fen([em1]hr[em2])si([em1]hr[em2])on([em1]hr[em2])is([em1]hr[em2]) ex(h)pug(i)nas:(i.,z) 
+au(g)xi(hr)li([em1]hr[em2])a([em1]hr[em2])re([em1]hr[em2]) fa([em1]hr[em2])mu([em1]hr[em2])lis([em1]hr[em2]) tu([em1]hr[em2])is,([em1]hr[em2]) im([em1]hr[em2])plo([em1]hr[em2])ran([em1]hr[em2])ti([em1]hr[em2])bus([em1]hr[em2]) mi([em1]hr[em2])se([em1]hr[em2])ri([em1]hr[em2])cor([em1]hr[em2])di([em1]hr[em2])am([em1]hr[em2]z) tu(i)am;(h.;)
+ut(g) i(hr)ni([em1]hr[em2])mi([em1]hr[em2])co([em1]hr[em2])rum([em1]hr[em2]) su([em1]hr[em2])o([em1]hr[em2])rum([em1]hr[em2]) fe([em1]hr[em2])ri([em1]hr[em2])ta([em1]hr[em2])te([em1]hr[em2]) de([em1]hr[em2])pres([em1]hr[em2])sa,([em1]hr[em2]z) 
+in([em1]hr[em2])ces([em1]hr[em2])sa([em1]hr[em2])bi([em1]hr[em2])li([em1]hr[em2]) te([em1]hr[em2]) gra([em1]hr[em2])ti([em1]hr[em2])a([em1]hr[em2])rum([em1]hr[em2]) ac([em1]hr[em2])ti([em1]hr[em2])o(i) ne(h) lau(g)de(h_0i)mus.(i.) (::)

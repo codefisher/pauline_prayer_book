@@ -1,0 +1,5 @@
+\documentclass{article}
+
+\begin{document}
+    \lilypondfile[noindent,quote]{s-paolo-ii.ly}
+\end{document}

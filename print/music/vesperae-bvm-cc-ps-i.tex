@@ -1,0 +1,16 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage[autocompile]{gregoriotex}
+\usepackage{libertine}
+\gresetlastline{ragged}
+\gresetinitiallines{0}
+\gresethyphen{auto}
+
+\input{functions}
+\begin{document}
+\begin{minipage}{4.5in}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{vesperae-bvm-cc-ps-i}
+\end{minipage}
+\end{document}

@@ -1,7 +1,13 @@
-name: orationes ii;
+name: Orationes III;
+book: Modlitwy Zakonu Świętego Pawła Pierwszego Pustelnika, page 117;
+transcriber:Br. Joseph Maria OSPPE (Michael Buckley);
+transcription-date:2017;
 annotation: III;
+def-m1: \begin{firstnote};
+def-m2: \end{firstnote};
 %%
-(cb4) De(g)us a quo sancta desideria,(hr) (,) recta consilia et iusta sunt(/[1]) o(i)pe(i)ra:(i) (z)
-da(g) servis tuis illam quam,(hr) (,) mundus dare non potest,(/[1]) pa(i)cem(h.) (;)(z)
-ut(g) et corda nostra mandatis tuis dedita,(hr) (,) et hostium sublata formidine, (/[1]) (,) (/[1]z)
-tempora sint, tua protecti(hr)o(i)ne(h) tran(g)quil(h_0i)la.(i.) (::)
+(cb4) De(g)us(hr) a([em1]hr[em2]) quo([em1]hr[em2]) san([em1]hr[em2])cta([em1]hr[em2]) de([em1]hr[em2])si([em1]hr[em2])de([em1]hr[em2])ri([em1]hr[em2])a,([em1]hr[em2],) rec([em1]hr[em2])ta([em1]hr[em2]) con([em1]hr[em2])si([em1]hr[em2])li([em1]hr[em2])a([em1]hr[em2]z) et([em1]hr[em2]) ius([em1]hr[em2])ta([em1]hr[em2]) sunt([em1]hr[em2])
+o(i)pe(i)ra:(i) da(g) ser(hr)vis([em1]hr[em2]) tu([em1]hr[em2])is([em1]hr[em2]) il([em1]hr[em2])lam([em1]hr[em2]) quam,([em1]hr[em2]) mun([em1]hr[em2])dus([em1]hr[em2],z) 
+da([em1]hr[em2])re([em1]hr[em2]) non([em1]hr[em2]) po([em1]hr[em2])test,([em1]hr[em2]) pa(i)cem(h.) (;) ut(g) et(hr) cor([em1]hr[em2])da([em1]hr[em2]) nos([em1]hr[em2])tra([em1]hr[em2])
+ man([em1]hr[em2])da([em1]hr[em2])tis([em1]hr[em2]) tu([em1]hr[em2])is([em1]hr[em2]z) de([em1]hr[em2])di([em1]hr[em2])ta,([em1]hr[em2],) et([em1]hr[em2]) hos([em1]hr[em2])ti([em1]hr[em2])um([em1]hr[em2]) sub([em1]hr[em2])la([em1]hr[em2])ta([em1]hr[em2]) for([em1]hr[em2])mi([em1]hr[em2])di([em1]hr[em2])ne,([em1]hr[em2],)
+tem([em1]hr[em2])po([em1]hr[em2])ra([em1]hr[em2]) sint,([em1]hr[em2]z) tu([em1]hr[em2])a([em1]hr[em2]) pro([em1]hr[em2])tec([em1]hr[em2])ti([em1]hr[em2])o(i)ne(h) tran(g)quil(h_i)la.(i.) (::)

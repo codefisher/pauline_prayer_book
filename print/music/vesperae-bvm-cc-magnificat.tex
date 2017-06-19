@@ -1,0 +1,18 @@
+\RequirePackage{luatex85}
+\documentclass{standalone}
+
+\usepackage[autocompile]{gregoriotex}
+\usepackage{libertine}
+\gresetlastline{justified}
+\gresetinitiallines{1}
+\gresethyphen{auto}
+
+\input{functions}
+\begin{document}
+\begin{minipage}{5in}
+\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
+\greillumination{\fontsize{56pt}{56pt}\selectfont \goudy M}
+\gresetheadercapture{commentary}{redcommentary}{string}
+\gregorioscore{vesperae-bvm-cc-magnificat}
+\end{minipage}
+\end{document}

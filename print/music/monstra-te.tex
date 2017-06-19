@@ -1,3 +1,5 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
 \RequirePackage{luatex85}
 \documentclass{standalone}
 
@@ -5,9 +7,13 @@
 \usepackage{libertine}
 \gresetlastline{justified}
 \gresetinitiallines{1}
+\gresethyphen{force}
 
 \begin{document}
 \begin{minipage}{4in}
+\ifdefined\musicillumination
+\musicillumination{M}
+\fi
 \gregorioscore{monstra-te}
 \end{minipage}
 \end{document}

@@ -1,0 +1,8 @@
+\makeatletter
+\NewEnviron{firstnote}{
+  \ifnum\gre@lastoflinecount=2
+    \BODY
+  \else
+    \null
+  \fi}
+\makeatother

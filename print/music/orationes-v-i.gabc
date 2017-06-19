@@ -1,7 +1,12 @@
-name: orationes v;
+name: Orationes V I;
+book: Modlitwy Zakonu Świętego Pawła Pierwszego Pustelnika, page 118;
+transcriber:Br. Joseph Maria OSPPE (Michael Buckley);
+transcription-date:2017;
 annotation: V\textsubscript{I};
+def-m1: \begin{firstnote};
+def-m2: \end{firstnote};
 %%
-(cb4) Ad(g) te nos, Domine, clamantes(hr) ex(h)au(i)di(i.) (;) et(g) aëris(hr) (z) 
-serenitatem tribue suppli(hr)can(i)ti(h)bus,(h.) (;) (/[25]) (z)
-ut(g) qui iuste pro peccatis nostris affligimur, misericordia tua praeveniente(hr) (/[1]z)
-clemen(hr)ti(h)am(i) (h+) sen(h)ti(g)a(h_0i)mus.(i.) (::) (/[65])
+(cb4) Ad(g) te(hr) nos,([em1]hr[em2]) Do([em1]hr[em2])mi([em1]hr[em2])ne,([em1]hr[em2]) cla([em1]hr[em2])man([em1]hr[em2])tes([em1]hr[em2]) ex(h)au(i)di(i.;) et(g) a(hr)ë([em1]hr[em2])ris([em1]hr[em2]z)
+se([em1]hr[em2])re([em1]hr[em2])ni([em1]hr[em2])ta([em1]hr[em2])tem([em1]hr[em2]) tri([em1]hr[em2])bu([em1]hr[em2])e([em1]hr[em2]) sup([em1]hr[em2])pli([em1]hr[em2])can(i)ti(h)bus,(h.;)
+ut(g) qui(hr) ius([em1]hr[em2])te([em1]hr[em2]) pro([em1]hr[em2]z) pec([em1]hr[em2])ca([em1]hr[em2])tis([em1]hr[em2]) nos([em1]hr[em2])tris([em1]hr[em2]) af([em1]hr[em2])fli([em1]hr[em2])gi([em1]hr[em2])mur,([em1]hr[em2]) mi([em1]hr[em2])se([em1]hr[em2])ri([em1]hr[em2])cor([em1]hr[em2])di([em1]hr[em2])a([em1]hr[em2]) tu([em1]hr[em2])a([em1]hr[em2])
+prae([em1]hr[em2])ve([em1]hr[em2])ni([em1]hr[em2])en([em1]hr[em2])te([em1]hr[em2]z) cle([em1]hr[em2])men([em1]hr[em2])ti(h)am(i) (h+) sen(h)ti(g)a(h_i)mus.(i.) (::)

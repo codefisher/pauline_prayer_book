@@ -1,0 +1,5 @@
+\documentclass{article}
+
+\begin{document}
+    \lilypondfile[noindent,quote]{omni-die-dic.ly}
+\end{document}

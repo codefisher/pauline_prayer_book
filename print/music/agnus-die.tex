@@ -1,21 +1,16 @@
 % !TEX program = LuaLaTeX+se
 % !TEX encoding = UTF-8 Unicode
-\documentclass[11pt]{article}
-\RequirePackage[paperheight=3in,paperwidth=4in,top=0cm,left=0cm,right=0cm,bottom=0cm]{geometry}
+\RequirePackage{luatex85}
+\documentclass{standalone}
 
 \usepackage[autocompile]{gregoriotex}
-\usepackage[savepos]{zref}
 \usepackage{libertine}
-
-
-\pagestyle{empty}
-\columnseprule=0.4pt
-
 \gresetlastline{justified}
+\gresetinitiallines{0}
+\gresethyphen{force}
 
 \begin{document}
-\gresethyphen{force}
-\gresetinitiallines{1}
+\begin{minipage}{4in}
 \gregorioscore{agnus-die}
-
+\end{minipage}
 \end{document}

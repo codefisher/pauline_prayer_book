@@ -1,11 +1,11 @@
 \version "2.18.2"
 
-#(set! paper-alist (cons '("boolet size" . (cons (* 5 in) (* 6.25 in))) paper-alist))
+#(set! paper-alist (cons '("boolet size" . (cons (* 5.5 in) (* 5.75 in))) paper-alist))
 
 \paper {
    #(set-paper-size "boolet size")
    indent = 0\cm
-   ragged-last = ##t
+   ragged-last = ##f
    top-margin = 0
    bottom-margin = 0
    right-margin = 0
@@ -29,7 +29,7 @@ musicOne = \relative c' {
   d8 a'8 a8 g4 \bar "'" a8 f8 g8 e4 \bar "'" f8 e8 d8 a'8 f8 g8 a4 \halfAddBar \break
   a8 c8 d8 a4 \bar "'" g8 e8 a8 a4 \bar "'" e8 f8 g8 d8 f8 e8 d4 \bar "|." \break
   f8 e8 g8 d4 \bar "'" f8 e8 d8 c8 \bar "'" f8 g8 a8 g8 c8 b8 a4 \halfAddBar \break
-  d8 c8 a8 f4 \bar "'" g8 a8 a8 d,4 \bar "'" d8 c8 e8 e8 d8 c8 d4 \bar "|." \break
+  d8 c8 a8 f4 \bar "'" g8 a8 a8 d,4 \bar "'" d8 c8 e8 e8 d8 c8 d4 \bar "|."
   d8[e8 d8] c8(d8) \bar "|." \break
   
 }

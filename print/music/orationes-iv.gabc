@@ -1,10 +1,16 @@
-name: orationes iv;
+name: Orationes IV;
+book: Modlitwy Zakonu Świętego Pawła Pierwszego Pustelnika, page 117;
+transcriber:Br. Joseph Maria OSPPE (Michael Buckley);
+transcription-date:2017;
 annotation: IV;
+def-m1: \begin{firstnote};
+def-m2: \end{firstnote};
 %%
-(cb4) De(g)us, misericordiae, Deus pietatis, Deus cle(hr)men(i)ti(i)ae,(i) (;) (z) 
-qui(g) misertus super afflictionem populi tui, dixisti angelo percuti(hr)en(i)ti:(h) (;) (z) 
-Suf(g)ficit, nunc contin(hr)e(i) ma(h)num(g) tu(h_0i)am(i.) (;) ob(g) amorem illius stellae(hr) (/[1]z) 
-gloriosae,(hr) (,) cuius ubera praeciosa contra venenum delictorum nostrorum dulciter (/[1]) (z) 
-su(h)xi(i)sti(i.) (;) prae(g)sta auxilium gratiae(hr) tu(i)ae(h.) (;) ut(g) ab omni peste(hr) (z) 
-et improvida morte liberemur et a totius perditionis incursu(hr) (/[1]z) 
-misericor(hr)di(i)ter(h) sal(g)ve(h_0i)mur.(i.) (::) (/[40])
+(cb4) De(g)us,(hr) mi([em1]hr[em2])se([em1]hr[em2])ri([em1]hr[em2])cor([em1]hr[em2])di([em1]hr[em2])ae,([em1]hr[em2]) De([em1]hr[em2])us([em1]hr[em2]) pi([em1]hr[em2])e([em1]hr[em2])ta([em1]hr[em2])tis,([em1]hr[em2]) De([em1]hr[em2])us([em1]hr[em2]z) cle([em1]h[em2])men(i)ti(i)ae,(i;)
+qui(g) mis(hr)er([em1]hr[em2])tus([em1]hr[em2]) su([em1]hr[em2])per([em1]hr[em2]) af([em1]hr[em2])flic([em1]hr[em2])ti([em1]hr[em2])on([em1]hr[em2])em([em1]hr[em2]) po([em1]hr[em2])pu([em1]hr[em2])li([em1]hr[em2]z) tu([em1]hr[em2])i,([em1]hr[em2]) di([em1]hr[em2])xis([em1]hr[em2])ti([em1]hr[em2]) an([em1]hr[em2])ge([em1]hr[em2])lo([em1]hr[em2])
+per([em1]hr[em2])cu([em1]hr[em2])ti([em1]hr[em2])en(i)ti:(h) (;) Suf(g)fi(hr)cit,([em1]hr[em2]) nunc([em1]hr[em2]) con([em1]hr[em2])tin([em1]hr[em2])e(iz) ma(h)num(g) tu(h_i)am(i.;) ob(g)
+a(hr)mo([em1]hr[em2])rem([em1]hr[em2]) il([em1]hr[em2])li([em1]hr[em2])us([em1]hr[em2]) stel([em1]hr[em2])lae([em1]hr[em2]) glo([em1]hr[em2])ri([em1]hr[em2])o([em1]hr[em2])sae,([em1]hr[em2],z) cu([em1]hr[em2])i([em1]hr[em2])us([em1]hr[em2]) u([em1]hr[em2])be([em1]hr[em2])ra([em1]hr[em2]) prae([em1]hr[em2])ci([em1]hr[em2])o([em1]hr[em2])sa([em1]hr[em2])
+con([em1]hr[em2])tra([em1]hr[em2]) ve([em1]hr[em2])ne([em1]hr[em2])num([em1]hr[em2]) de([em1]hr[em2])lic([em1]hr[em2])to([em1]hr[em2])rum([em1]hr[em2]z) nos([em1]hr[em2])tro([em1]hr[em2])rum([em1]hr[em2]) dul([em1]hr[em2])ci([em1]hr[em2])ter([em1]hr[em2]) su(h)xi(i)sti(i.;)
+ prae(g)sta(hr) au([em1]hr[em2])xi([em1]hr[em2])li([em1]hr[em2])um([em1]hr[em2]) gra([em1]hr[em2])ti([em1]hr[em2])ae([em1]hr[em2]z) tu(i)ae(h.;) ut(g) ab(hr) om([em1]hr[em2])ni([em1]hr[em2]) pes([em1]hr[em2])te([em1]hr[em2])
+et([em1]hr[em2]) im([em1]hr[em2])pro([em1]hr[em2])vi([em1]hr[em2])da([em1]hr[em2]) mor([em1]hr[em2])te([em1]hr[em2]) li([em1]hr[em2])be([em1]hr[em2])re([em1]hr[em2])mur([em1]hr[em2]) et([em1]hr[em2]z) a([em1]hr[em2]) to([em1]hr[em2])ti([em1]hr[em2])us([em1]hr[em2]) per([em1]hr[em2])di([em1]hr[em2])ti([em1]hr[em2])on([em1]hr[em2])is([em1]hr[em2]) in([em1]hr[em2])cur([em1]hr[em2])su([em1]hr[em2]) 
+mi([em1]hr[em2])se([em1]hr[em2])ri([em1]hr[em2])cor([em1]hr[em2])di(i)ter(h) sal(g)ve(h_0i)mur.(i.) (::)
