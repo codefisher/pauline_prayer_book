@@ -54,12 +54,10 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        print(request.URL!.resourceSpecifier)
         if(request.URL!.scheme == "mailto" || request.URL!.scheme == "http") {
             UIApplication.sharedApplication().openURL(request.URL!)
             return false;
         } else if(request.URL!.scheme == "musicplay") {
-            print(request.URL!.resourceSpecifier)
             if(request.URL!.resourceSpecifier == "") {
                 if(player != nil) {
                     player?.stop()
@@ -70,7 +68,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
                 if(url == nil) {
                     return false
                 }
-                print(url)
                 do {
                     player = try AVMIDIPlayer(contentsOfURL: url!, soundBankURL: sounds!)
                     guard let player = player else { return false }
