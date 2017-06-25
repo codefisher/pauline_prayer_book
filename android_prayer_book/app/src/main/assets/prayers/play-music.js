@@ -68,7 +68,7 @@ function playSong(svgId, audioId, url, mutiple) {
                 top.insertBefore(circle, top.childNodes[0]);
 
                 var possibleNotes = svgDoc.querySelectorAll('use');
-                
+
                 for(var i = 0; i < possibleNotes.length; i++) {
                     var xlink = possibleNotes[i].getAttributeNS('http://www.w3.org/1999/xlink', 'href');
                     if(xlink) {
