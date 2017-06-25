@@ -6,6 +6,9 @@ if (typeof chantPlayer == "undefined") {
     // is gives access to application settings
     var chantPlayer = {
         play: function(songName) {
+            // first try to call the ios version
+            window.location = "musicplay:" + songName.replace("-", "_");
+            // now what could work on the desktop
             var src = MP3_PATH + songName + ".mp3";
             var oldAudio = document.getElementById('audio-element');
             if(oldAudio != null) {
@@ -20,6 +23,9 @@ if (typeof chantPlayer == "undefined") {
             audio.play();
         },
         stop: function() {
+            // first try to call the ios version
+            window.location = "musicplay:";
+            // now what could work on the desktop
             var oldAudio = document.getElementById('audio-element');
             if(oldAudio) {
                 oldAudio.pause();
