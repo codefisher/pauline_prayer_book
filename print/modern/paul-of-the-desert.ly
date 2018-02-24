@@ -28,7 +28,7 @@ musicOne = \relative c' {
 verseOne = \lyricmode {
   Paul of the des -- ert your sons im -- plore Aid as we carr -- y the Good News,
   Christ is the Savi -- or, Our sins he bore To all the earth, none re -- fused;
-  Saint Paul our Fa -- ther and found -- er, We ask for cour -- age like yours
+  Saint Paul our Fa -- ther and teach -- er, We ask for cour -- age like yours
   To con -- fess Je -- sus, With all our heart, To be true God and our Lord!
 }
 
