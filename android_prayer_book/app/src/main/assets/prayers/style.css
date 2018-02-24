@@ -172,6 +172,10 @@ hr {
     margin:1em 0;
 }
 
+.psalm {
+    clear:both;
+}
+
 .psalm-marker {
     color:#ff0000;
 }
@@ -183,4 +187,9 @@ hr {
 
 .indent-psalm-line {
     margin-left: 2em;
+}
+
+.reading {
+    color:red;
+    font-variant: small-caps;
 }
