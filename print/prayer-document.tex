@@ -8,5 +8,18 @@
 \checkoddpage\ifoddpage\else\newpage\mbox{}\fi%
 \includepdf[pagecommand={\thispagestyle{empty}},pages=1]{insert/a5/#1}}
 
+
 \input{prayer-header}
+
+\begin{document}
+
 \input{prayer-book-content}
+
+\pagestyle{empty}
+
+\tableofcontents
+
+\newpage\null\thispagestyle{empty}\newpage
+
+\end{document}
+

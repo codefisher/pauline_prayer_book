@@ -1,6 +1,6 @@
 % !TEX program = LuaLaTeX+se
 % !TEX encoding = UTF-8 Unicode
-\documentclass[twoside]{book}
+\documentclass[twoside,10pt]{book}
 \RequirePackage[paperheight=8.25in,paperwidth=5.125in,includehead,includefoot,top=0.625in,inner=0.5in,outer=0.625in,bottom=0.625in]{geometry}
 
 \newcommand*{\includeimage}[1]{%
@@ -10,4 +10,15 @@
 
 
 \input{prayer-header}
+
+\begin{document}
+
 \input{prayer-book-content}
+
+\pagestyle{empty}
+
+\tableofcontents
+
+\newpage\null\thispagestyle{empty}\newpage
+
+\end{document}

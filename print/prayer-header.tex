@@ -9,13 +9,21 @@
 \usepackage{ragged2e}
 \usepackage[center]{titlesec}
 \usepackage{tabularx}
+\usepackage{array}
+\usepackage{tabu}
 \usepackage{fancyhdr}
 \usepackage{pdfpages}
 \usepackage{environ}
 \usepackage{setspace}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage{pifont}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
+
+\newlength{\psalmindent}
+\setlength{\psalmindent}{2em}
 
 \titleformat{\paragraph}
   {\centering\normalfont\bfseries} % format
@@ -23,9 +31,9 @@
   {0pt} % sep
   {\large}
 
-\input{music/multi-line}
-\input{music/repeat-notes}
-\input{music/functions}
+\input{music-multi-line}
+\input{music-repeat-notes}
+\input{music-functions}
 
 \makeatletter
 \def\@makechapterhead#1{%
@@ -59,16 +67,27 @@
 
 \newcommand*{\red}[1]{\textcolor{red}{#1}}
 \newcommand*{\redit}[1]{\textit{\textcolor{red}{#1}}}
-\newcommand*{\instruction}[1]{\begin{addmargin}[\parindent]{0em}\textit{\textcolor{red}{#1}}\end{addmargin}}
-% \enlargethispage is a horrible hack to make sure there is always space for this
-\newcommand*{\reference}[1]{\enlargethispage{\baselineskip}\nopagebreak\hfill{\textcolor{red}{#1}}}
 
-\usepackage{changepage}
+\newcommand*{\rubric}[1]{\red{#1}}
+\newcommand*{\cross}[1]{\red{#1}}
+
+\newcommand*{\instruction}[1]{\begin{addmargin}[\parindent]{0em}\textit{\textcolor{red}{#1}}\end{addmargin}}
+\newcommand*{\titlerubric}[1]{\needspace{3\baselineskip}\smallbreak\noindent\textcolor{red}{#1}}
+% \enlargethispage is a horrible hack to make sure there is always space for this
+% \enlargethispage{\baselineskip}
+\newcommand*{\reference}[1]{\nopagebreak\unskip\hfill\penalty100\relax\hspace*{0.5em}\hspace*{\fill}\mbox{\textcolor{red}{#1}}}
+
+\newcommand*{\hrline}{\par {\centering\noindent\rule{\textwidth/2}{0.4pt}\par}}
+\newcommand*{\hrlinered}{{\color{red}\par {\centering\noindent\rule{\textwidth/2}{0.4pt}\par}}}
+
+\usepackage{changepage} %adjustwidth
+\usepackage{etoolbox}
+\AtBeginEnvironment{adjustwidth}{\partopsep\parskip}
 
 \newcommand{\prayer}[3][3em]{%
   \nopagebreak%
   \begin{adjustwidth}{#1}{0pt}%
-    \makebox[0pt][r]{\makebox[#1][l]{\bfseries \redit{#2}}}%
+    \makebox[0pt][r]{\makebox[#1][l]{\redit{#2}}}%
     \ignorespaces #3
   \end{adjustwidth}%
   \nopagebreak%
@@ -97,7 +116,21 @@
 \newenvironment{litany}
   {\list{\topsep=0pt}{%
    \setlength{\topsep}{0pt}%
+   \setlength{\partopsep}{0pt}%
    \setlength{\leftmargin}{2em}%
+   \setlength{\listparindent}{-2em}%
+   \setlength{\itemindent}{-2em}%
+   \setlength{\parsep}{\parskip}}%
+   \item[]}%
+  {\endlist}
+\makeatother
+
+\makeatletter
+\newenvironment{psalm}
+  {\list{\topsep=0pt}{%
+   \setlength{\topsep}{-1em}%
+   \setlength{\partopsep}{0pt}%
+   \setlength{\leftmargin}{\psalmindent}%
    \setlength{\listparindent}{-2em}%
    \setlength{\itemindent}{-2em}%
    \setlength{\parsep}{\parskip}}%
