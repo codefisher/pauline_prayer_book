@@ -1,0 +1,82 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass[twoside, 12pt]{book}
+\RequirePackage[a5paper,includehead,includefoot,top=0.5in,inner=0.5in,outer=0.5in,bottom=0.5in]{geometry}
+
+\input{hymn-header}
+
+\usepackage[splitindex]{imakeidx}
+\usepackage[font=footnotesize,columns=1]{idxlayout}
+
+\usepackage{paracol}
+
+\usepackage{remreset}
+\makeatletter
+\@removefromreset{subsection}{section}
+\renewcommand\thesubsection{\arabic{subsection}}
+\makeatother
+
+\makeindex[name=hymn-title,title={Index of Hymn Titles}]
+\makeindex[name=hymn-first-line,title={Index of Hymn First Lines}]
+
+\setcounter{tocdepth}{1}
+
+\begin{document}
+
+\pagestyle{empty}
+\hspace{0pt}
+\vfill
+
+\begin{center}
+\uppercase{\textbf{\huge Marian Valley} \par}
+\vspace{1em}
+\uppercase{\textbf{\large Shrine of Our Lady Help of Christians} \par}
+\vspace{3em}
+\uppercase{\textbf{\huge Hymn Book} \par}
+\end{center}
+
+\vfill
+
+\begin{center}
+Australia 2018
+\end{center}
+
+\hspace{0pt}
+\pagebreak
+
+\noindent Music Licence Holder: \\
+ORDER OF ST PAUL THE FIRST HERMIT \\
+MARIAN VALLEY. BEECHMONT ROAD \\
+CANUGNGRA \\
+QLD \hspace{3em} 4275
+\medskip
+
+\noindent Licence No. 2397 \\
+Customer No. ORPACAN
+\medskip
+
+\noindent Music Licence Provider: \\
+Word of Life International
+
+\newpage
+
+\newpageheader{Table of Contents}{Table of Contents}
+\tableofcontents
+
+\input{hymn-book-content}
+
+\newpageheader{Hymns}{Index Of Hymn Titles}
+\addcontentsline{toc}{chapter}{Index of Hymn Titles}
+
+\setindexprenote{\textit{All numbers refer the the page number.}}
+
+\printindex[hymn-title]
+
+\newpageheader{Hymns}{Index of Hymn First Lines}
+\addcontentsline{toc}{chapter}{Index of Hymn First Lines}
+\printindex[hymn-first-line]
+
+\newpage\null\thispagestyle{empty}\newpage
+\newpage\null\thispagestyle{empty}\newpage
+
+\end{document}

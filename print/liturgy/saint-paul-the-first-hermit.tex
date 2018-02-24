@@ -1,0 +1,21 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass[twoside]{book}
+\RequirePackage[a5paper,top=0.5in,inner=0.5in,outer=0.5in,bottom=0.5in]{geometry}
+
+\input{../prayer-header}
+
+\renewcommand{\newpageheader}[2]{}
+\pagestyle{empty}
+
+
+\begin{document}
+
+\input{mass/st-paul-the-first-hermit.tex}
+\input{lectionary/st-paul-the-first-hermit.tex}
+\input{mass/st-paul-general-intercessions.tex}
+\input{mass/renewal-vows.tex}
+\input{mass/st-paul-blessing-of-fruits.tex}
+\input{mass/st-paul-blessing-of-children.tex}
+
+\end{document}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+    <include file="mass/cover" />
+    <include file="office/calendar" />
+    <chapter title="Propers">
+        <section title="January 15 Solemnity of St. Paul the First Hermit" doc="st-paul-the-first-hermit.html"/>
+        <section title="January 16 Feast of Our Lady, Queen of Hermits" doc="mary-queen-of-hermits.html"/>
+        <section title="January 19 Memorial of St Macarius the Great, Abbot" doc="macarius.html"/>
+        <section title="January 20 Feast of Blessed Eusebius" doc="blessed-eusebius.html"/>
+        <section title="February 25 Memorial of St John Cassian, Abbot" doc="john-cassian.html" />
+        <section tilte="March 20 Memorial of St Joseph Bilczewski, Bishop" doc="joseph-bilczewski.html" />
+        <section tilte="April 1 Memorial of St Mary of Egypt, Hermit" doc="mary-egypt.html" />
+        <section tilte="May 9 Memorial of St Pachomius, Abbot" doc="pachomius.html" />
+        <section tilte="June 8 Memorial of St Hedwig, Queen" doc="hedwig.html" />
+        <section title="August 26 Solemnity of Our Lady of Czestochowa" doc="czestochowa.html"/>
+        <section title="September 24 Memorial of St Thecla, Virgin and Martyr" doc="thecla.html" />
+        <section title="October 30 Memorial of Mary, Mother and Mediatrix of Grace" doc="mary-grace.html" />
+        <section title="November 3 Commemoration of all the Departed of the Order" doc="departed.html" />
+        <section title="November 7 All the Saints of the Order" doc="saints.html" />
+    </chapter>
+    <appendix>
+        <chapter title="Saint Paul the First Hermit">
+            <section title="Renewal of Vows" doc="renewal-vows.html"/>
+            <section title="Solemnity of St. Paul the First Hermit General Intercessions"
+                     doc="st-paul-general-intercessions.html"/>
+            <section title="Blessing of Fruits" doc="st-paul-blessing-of-fruits.html"/>
+            <section title="Blessing of Children" doc="st-paul-blessing-of-children.html"/>
+        </chapter>
+        <chapter title="Our Lady Queen of Hermits">
+            <section title="Renewal of the Covenant with Mary" doc="renewal-covenant.html"/>
+        </chapter>
+        <chapter title="Blessed Eusebius">
+            <section title="Feast of Blessed Eusebius General Intercessions"
+                     doc="blessed-eusebius-general-intercessions.html"/>
+        </chapter>
+    </appendix>
+
+</index>

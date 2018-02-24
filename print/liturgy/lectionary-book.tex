@@ -1,0 +1,18 @@
+% !TEX program = LuaLaTeX+se
+% !TEX encoding = UTF-8 Unicode
+\documentclass[twoside]{book}
+\RequirePackage[a5paper,includehead,top=0.5in,inner=0.75in,outer=0.5in,bottom=0.5in]{geometry}
+
+\input{../prayer-header}
+
+\setlength{\psalmindent}{3.5em}
+
+\begin{document}
+    \input{lectionary.tex}
+
+    \pagestyle{empty}
+    \tableofcontents
+    \thispagestyle{empty}
+
+    \newpage\null\thispagestyle{empty}\newpage
+\end{document}

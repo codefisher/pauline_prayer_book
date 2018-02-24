@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<index>
+    <include file="office/cover" />
+    <include file="office/calendar" />
+    <chapter title="Solemnity of St. Paul the First Hermit, Father of the Order">
+        <section title="Evening Prayer I" doc="paul-evening-i.html"/>
+        <section title="Invitatory Psalm" doc="paul-invitatory.html"/>
+        <section title="Office of Readings" doc="paul-readings.html" />
+        <section title="Morning Prayer" doc="paul-morning.html" />
+        <section title="Prayer During the Day" doc="paul-little-hour.html" />
+        <section title="Evening Prayer II" doc="paul-evening-ii.html"/>
+    </chapter>
+    <chapter title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order">
+        <section title="Invitatory Psalm" doc="mary-hermits-invitatory.html"/>
+        <section title="Office of Readings" doc="mary-hermits-readings.html" />
+        <section title="Morning Prayer" doc="mary-hermits-morning.html" />
+        <section title="Prayer During the Day" doc="mary-hermits-little-hour.html" />
+        <section title="Evening Prayer" doc="mary-hermits-evening.html"/>
+    </chapter>
+    <chapter title="Memorial of St. Macarius the Great, Abbot">
+        <section title="Memorial of St. Macarius the Great, Abbot" doc="macarius.html" />
+    </chapter>
+    <chapter title="Feast of Blessed Eusebius">
+        <section title="Invitatory Psalm" doc="eusebius-invitatory.html"/>
+        <section title="Office of Readings" doc="eusebius-readings.html"/>
+        <section title="Morning Prayer" doc="eusebius-morning.html"/>
+        <section title="Prayer During the Day" doc="eusebius-little-hour.html"/>
+        <section title="Evening Prayer" doc="eusebius-evening.html"/>
+    </chapter>
+    <chapter title="Memorial of St John Cassian, Abbot">
+        <section title="Memorial of St John Cassian, Abbot" doc="john-cassian.html" />
+    </chapter>
+    <chapter title="Memorial of St. Joseph Bilczewski, Bishop">
+        <section title="Memorial of St. Joseph Bilczewski, Bishop" doc="joseph-bilczewski.html" />
+    </chapter>
+    <chapter title="Memorial of St. Mary of Egypt, Hermit">
+        <section title="Memorial of St. Mary of Egypt, Hermit" doc="mary-egypt.html" />
+    </chapter>
+    <chapter title="Memorial of St Pachomius, Abbot">
+        <section title="Memorial of St Pachomius, Abbot" doc="pachomius.html" />
+    </chapter>
+    <chapter title="Memorial of St Hedwig, Queen">
+        <section title="Memorial of St Hedwig, Queen" doc="hedwig.html" />
+    </chapter>
+    <chapter title="Solemnity of Our Lady of Czestochowa">
+        <section title="Evening Prayer I" doc="czestochowa-evening-i.html"/>
+        <section title="Invitatory Psalm" doc="czestochowa-invitatory.html"/>
+        <section title="Office of Readings" doc="czestochowa-readings.html" />
+        <section title="Morning Prayer" doc="czestochowa-morning.html" />
+        <section title="Prayer During the Day" doc="czestochowa-little-hour.html" />
+        <section title="Evening Prayer II" doc="czestochowa-evening-ii.html"/>
+    </chapter>
+    <chapter title="St Thecla, Virgin and Martyr">
+        <section title="St Thecla, Virgin and Martyr" doc="thecla.html" />
+    </chapter>
+    <appendix>
+        <chapter title="Night Prayer">
+            <section title="Night Prayer I" doc="night-i.html"/>
+            <section title="Night Prayer II" doc="night-ii.html"/>
+        </chapter>
+        <chapter title="Recuring Texts">
+            <section title="Invitatory Pslams" doc="invitatory.html"/>
+            <section title="Complementary Psalmody" doc="complementary-psalms.html"/>
+        </chapter>
+        <chapter title="Hymns">
+            <section title="The Common of The Blessed Virgin Mary" doc="hymns-mary.html" />
+            <section title="The Common of Men Saints" doc="hymns-men.html" />
+            <section title="Hymns for Night Prayer" doc="night-hymns.html" />
+            <section title="Anthems to the Blessed Virgin" doc="anthems-bvm.html"/>
+        </chapter>
+    </appendix>
+
+</index>
