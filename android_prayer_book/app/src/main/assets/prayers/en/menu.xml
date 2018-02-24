@@ -4,14 +4,14 @@
     <menuitem title="Afternoon Prayers" doc="afternoon.html" />
     <menuitem title="Second Meditation" doc="meditation.html" />
     <menuitem title="Evening Prayers" doc="evening.html" />
-    <menuitem title="Night Prayers" doc="night.html" />
+    <menuitem title="Night Prayer" doc="night.html" />
     <menuitem title="Prayer Before Repose" doc="repose.html" />
     <menuitem title="Prayers in the Refectory" doc="refectory.html" />
 
     <menu title="Life of Prayer and Sacrifice with Christ">
         <menuitem title="Prayers Of Adoration" doc="adoration.html" />
         <menuitem title="Divine Praises" doc="divine-praises.html" />
-        <menuitem title="An Act of Spiritual Communion" doc="spirtual-communion.html" />
+        <menuitem title="An Act of Spiritual Holy Communion" doc="spirtual-communion.html" />
         <menuitem title="Preparation For Holy Mass" doc="before-holy-mass.html" />
         <menuitem title="Thanksgiving After Holy Mass" doc="after-holy-mass.html" />
         <menuitem title="Prayers for Special Occasions" doc="special-occasions.html" />
@@ -22,11 +22,11 @@
         <menuitem title="Litany of the Blessed Virgin Mary" doc="loreto.html" />
         <menuitem title="Prayer of St. Bernard (The Memorare)" doc="memorare.html" />
         <menuitem title="Litany of Our Blessed Virgin Mary “Kleczki Jasnagorskie”" doc="kleczki.html" />
-        <menuitem title="Marian Antiphones" doc="marian-antiphones.html" />
+        <menuitem title="Marian Antiphons" doc="marian-antiphons.html" />
         <menuitem title="The Holy Rosary" doc="rosary.html" />
         <menuitem title="An act of Consecration to the Mother of God" doc="consecration.html" />
         <menuitem title="Invocation to Implore the Intercession of the Immaculate Conception" doc="mary-invocation.html" />
-        <menuitem title="An act of Expiation to the Immaculate Heart of Mary" doc="mary-expiation.html" />
+        <menuitem title="An act of Reparation to the Immaculate Heart of Mary" doc="mary-expiation.html" />
         <menuitem title="Filial and Apostolic Consecration to the Heart of Mary" doc="consecration-heart-mary.html" />
         <menuitem title="Prayer to the Queen of Hermits for our Order" doc="queen-hermits.html" />
         <menuitem title="An Act of Consecration to Mary the Queen and Protectress of the Order" doc="queen-order.html" />
