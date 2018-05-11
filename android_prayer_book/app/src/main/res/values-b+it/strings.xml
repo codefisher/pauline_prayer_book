@@ -14,6 +14,7 @@
         <item>Inglese</item>
         <item>Latino</item>
         <item>Polacco</item>
+        <item>Slovacco</item>
         <item>Tedesco</item>
     </string-array>
     <string-array name="pref_language_values">
@@ -22,6 +23,7 @@
         <item>en</item>
         <item>la</item>
         <item>pl</item>
+        <item>sk</item>
         <item>de</item>
     </string-array>
     <string name="pref_language">Lingua delle Preghiere</string>
@@ -33,11 +35,15 @@
     <string name="pref_font_size">Dimensione del carattere</string>
 
     <string-array name="pref_font_size_titles">
-        <item>Molto piccolo</item>
-        <item>Piccolo</item>
-        <item>Medio</item>
-        <item>Grande</item>
-        <item>Molto grande</item>
+        <item>8</item>
+        <item>11</item>
+        <item>14</item>
+        <item>17</item>
+        <item>20</item>
+        <item>24</item>
+        <item>28</item>
+        <item>36</item>
+        <item>48</item>
     </string-array>
     <string-array name="pref_font_size_values">
         <item>8</item>
@@ -45,5 +51,9 @@
         <item>14</item>
         <item>17</item>
         <item>20</item>
+        <item>24</item>
+        <item>28</item>
+        <item>36</item>
+        <item>48</item>
     </string-array>
 </resources>

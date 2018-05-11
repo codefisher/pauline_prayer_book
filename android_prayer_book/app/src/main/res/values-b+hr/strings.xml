@@ -14,6 +14,7 @@
         <item>Latinski</item>
         <item>Njemački</item>
         <item>Poljski</item>
+        <item>Slovački</item>
         <item>Talijanski</item>
     </string-array>
     <string-array name="pref_language_values">
@@ -22,6 +23,7 @@
         <item>la</item>
         <item>de</item>
         <item>pl</item>
+        <item>sk</item>
         <item>it</item>
     </string-array>
     <string name="pref_language">Jezik molitava</string>
@@ -33,11 +35,15 @@
     <string name="pref_font_size">Veličina slova</string>
 
     <string-array name="pref_font_size_titles">
-        <item>Vrlo mala</item>
-        <item>Mala</item>
-        <item>Srednja</item>
-        <item>Velika</item>
-        <item>Vrlo velika</item>
+        <item>8</item>
+        <item>11</item>
+        <item>14</item>
+        <item>17</item>
+        <item>20</item>
+        <item>24</item>
+        <item>28</item>
+        <item>36</item>
+        <item>48</item>
     </string-array>
     <string-array name="pref_font_size_values">
         <item>8</item>
@@ -45,5 +51,9 @@
         <item>14</item>
         <item>17</item>
         <item>20</item>
+        <item>24</item>
+        <item>28</item>
+        <item>36</item>
+        <item>48</item>
     </string-array>
 </resources>

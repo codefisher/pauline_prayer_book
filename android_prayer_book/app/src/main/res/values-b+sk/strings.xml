@@ -1,38 +1,37 @@
 <resources>
-    <string name="app_name">Pauliner Gebete</string>
-    <string name="settings">Einstellungen</string>
+    <string name="app_name">Paulini Modlitby</string>
+    <string name="settings">Nastavenie</string>
     <string name="index">Index</string>
-    <string name="about">Über die Bewerbung</string>
-    <string name="title_activity_settings">Einstellungen</string>
+    <string name="about">O aplikácii</string>
+    <string name="title_activity_settings">Nastavenie</string>
     <string name="title_activity_index">Index</string>
-
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
-        <item>Deutsch</item>
-        <item>Englisch</item>
-        <item>Italienisch</item>
-        <item>Kroatisch</item>
-        <item>Lateinisch</item>
-        <item>Polnisch</item>
-        <item>Slowakisch</item>
+        <item>Anglický</item>
+        <item>Chrovátsky</item>
+        <item>Nemecký</item>
+        <item>Latinský</item>
+        <item>Poľský</item>
+        <item>Slovenský</item>
+        <item>Taliansky</item>
     </string-array>
     <string-array name="pref_language_values">
-        <item>de</item>
         <item>en</item>
-        <item>it</item>
         <item>hr</item>
+        <item>de</item>
         <item>la</item>
         <item>pl</item>
         <item>sk</item>
+        <item>it</item>
     </string-array>
-    <string name="pref_language">Gebetssprache</string>
-    <string name="pref_language_default">de</string>
-    <string name="pref_language_title">Sprache</string>
+    <string name="pref_language">Modlitebný jazyk</string>
+    <string name="pref_language_default">sk</string>
+    <string name="pref_language_title">Jazyk</string>
 
-    <string name="pref_settings_title">Einstellungen</string>
+    <string name="pref_settings_title">Nastavenie</string>
     <string name="pref_font_size_default">14</string>
-    <string name="pref_font_size">Schriftgröße</string>
+    <string name="pref_font_size">Veľkosť písma</string>
 
     <string-array name="pref_font_size_titles">
         <item>8</item>
