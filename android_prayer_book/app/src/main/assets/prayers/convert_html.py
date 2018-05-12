@@ -182,6 +182,11 @@ def format_psalm(node, *args, **kwargs):
     root = Element("div")
     root.attrib["class"] = "psalm"
     text = (node.text if node.text else '') + ''.join(html.tostring(n).decode() for n in node)
+    if "red" in node.attrib:
+        red_node = Element("div")
+        red_node.attrib["class"] = "psalm-red"
+        red_node.append(from_string(node.attrib.get("red")))
+        root.append(red_node)
     for stanza in text.strip().split("\n\n"):
         stanza_node = Element("div")
         stanza_node.attrib["class"] = "stanza"
