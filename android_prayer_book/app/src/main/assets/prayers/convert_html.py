@@ -44,6 +44,8 @@ def format_prayer(node, *args, **kwargs):
     if "lines" in node.attrib:
         items = []
         for row in text.strip().split("\n"):
+            if not row.strip():
+                row = "&nbsp;"
             items.append("""<div class="prayer-line">{}</div>""".format(row))
         text = "".join(items)
     if "red" in node.attrib:
