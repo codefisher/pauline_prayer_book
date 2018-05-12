@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <menu>
-    <menuitem title="Ranné Modlitby" doc="morning.html" />
-    <menuitem title="Poludňajšie Modlitby" doc="afternoon.html" />
-    <menuitem title="Druhá Meditácia" doc="meditation.html" />
-    <menuitem title="Večerné Modlitby" doc="evening.html" />
-    <menuitem title="Night Prayer" doc="night.html" />
-    <menuitem title="Prayer Before Repose" doc="repose.html" />
-    <menuitem title="Prayers in the Refectory" doc="refectory.html" />
-    <menuutem title="Litánie k svätému Pavlovi" doc="saint-paul.html" />
-    <menuutem title="Prosby k Anjelom strážnym" doc="angels.html" />
-    <menuutem title="Litánie k svätému Jozefovi" doc="joseph.html" />
-    <menuutem title="Litánie k Najsvätejšiemu menu Ježiš" doc="name-of-jesus.html" />
-    <menuutem title="Litánie k Božskému srdcu Ježišovmu" doc="sacred-heart.html" />
-    <menuutem title="Litánie k Predrahej krvi Kristovej" doc="precious-blood.html" />
-    <menuutem title="K piatim ránam Ježišovým" doc="five-wounds.html" />
-    <menuutem title="Výzvy o pokoru" doc="humility.html" />
-    <menuutem title="Loretánske litánie" doc="loreto.html" />
+    <menuitem title="Ranné modlitby" doc="morning.html" />
+    <menuitem title="Poludňajšie modlitby" doc="afternoon.html" />
+    <menuitem title="Druhá meditácia" doc="meditation.html" />
+    <menuitem title="Večerné modlitby" doc="evening.html" />
+    <menuitem title="Modlitba na záver dňa" doc="night.html" />
+    <menuitem title="Modlitba pred spaním" doc="repose.html" />
+    <menuitem title="Modlitba v refektóriu" doc="refectory.html" />
+    <menuitem title="Litánie k svätému Pavlovi" doc="saint-paul.html" />
+    <menuitem title="Prosby k Anjelom strážnym" doc="angels.html" />
+    <menuitem title="Litánie k svätému Jozefovi" doc="joseph.html" />
+    <menuitem title="Litánie k Najsvätejšiemu menu Ježiš" doc="name-of-jesus.html" />
+    <menuitem title="Litánie k Božskému srdcu Ježišovmu" doc="sacred-heart.html" />
+    <menuitem title="Litánie k Predrahej krvi Kristovej" doc="precious-blood.html" />
+    <menuitem title="K piatim ránam Ježišovým" doc="five-wounds.html" />
+    <menuitem title="Výzvy o pokoru" doc="humility.html" />
+    <menuitem title="Loretánske litánie" doc="loreto.html" />
     <menuitem title="Jasnohorská pobožnosť – „Klęczki”" doc="kleczki.html" />
 </menu>
