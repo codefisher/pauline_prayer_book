@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <menuitem title="Ranné Modlitby" doc="morning.html" />
+    <menuitem title="Poludňajšie Modlitby" doc="afternoon.html" />
+    <menuitem title="Druhá Meditácia" doc="meditation.html" />
+    <menuitem title="Večerné Modlitby" doc="evening.html" />
+    <menuitem title="Night Prayer" doc="night.html" />
+    <menuitem title="Prayer Before Repose" doc="repose.html" />
+    <menuitem title="Prayers in the Refectory" doc="refectory.html" />
+
+    <menuitem title="Jasnohorská pobožnosť – „Klęczki”" doc="kleczki.html" />
+</menu>
