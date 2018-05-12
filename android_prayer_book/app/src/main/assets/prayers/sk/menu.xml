@@ -7,6 +7,14 @@
     <menuitem title="Night Prayer" doc="night.html" />
     <menuitem title="Prayer Before Repose" doc="repose.html" />
     <menuitem title="Prayers in the Refectory" doc="refectory.html" />
-
+    <menuutem title="Litánie k svätému Pavlovi" doc="saint-paul.html" />
+    <menuutem title="Prosby k Anjelom strážnym" doc="angels.html" />
+    <menuutem title="Litánie k svätému Jozefovi" doc="joseph.html" />
+    <menuutem title="Litánie k Najsvätejšiemu menu Ježiš" doc="name-of-jesus.html" />
+    <menuutem title="Litánie k Božskému srdcu Ježišovmu" doc="sacred-heart.html" />
+    <menuutem title="Litánie k Predrahej krvi Kristovej" doc="precious-blood.html" />
+    <menuutem title="K piatim ránam Ježišovým" doc="five-wounds.html" />
+    <menuutem title="Výzvy o pokoru" doc="humility.html" />
+    <menuutem title="Loretánske litánie" doc="loreto.html" />
     <menuitem title="Jasnohorská pobožnosť – „Klęczki”" doc="kleczki.html" />
 </menu>
