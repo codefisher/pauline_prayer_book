@@ -72,4 +72,39 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Blessing by a Bishop" doc="bishop-la.html" />
         <menuitem title="Blessing by a Priest" doc="priest-la.html" />
     </menu>
+
+    <menu title="Divine Office">
+        <menuitem title="Solemnity of St. Paul the First Hermit, Father of the Order" doc="office/paul.html" />
+        <menuitem title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order" doc="office/mary-hermits.html" />
+        <menuitem title="Memorial of St. Macarius the Great, Abbot" doc="office/macarius.html"/>
+        <menuitem title="Feast of Blessed Eusebius, Priest, Founder of the Order" doc="office/eusebius.html" />
+        <menuitem title="Memorial of St John Cassian, Abbot" doc="office/john-cassian.html" />
+        <menuitem title="Memorial of St. Joseph Bilczewski, Bishop" doc="office/joseph-bilczewski.html" />
+        <menuitem title="Memorial of St. Mary of Egypt, Hermit" doc="office/mary-egypt.html" />
+        <menuitem title="Memorial of St Pachomius, Abbot" doc="office/pachomius.html" />
+        <menuitem title="Memorial of St Hedwig, Queen" doc="office/hidwig.html" />
+        <menuitem title="Solemnity of Our Lady of Czestochowa" doc="office/czestochowa.html" />
+        <menuitem title="Memorial of St Thecla, Virgin and Martyr" doc="office/thecla.html" />
+        <menuitem title="Memorial of Mary, Mother and Mediatrix of Grace" doc="office/mary-grace.html" />
+        <menuitem title="Commemoration of all the Departed of the Order" doc="office/departed.html" />
+        <menuitem title="All the Saints of the Order, Invitatory" doc="office/saints.html" />
+    </menu>
+
+    <menu title="Mass">
+        <menuitem title="Solemnity of St. Paul the First Hermit, Father of the Order" doc="mass/st-paul-the-first-hermit.html" />
+        <menuitem title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order" doc="mass/mary-queen-of-hermits.html" />
+        <menuitem title="Memorial of St. Macarius the Great, Abbot" doc="mass/macarius.html"/>
+        <menuitem title="Feast of Blessed Eusebius, Priest, Founder of the Order" doc="mass/blessed-eusebius.html" />
+        <menuitem title="Memorial of St John Cassian, Abbot" doc="mass/john-cassian.html" />
+        <menuitem title="Memorial of St. Joseph Bilczewski, Bishop" doc="mass/joseph-bilczewski.html" />
+        <menuitem title="Memorial of St. Mary of Egypt, Hermit" doc="mass/mary-egypt.html" />
+        <menuitem title="Memorial of St Pachomius, Abbot" doc="mass/pachomius.html" />
+        <menuitem title="Memorial of St Hedwig, Queen" doc="mass/hidwig.html" />
+        <menuitem title="Solemnity of Our Lady of Czestochowa" doc="mass/czestochowa.html" />
+        <menuitem title="Memorial of St Thecla, Virgin and Martyr" doc="mass/thecla.html" />
+        <menuitem title="Memorial of Mary, Mother and Mediatrix of Grace" doc="mass/mary-grace.html" />
+        <menuitem title="Commemoration of all the Departed of the Order" doc="mass/departed.html" />
+        <menuitem title="All the Saints of the Order, Invitatory" doc="mass/saints.html" />
+        <menuitem title="General Intercessions for Conventual Mass" doc="mass/conventual-general-intercessions.html" />
+    </menu>
 </menu>
