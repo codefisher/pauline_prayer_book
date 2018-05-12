@@ -58,6 +58,10 @@ h4 {
     color:red;
 }
 
+hr.rubric {
+    display:none;
+}
+
 .indented-prayer {
     margin-left:6em;
 }
