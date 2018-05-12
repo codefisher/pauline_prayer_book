@@ -94,7 +94,10 @@
 }
 
 % add illumination to some chant
-\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
+%\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
+
+\input GoudyIn.fd
+\newcommand*\goudy{\usefont{U}{GoudyIn}{xl}{n}}
 
 \makeatletter
 \def\musicillumination{\@ifnextchar[{\@with}{\@without}}

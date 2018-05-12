@@ -17,7 +17,7 @@
 \usepackage{setspace}
 \usepackage{needspace}
 \usepackage{xcolor}
-\usepackage{pifont}
+\usepackage{pifont} % used for dingbat
 \usepackage{paracol}
 
 \setcounter{secnumdepth}{3}
@@ -29,24 +29,8 @@
   {0pt} % sep
   {\large}
 
+\titlespacing*{\chapter}{0pt}{-0pt}{40pt}
 
-\makeatletter
-\def\@makechapterhead#1{%
-  \vspace*{50\p@}%
-  {\parindent \z@ \raggedright \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-        %\huge\bfseries \@chapapp\space \thechapter
-        \Huge\bfseries \thechapter.\space%
-        %\par\nobreak
-        %\vskip 20\p@
-      \fi
-    \fi
-    \interlinepenalty\@M
-    \Huge \bfseries #1\par\nobreak
-    \vskip 40\p@
-  }}
-\makeatother
 
 \newcommand{\newpageheader}[2]{\fancypagestyle{#2}{%
 	\fancyhead{}
@@ -87,16 +71,6 @@
   \nopagebreak%
 }
 
-% add illumination to some chant
-\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
-
-\makeatletter
-\def\musicillumination{\@ifnextchar[{\@with}{\@without}}
-\def\@with[#1]#2{\greillumination{\fontsize{#1}{#1}\selectfont \goudy #2}}
-\def\@without#1{\greillumination{\fontsize{56pt}{56pt}\selectfont \goudy #1}}
-\makeatother
-
-
 \newcommand\responce[1]{%
   \unskip\hfill\penalty100\relax\hspace*{0.5em}\hspace*{\fill}\mbox{\textbf{#1}}%
 }
@@ -104,7 +78,6 @@
 \usepackage{enumitem}
 
 \setlist[itemize]{noitemsep, topsep=0pt}
-
 
 \makeatletter
 \newenvironment{litany}

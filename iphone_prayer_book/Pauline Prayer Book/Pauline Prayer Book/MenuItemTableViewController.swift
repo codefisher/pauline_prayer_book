@@ -8,9 +8,9 @@
 
 import UIKit
 
-class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate, UINavigationBarDelegate {
+class MenuItemTableViewController: UITableViewController, XMLParserDelegate, UINavigationBarDelegate {
     
-    var parser = NSXMLParser()
+    var parser = XMLParser()
     
     class MenuItem {
         var title: String = ""
@@ -50,21 +50,21 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate, U
         super.viewDidLoad()
         //self.navigationController?.navigationBar.delegate = self
         
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard //UserDefaults()
         
-        var language = defaults.stringForKey("prayer_language")
+        var language = defaults.string(forKey:"prayer_language")
         if language == nil {
             language = NSLocalizedString("default_locale", comment: "")
         }
-        let menuFile = NSBundle.mainBundle().URLForResource("prayers/" + language! + "/menu", withExtension: "xml")
-        parser = NSXMLParser(contentsOfURL: menuFile!)!
+        let menuFile = Bundle.main.url(forResource:"prayers/" + language! + "/menu", withExtension: "xml")
+        parser = XMLParser(contentsOf: menuFile!)!
         parser.delegate = self
         parser.parse()
         
         currentMenuitems = menuitems
     }
     
-    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
         if elementName == "menuitem" {
             if(menuTitle == "") {
                 menuitems.append(MenuItem(aTitle: attributeDict["title"]!, aDoc: attributeDict["doc"]!))
@@ -76,7 +76,7 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate, U
         }
     }
     
-    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "menu" {
             menuitems.append(MenuItem(aTitle: menuTitle, aChildren: submenuitems))
             menuTitle = ""
@@ -92,31 +92,31 @@ class MenuItemTableViewController: UITableViewController, NSXMLParserDelegate, U
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return currentMenuitems.count
     }
 
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCellWithIdentifier("MenuTableViewCell", forIndexPath: indexPath) as? MenuTableViewCell else { fatalError() }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuTableViewCell", for: indexPath as IndexPath) as? MenuTableViewCell else { fatalError() }
         cell.label.text = currentMenuitems[indexPath.row].getTitle()
         return cell
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let menuitem = currentMenuitems[indexPath.row]
         if menuitem.getDoc() == "" {
             currentMenuitems = (menuitem.getChildren() as? [MenuItem])!
             tableView.reloadData()
         } else {
-            navigationController?.popViewControllerAnimated(true)
-            let nav  = UIApplication.sharedApplication().keyWindow?.rootViewController as! UINavigationController
+            navigationController?.popViewController(animated: true)
+            let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
             let view = nav.viewControllers[0] as! ViewController
-            view.loadPage(menuitem.getDoc().stringByReplacingOccurrencesOfString(".html", withString: ""))
+            view.loadPage(page: menuitem.getDoc().replacingOccurrences(of:".html", with: ""))
         }
     }
     /*

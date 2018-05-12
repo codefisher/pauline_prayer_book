@@ -19,9 +19,6 @@ class ViewController: UIViewController, UIWebViewDelegate {
     let SegueMenuViewControler = "MenuViewControler"
     let SegueMenuItemTableViewController = "MenuItemTableViewController"
 
-    
-    @IBOutlet weak var indexButton: UIBarButtonItem!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         webview.delegate = self
@@ -35,41 +32,41 @@ class ViewController: UIViewController, UIWebViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        updateFontSize(webview)
+        updateFontSize(webView: webview)
     }
     
     func updateFontSize(webView: UIWebView) {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        var fontSize = defaults.stringForKey("font_size")
+        let defaults = UserDefaults.standard //UserDefaults()
+        var fontSize = defaults.string(forKey: "font_size")
         if fontSize == nil {
             fontSize = "14"
         }
-        webView.stringByEvaluatingJavaScriptFromString("document.body.style.fontSize = \"" + fontSize! + "px\"")
+        webView.stringByEvaluatingJavaScript(from: "document.body.style.fontSize = \"" + fontSize! + "px\"")
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        updateFontSize(webView)
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        updateFontSize(webView: webView)
     }
     
-    func webView(webView: UIWebView, shouldStartLoadWithRequest request: NSURLRequest, navigationType: UIWebViewNavigationType) -> Bool {
-        if(request.URL!.scheme == "mailto" || request.URL!.scheme == "http") {
-            UIApplication.sharedApplication().openURL(request.URL!)
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if(request.url!.scheme == "mailto" || request.url!.scheme == "http") {
+            UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
             return false;
-        } else if(request.URL!.scheme == "musicplay") {
-            if(request.URL!.resourceSpecifier == "") {
+        } else if(request.url!.scheme == "musicplay") {
+            if(request.url!.path == "") {
                 if(player != nil) {
                     player?.stop()
                 }
             } else {
-                let url = NSBundle.mainBundle().URLForResource("raw/" + request.URL!.resourceSpecifier, withExtension: "mid")
-                let sounds = NSBundle.mainBundle().URLForResource("jeux14", withExtension: "sf2")
+                let url = Bundle.main.url(forResource: "raw/" + request.url!.path, withExtension: "mid")
+                let sounds = Bundle.main.url(forResource: "jeux14", withExtension: "sf2")
                 if(url == nil) {
                     return false
                 }
                 do {
-                    player = try AVMIDIPlayer(contentsOfURL: url!, soundBankURL: sounds!)
+                    player = try AVMIDIPlayer(contentsOf: url!, soundBankURL: sounds!)
                     guard let player = player else { return false }
                     
                     player.prepareToPlay()
@@ -84,38 +81,37 @@ class ViewController: UIViewController, UIWebViewDelegate {
     }
     
     func languageChanged() {
-        loadPage("front")
+        loadPage(page: "front")
     }
     
     func loadPage(page: String) {
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard //UserDefaults()
         
-        var language = defaults.stringForKey("prayer_language")
+        var language = defaults.string(forKey: "prayer_language")
         if language == nil {
             language = NSLocalizedString("default_locale", comment: "")
         }
         
-        var htmlFile = NSBundle.mainBundle().URLForResource("prayers/" + language! + "/" + page, withExtension: "html" )
+        var htmlFile = Bundle.main.url(forResource: "prayers/" + language! + "/" + page, withExtension: "html" )
         //let html = try? String(contentsOfFile: htmlFile!, encoding: NSUTF8StringEncoding)
         if(htmlFile == nil) {
-            htmlFile = NSBundle.mainBundle().URLForResource("prayers/" + language! + "/front", withExtension: "html" )
+            htmlFile = Bundle.main.url(forResource: "prayers/" + language! + "/front", withExtension: "html" )
         }
-        let url = NSURLRequest(URL: htmlFile!)
+        let url = URLRequest(url: htmlFile!)
         webview.loadRequest(url)
     }
 
     //MARK: Actions
-    
-    @IBAction func indexAction(sender: UIBarButtonItem) {
-        performSegueWithIdentifier(SegueMenuItemTableViewController, sender: self)
 
+    @IBAction func indexButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: SegueMenuItemTableViewController, sender: self)
     }
     
-    @IBAction func menuButton(sender: UIBarButtonItem) {
-        performSegueWithIdentifier(SegueMenuViewControler, sender: self)
+    @IBAction func menuButton(_ sender: UIBarButtonItem) {
+        performSegue(withIdentifier: SegueMenuViewControler, sender: self)
     }
     
-
+    
 
 }
 

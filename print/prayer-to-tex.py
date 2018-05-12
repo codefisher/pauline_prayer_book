@@ -205,7 +205,10 @@ def prayer(node):
     if "leader" in node.attrib.get('class', ''):
         text = r"\textbf{%s}" % text
         #red = r"\textbf{%s}" % red
-    text = r"\prayer{%s}{%s}" % (red, text)
+    if "indent" in node.attrib:
+        text = r"\prayer[%s]{%s}{%s}" % (node.attrib.get("indent"), red, text)
+    else:
+        text = r"\prayer{%s}{%s}" % (red, text)
     if node.attrib.get('lines'):
         return (r"\begin{litany}%s\end{litany}" % text) + "\n"
     if node.attrib.get('class') == 'leader' and last_was_space == False:
@@ -276,6 +279,8 @@ def hymn(node):
             result.append(r"\needspace{%s\baselineskip}" % len(lines))
         for line in lines:
             line = line.strip()
+            if not line:
+                continue
             match = number_start.match(line)
             if match:
                 result.append(r"\item[%s]" % match.group(0))
@@ -499,7 +504,7 @@ def parse_html(doc, node, fp):
         nodes = html.fromstring(text)
         print(doc)
         for title in nodes.xpath("//title"):
-            if node and title.text.strip() != node.attrib.get('title').strip():
+            if len(node) and title.text.strip() != node.attrib.get('title').strip():
                 print("'{}' != '{}'".format(title.text, node.attrib.get('title')))
         for body in nodes.xpath("//body"):
             write_tex(body, fp, doc)

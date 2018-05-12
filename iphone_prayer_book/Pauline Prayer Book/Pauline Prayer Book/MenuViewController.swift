@@ -23,7 +23,7 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard // standardUserDefaults()
         
         // Connect data:
         self.prayerLanguage.delegate = self
@@ -38,32 +38,29 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
                         NSLocalizedString("Latin", comment: ""),
                         NSLocalizedString("Italian", comment: ""),
                         NSLocalizedString("German", comment: ""),
-                        NSLocalizedString("Croation", comment: "")]
-        languageValues = ["en", "pl", "la", "it", "de", "hr"]
+                        NSLocalizedString("Croation", comment: ""),
+                        NSLocalizedString("Slovak", comment: "")]
+        languageValues = ["en", "pl", "la", "it", "de", "hr", "sk"]
         
-        var language = defaults.stringForKey("prayer_language")
+        var language = defaults.string(forKey: "prayer_language")
         if language == nil {
             language = NSLocalizedString("default_locale", comment: "")
         }
         
-        let activeLanguage = languageValues.indexOf(language!)
+        let activeLanguage = languageValues.index(of: language!)
         if activeLanguage != nil {
             self.prayerLanguage.selectRow(activeLanguage!, inComponent: 0, animated: false)
         }
         
-        fontSizeData = [NSLocalizedString("Very Small", comment: ""),
-                        NSLocalizedString("Small", comment: ""),
-                        NSLocalizedString("Medium", comment: ""),
-                        NSLocalizedString("Large", comment: ""),
-                        NSLocalizedString("Very Large", comment: "")]
-        fontSizeValue = ["8", "11", "14", "17", "20"]
+        fontSizeData = ["8", "11", "14", "17", "20", "24", "28", "32", "36", "48"]
+        fontSizeValue = ["8", "11", "14", "17", "20", "24", "28", "32", "36", "48"]
  
-        var fontSize = defaults.stringForKey("font_size")
+        var fontSize = defaults.string(forKey: "font_size")
         if fontSize == nil {
             fontSize = "14"
         }
         
-        let activeFontSize = fontSizeValue.indexOf(fontSize!)
+        let activeFontSize = fontSizeValue.index(of: fontSize!)
         if activeFontSize != nil {
             self.fontSize.selectRow(activeFontSize!, inComponent: 0, animated: false)
         }
@@ -75,12 +72,12 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     // The number of columns of data
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     // The number of rows of data
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if pickerView == self.prayerLanguage {
             return languageData.count
         } else {
@@ -90,7 +87,7 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     // The data to return for the row and component (column) that's being passed in
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if pickerView == self.prayerLanguage {
             return languageData[row]
         } else {
@@ -99,16 +96,16 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
     // Catpure the picker view selection
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
-        let defaults = NSUserDefaults.standardUserDefaults()
+        let defaults = UserDefaults.standard //UserDefaults()
 
         if pickerView == self.prayerLanguage {
-            defaults.setObject(languageValues[row], forKey: "prayer_language")
+            defaults.set(languageValues[row], forKey: "prayer_language")
             self.languageChange = true
         } else {
-            defaults.setObject(fontSizeValue[row], forKey: "font_size")
+            defaults.set(fontSizeValue[row], forKey: "font_size")
         }
     }
     
@@ -116,20 +113,20 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     // MARK: - Navigation
 
-    override func willMoveToParentViewController(parent: UIViewController?) {
-        super.willMoveToParentViewController(parent)
+    override func willMove(toParentViewController parent: UIViewController?) {
+        super.willMove(toParentViewController: parent)
         if parent == nil && self.languageChange {
-            let nav  = UIApplication.sharedApplication().keyWindow?.rootViewController as! UINavigationController
+            let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
             let view = nav.viewControllers[0] as! ViewController
             view.languageChanged()
         }
     }
     
     @IBAction func about(sender: UIButton) {
-        navigationController?.popViewControllerAnimated(true)
-        let nav  = UIApplication.sharedApplication().keyWindow?.rootViewController as! UINavigationController
+        navigationController?.popViewController(animated: true)
+        let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
         let view = nav.viewControllers[0] as! ViewController
-        view.loadPage("about")
+        view.loadPage(page: "about")
         
     }
 

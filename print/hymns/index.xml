@@ -12,12 +12,6 @@
         <section title="Exposition" doc="exposition.html"/>
         <section title="Benediction" doc="benediction.html"/>
     </chapter>
-    <chapter title="Friday">
-        <section title="Litany of The Sacred Heart of Jesus" doc="litany-of-the-sacred-heart-of-jesus.html"
-                 nobreak="nobreak"/>
-        <section title="Act of Consecration to the Sacred Heart of Jesus"
-                 doc="act-of-consecration-to-sacred-heart.html"/>
-    </chapter>
     <chapter title="First Saturday and Fatima Day">
         <section title="The Holy Rosary" doc="marian/rosary.html" nobreak="nobreak"/>
         <section title="The Mysteries of the Rosary" doc="marian/mysteries-of-the-rosary.html" nobreak="nobreak"/>
@@ -37,6 +31,12 @@
         <section title="Tuesday - Litany of the Guardian Angels" doc="days/tuesday.html"/>
         <section title="Wednesday – Prayer to St. Joseph" doc="days/wednesday.html"/>
         <section title="Thursday – Prayer for Priests" doc="days/thursday.html"/>
+        <chapter title="Friday – The Sacred Heart of Jesus">
+            <section title="Litany of The Sacred Heart of Jesus" doc="litany-of-the-sacred-heart-of-jesus.html"
+                     nobreak="nobreak"/>
+            <section title="Act of Consecration to the Sacred Heart of Jesus"
+                     doc="act-of-consecration-to-sacred-heart.html"/>
+        </chapter>
     </chapter>
     <chapter title="Hymns">
         <chapter title="Advent">
@@ -135,11 +135,13 @@
             <section title="Amazing Grace" doc="general/amazing-grace.html"/>
             <section title="As Gentle as Silence (Oh, The Love of My Lord Is the Essence)"
                      doc="general/as-gentle-as-silence.html" nobreak="nobreak"/>
+            <section title="As we gather at your table" doc="general/as-we-gather-at-your-table.html" nobreak="nobreak" />
+            <section title="A Trusting Psalm" doc="general/a-trusting-psalm.html" nobreak="nobreak" />
             <section title="Be Not Afraid" doc="general/be-not-afraid.html" nobreak="nobreak"/>
-            <section title="Be Still and Know That I Am God" doc="general/be-still-and-know-that-i-am-god.html"/>
+            <section title="Be Still and Know That I Am God" doc="general/be-still-and-know-that-i-am-god.html" nobreak="nobreak" />
             <section title="Be Still for the Presence of the Lord"
                      doc="general/be-still-for-the-presence-of-the-lord.html" nobreak="nobreak"/>
-            <section title="Be Still, My Soul" doc="general/be-still-by-soul.html" nobreak="nobreak"/>
+            <section title="Be Still, My Soul" doc="general/be-still-by-soul.html"/>
             <section title="Be Thou My Vision, O Lord of My Heart"
                      doc="general/be-thou-my-vision-o-lord-of-my-heart.html" nobreak="nobreak"/>
             <section title="Blessed Jesus, At Thy Word" doc="general/blessed-jesus-at-thy-word.html" nobreak="nobreak"/>
@@ -174,8 +176,7 @@
             <section title="In Faith and Hope and Love" doc="general/in-faith-and-hope-and-love.html"
                      nobreak="nobreak"/>
             <section title="Lay Your Hands" doc="general/lay-your-hands.html" nobreak="nobreak"/>
-            <section title="Lead Kindly Light, Amid the Encircling Gloom" doc="general/lead-kindly-light.html"
-                     nobreak="nobreak"/>
+            <section title="Lead Kindly Light, Amid the Encircling Gloom" doc="general/lead-kindly-light.html"/>
             <section title="Lift High the Cross" doc="general/lift-high-the-cross.html"/>
             <section title="Lord of All Hopefulness, Lord of All Joy"
                      doc="general/lord-of-all-hopefullness-lord-of-all-joy.html" nobreak="nobreak"/>
@@ -197,12 +198,11 @@
             <section title="Praise, My Soul, The King of Heaven" doc="general/praise-my-soul-the-king-of-heaven.html"
                      nobreak="nobreak"/>
             <section title="Prayer for Peace" doc="general/prayer-for-peace.html" nobreak="nobreak"/>
-            <section title="See Us, Lord, About Thine Altar" doc="general/see-us-lord-about-thine-altar.html"
-                     nobreak="nobreak"/>
             <section title="Seek Ye First the Kingdom of God" doc="general/seek-ye-first-the-kingdom-of-god.html"
                      nobreak="nobreak"/>
             <section title="Seek, O Seek The Lord, While He is Near"
-                     doc="general/seek-o-seek-the-lord-while-he-is-near.html" nobreak="nobreak"/>
+                     doc="general/seek-o-seek-the-lord-while-he-is-near.html"/>
+            <section title="See Us, Lord, About Thine Altar" doc="general/see-us-lord-about-thine-altar.html"/>
             <section title="Shout to the Lord" doc="general/shout-to-the-lord.html" nobreak="nobreak"/>
             <section title="Sing Praise to the Lord Who Dwells in the Height"
                      doc="general/sing-praise-to-the-lord-who-dwells-in-the-height.html" nobreak="nobreak"/>
@@ -215,27 +215,25 @@
             <section title="The King of Love My Shepherd Is" doc="general/the-king-of-love-my-shepherd-is.html"
                      nobreak="nobreak"/>
             <section title="The Lord is My Shepherd" doc="general/the-lord-is-my-shepherd.html" nobreak="nobreak"/>
-            <section title="The Lord's My Shepherd (Crimond)" doc="general/the-lords-my-shepherd.html"
-                     nobreak="nobreak"/>
+            <section title="The Lord's My Shepherd (Crimond)" doc="general/the-lords-my-shepherd.html"/>
             <section title="The Servant Song" doc="general/the-servant-song.html"/>
             <section title="This Day God Gives Me" doc="general/this-day-god-gives-me.html" nobreak="nobreak"/>
             <section title="This is My Will, My One Command" doc="general/this-is-my-will-my-one-command.html"
                      nobreak="nobreak"/>
-            <section title="We Stand for God! And For His Glory" doc="general/we-stand-for-god-and-for-his-glory.html"
-                     nobreak="nobreak"/>
-            <section title="We Walk by Faith" doc="general/we-walk-by-faith.html" nobreak="nobreak"/>
+            <section title="We are called" doc="general/we-are-called.html" nobreak="nobreak" />
+            <section title="We Stand for God! And For His Glory" doc="general/we-stand-for-god-and-for-his-glory.html"/>
+            <section title="We Walk by Faith" doc="general/we-walk-by-faith.html"/>
             <section title="Where There is Charity and Love" doc="general/where-there-is-charity-and-love.html"
                      nobreak="nobreak"/>
             <section title="Where Would We Be Without Christ Our Lord"
-                     doc="general/where-would-we-be-without-chirst-our-lord.html" nobreak="nobreak"/>
+                     doc="general/where-would-we-be-without-chirst-our-lord.html"/>
             <section title="You Are Mine" doc="general/you-are-mine.html" nobreak="nobreak"/>
         </chapter>
         <chapter title="Offertory">
             <section title="All that I am" doc="offertory/all-that-i-am.html" nobreak="nobreak"/>
             <section title="Father, In My Life I See" doc="offertory/father-in-my-life-i-see.html" nobreak="nobreak"/>
             <section title="Fill My House" doc="offertory/fill-my-house.html" nobreak="nobreak"/>
-            <section title="I, The Word of God Will Treasure" doc="offertory/i-the-word-of-god-will-treasure.html"
-                     nobreak="nobreak"/>
+            <section title="I, The Word of God Will Treasure" doc="offertory/i-the-word-of-god-will-treasure.html"/>
             <section title="My God Loves Me" doc="offertory/my-god-loves-me.html" nobreak="nobreak"/>
             <section title="O God We Give Ourselves Today" doc="offertory/o-god-we-give-ourselves-today.html"
                      nobreak="nobreak"/>
@@ -252,7 +250,7 @@
                      doc="sacrament/draw-nigh-and-take-the-body-of-our-lord.html" nobreak="nobreak"/>
             <section title="Eat This Bread; Drink This Cup" doc="sacrament/eat-this-bread-drink-this-cup.html"
                      nobreak="nobreak"/>
-            <section title="Fullness of God" doc="sacrament/fullness-of-god.html" nobreak="nobreak"/>
+            <section title="Fullness of God" doc="sacrament/fullness-of-god.html"/>
             <section title="Godhead Here in Hiding, Whom I Do Adore"
                      doc="sacrament/godhead-here-in-hiding-whom-i-do-adore.html"/>
             <section title="Guide me O Thou Great Redeemer" doc="sacrament/guide-me-thou-great-redeemer.html"/>
@@ -310,8 +308,7 @@
                      doc="marian/my-soul-glorifies-the-lord.html" nobreak="nobreak"/>
             <section title="O Heart of Mary Pure and Fair" doc="marian/o-heart-of-mary-pure-and-fair.html"
                      nobreak="nobreak"/>
-            <section title="O Mary Mother Sweetest Best" doc="marian/o-mary-mother-sweetest-best.html"
-                     nobreak="nobreak"/>
+            <section title="O Mary Mother Sweetest Best" doc="marian/o-mary-mother-sweetest-best.html" />
             <section title="O Mary Of Graces" doc="marian/o-mary-of-graces.html" nobreak="nobreak"/>
             <section title="O Most Holy Mother" doc="marian/o-most-holy-mother.html" nobreak="nobreak"/>
             <section title="O Mother, I Could Weep for Mirth" doc="marian/o-mother-i-could-weep-for-mirth.html"
@@ -320,9 +317,10 @@
             <section title="O Sanctissima" doc="marian/o-sanctissima.html" />
             <section title="On This Day O Beautiful Mother" doc="marian/on-this-day-o-beautiful-mother.html"
                      nobreak="nobreak"/>
+            <section title="Our Lady of Fatima" doc="marian/our-lady-of-fatima.html" nobreak="nobreak" />
             <section title="Praise to Mary of all Creatures the Loveliest"
                      doc="marian/praise-to-mary-of-all-creatures-the-loveliest.html" nobreak="nobreak"/>
-            <section title="Queen of the Holy Rosary" doc="marian/queen-of-the-holy-rosary.html" nobreak="nobreak"/>
+            <section title="Queen of the Holy Rosary" doc="marian/queen-of-the-holy-rosary.html"/>
             <section title="Salve, Regina" doc="marian/salve-regina.html" nobreak="nobreak"/>
             <section title="Sing of Mary, Pure and Lowly" doc="marian/sing-of-mary-pure-and-lowly.html"
                      nobreak="nobreak"/>

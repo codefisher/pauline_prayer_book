@@ -53,6 +53,19 @@
     <chapter title="St Thecla, Virgin and Martyr">
         <section title="St Thecla, Virgin and Martyr" doc="thecla.html" />
     </chapter>
+    <chapter title="Memorial of Mary, Mother and Mediatrix of Grace">
+        <section title="Memorial of Mary, Mother and Mediatrix of Grace" doc="mary-grace.html" />
+    </chapter>
+    <chapter title="Commemoration of all the Departed of the Order">
+        <section title="Commemoration of all the Departed of the Order" doc="departed.html" />
+    </chapter>
+    <chapter title="All the Saints of the Order">
+        <section title="Invitatory Psalm" doc="saints-invitatory.html"/>
+        <section title="Office of Readings" doc="saints-readings.html"/>
+        <section title="Morning Prayer" doc="saints-morning.html" nobreak="nobreak"/>
+        <section title="Prayer During the Day" doc="saints-little-hour.html"/>
+        <section title="Evening Prayer" doc="saints-evening.html"/>
+    </chapter>
     <appendix>
         <chapter title="Night Prayer">
             <section title="Night Prayer I" doc="night-i.html"/>
