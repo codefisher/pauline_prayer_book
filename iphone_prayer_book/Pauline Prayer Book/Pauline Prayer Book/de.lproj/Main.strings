@@ -2,9 +2,6 @@
 /* Class = "UILabel"; text = "Font Size"; ObjectID = "6sj-Q8-RPH"; */
 "6sj-Q8-RPH.text" = "Schriftgröße";
 
-/* Class = "UILabel"; text = "Label"; ObjectID = "AuP-fl-DvX"; */
-"AuP-fl-DvX.text" = "";
-
 /* Class = "UILabel"; text = "Prayer Language"; ObjectID = "E6K-sx-SMt"; */
 "E6K-sx-SMt.text" = "Gebetssprache";
 

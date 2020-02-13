@@ -20,6 +20,8 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     
     var languageChange = false
     
+    @IBOutlet weak var theme: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,7 +49,7 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             language = NSLocalizedString("default_locale", comment: "")
         }
         
-        let activeLanguage = languageValues.index(of: language!)
+        let activeLanguage = languageValues.firstIndex(of: language!)
         if activeLanguage != nil {
             self.prayerLanguage.selectRow(activeLanguage!, inComponent: 0, animated: false)
         }
@@ -60,10 +62,14 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             fontSize = "14"
         }
         
-        let activeFontSize = fontSizeValue.index(of: fontSize!)
+        let activeFontSize = fontSizeValue.firstIndex(of: fontSize!)
         if activeFontSize != nil {
             self.fontSize.selectRow(activeFontSize!, inComponent: 0, animated: false)
         }
+        
+        let currentTheme = defaults.integer(forKey: "theme_type")
+        theme.selectedSegmentIndex = currentTheme
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -110,24 +116,40 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     }
     
 
+    @IBAction func themeChanged(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        switch theme.selectedSegmentIndex {
+        case 0:
+            defaults.set(0, forKey: "theme_type")
+        case 1:
+            defaults.set(1, forKey: "theme_type")
+        default:
+            break
+        }
+    }
     
     // MARK: - Navigation
 
-    override func willMove(toParentViewController parent: UIViewController?) {
-        super.willMove(toParentViewController: parent)
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
         if parent == nil && self.languageChange {
             let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
             let view = nav.viewControllers[0] as! ViewController
             view.languageChanged()
         }
     }
-    
-    @IBAction func about(sender: UIButton) {
+    @IBAction func about(_ sender: Any) {
         navigationController?.popViewController(animated: true)
         let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
         let view = nav.viewControllers[0] as! ViewController
         view.loadPage(page: "about")
-        
     }
-
+    
+    @IBAction func openAbout(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
+        let view = nav.viewControllers[0] as! ViewController
+        view.loadPage(page: "about")
+    }
+    
 }

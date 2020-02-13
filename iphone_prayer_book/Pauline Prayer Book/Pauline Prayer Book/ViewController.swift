@@ -8,11 +8,12 @@
 
 import UIKit
 import AVFoundation
+import WebKit
 
-class ViewController: UIViewController, UIWebViewDelegate {
+class ViewController: UIViewController, WKNavigationDelegate {
     
     //MARK: Properties
-    @IBOutlet weak var webview: UIWebView!
+    @IBOutlet weak var webview: WKWebView!
     
     var player: AVMIDIPlayer?
     
@@ -21,7 +22,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        webview.delegate = self
+        webview.navigationDelegate = self
         // Do any additional setup after loading the view, typically from a nib.        
         self.languageChanged()
         
@@ -37,47 +38,60 @@ class ViewController: UIViewController, UIWebViewDelegate {
         updateFontSize(webView: webview)
     }
     
-    func updateFontSize(webView: UIWebView) {
+    func updateFontSize(webView: WKWebView) {
         let defaults = UserDefaults.standard //UserDefaults()
         var fontSize = defaults.string(forKey: "font_size")
         if fontSize == nil {
             fontSize = "14"
         }
-        webView.stringByEvaluatingJavaScript(from: "document.body.style.fontSize = \"" + fontSize! + "px\"")
+        //print("document.body.style.fontSize = \"" + fontSize! + "px\";")
+        webView.evaluateJavaScript("document.body.style.fontSize = \"" + fontSize! + "px\";")
+        
+        let currentTheme = defaults.integer(forKey: "theme_type")
+        if(currentTheme == 1) {
+            webView.evaluateJavaScript("document.body.classList.add(\"darktheme\")")
+        }
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         updateFontSize(webView: webView)
     }
     
-    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        //print("WebView opening:" + request.url!.absoluteString + " with scheme:" + request.url!.scheme!)
+        let request = navigationAction.request
         if(request.url!.scheme == "mailto" || request.url!.scheme == "http") {
             UIApplication.shared.open(request.url!, options: [:], completionHandler: nil)
-            return false;
+            decisionHandler(.cancel)
+            return;
         } else if(request.url!.scheme == "musicplay") {
-            if(request.url!.path == "") {
+            // for some reason request.url!.path is always empty???
+            let filename = request.url!.host
+            if(filename == "" || filename == nil) {
                 if(player != nil) {
                     player?.stop()
                 }
             } else {
-                let url = Bundle.main.url(forResource: "raw/" + request.url!.path, withExtension: "mid")
+                let url = Bundle.main.url(forResource: "raw/" + filename!, withExtension: "mid")
                 let sounds = Bundle.main.url(forResource: "jeux14", withExtension: "sf2")
                 if(url == nil) {
-                    return false
+                    decisionHandler(.cancel)
+                    return
                 }
                 do {
                     player = try AVMIDIPlayer(contentsOf: url!, soundBankURL: sounds!)
-                    guard let player = player else { return false }
+                    guard let player = player else { decisionHandler(.cancel); return  }
                     
                     player.prepareToPlay()
                     player.play(nil)
                 } catch let error as NSError {
-                    print(error.description)
+                    NSLog("Music Play Error")
+                    NSLog(error.description)
                 }
             }
-            return false;
+            decisionHandler(.cancel)
         }
-        return true
+        decisionHandler(.allow)
     }
     
     func languageChanged() {
@@ -98,7 +112,7 @@ class ViewController: UIViewController, UIWebViewDelegate {
             htmlFile = Bundle.main.url(forResource: "prayers/" + language! + "/front", withExtension: "html" )
         }
         let url = URLRequest(url: htmlFile!)
-        webview.loadRequest(url)
+        webview.load(url)
     }
 
     //MARK: Actions
@@ -114,4 +128,3 @@ class ViewController: UIViewController, UIWebViewDelegate {
     
 
 }
-

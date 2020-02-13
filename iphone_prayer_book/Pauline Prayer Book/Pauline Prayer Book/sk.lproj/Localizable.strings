@@ -6,16 +6,11 @@
  
  */
 
-"default_locale"="en";
-"English"="English";
-"Polish"="Polish";
-"Latin"="Latin";
-"Italian"="Italian";
-"German"="German";
-"Croation"="Croation";
-
-"Very Small"="Very Small";
-"Small"="Small";
-"Medium"="Medium";
-"Large"="Large";
-"Very Large"="Very Large";
+"default_locale"="sk";
+"English"="Anglický";
+"Polish"="Poľský";
+"Latin"="Latinský";
+"Italian"="Taliansky";
+"German"="Nemecký";
+"Croation"="Chrovátsky";
+"Slovak"="Slovenský";
