@@ -1,77 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<index>
+<index chapterheadings="part">
     <include file="office/cover" />
+    <include file="mass/decree-la" />
     <include file="office/calendar" />
-    <chapter title="Solemnity of St. Paul the First Hermit, Father of the Order">
-        <section title="Evening Prayer I" doc="paul-evening-i.html"/>
-        <section title="Invitatory Psalm" doc="paul-invitatory.html"/>
-        <section title="Office of Readings" doc="paul-readings.html" />
-        <section title="Morning Prayer" doc="paul-morning.html" />
-        <section title="Prayer During the Day" doc="paul-little-hour.html" />
-        <section title="Evening Prayer II" doc="paul-evening-ii.html"/>
+    <chapter title="Liturgy of the Hours" chapterheadings="none">
+        <chapter title="Solemnity of St. Paul the First Hermit, Father of the Order">
+            <section title="Evening Prayer I" doc="paul-evening-i.html"/>
+            <section title="Invitatory Psalm" doc="paul-invitatory.html"/>
+            <section title="Office of Readings" doc="paul-readings.html" />
+            <section title="Morning Prayer" doc="paul-morning.html" />
+            <section title="Prayer During the Day" doc="paul-little-hour.html" />
+            <section title="Evening Prayer II" doc="paul-evening-ii.html"/>
+        </chapter>
+        <chapter title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order">
+            <section title="Invitatory Psalm" doc="mary-hermits-invitatory.html"/>
+            <section title="Office of Readings" doc="mary-hermits-readings.html" />
+            <section title="Morning Prayer" doc="mary-hermits-morning.html" />
+            <section title="Prayer During the Day" doc="mary-hermits-little-hour.html" />
+            <section title="Evening Prayer" doc="mary-hermits-evening.html"/>
+        </chapter>
+        <chapter title="Memorial of St. Macarius the Great, Abbot">
+            <section title="Memorial of St. Macarius the Great, Abbot" doc="macarius.html" />
+        </chapter>
+        <chapter title="Feast of Blessed Eusebius">
+            <section title="Invitatory Psalm" doc="eusebius-invitatory.html"/>
+            <section title="Office of Readings" doc="eusebius-readings.html"/>
+            <section title="Morning Prayer" doc="eusebius-morning.html"/>
+            <section title="Prayer During the Day" doc="eusebius-little-hour.html"/>
+            <section title="Evening Prayer" doc="eusebius-evening.html"/>
+        </chapter>
+        <chapter title="Memorial of St John Cassian, Abbot">
+            <section title="Memorial of St John Cassian, Abbot" doc="john-cassian.html" />
+        </chapter>
+        <chapter title="Memorial of St. Joseph Bilczewski, Bishop">
+            <section title="Memorial of St. Joseph Bilczewski, Bishop" doc="joseph-bilczewski.html" />
+        </chapter>
+        <chapter title="Memorial of St. Mary of Egypt, Hermit">
+            <section title="Memorial of St. Mary of Egypt, Hermit" doc="mary-egypt.html" />
+        </chapter>
+        <chapter title="Memorial of St Pachomius, Abbot">
+            <section title="Memorial of St Pachomius, Abbot" doc="pachomius.html" />
+        </chapter>
+        <chapter title="Feast of Mary, Mother of the Church">
+            <section title="Feast of Mary, Mother of the Church" doc="mother-church.html" />
+        </chapter>
+        <chapter title="Memorial of St Hedwig, Queen">
+            <section title="Memorial of St Hedwig, Queen" doc="hedwig.html" />
+        </chapter>
+        <chapter title="Solemnity of Our Lady of Czestochowa">
+            <section title="Evening Prayer I" doc="czestochowa-evening-i.html"/>
+            <section title="Invitatory Psalm" doc="czestochowa-invitatory.html"/>
+            <section title="Office of Readings" doc="czestochowa-readings.html" />
+            <section title="Morning Prayer" doc="czestochowa-morning.html" />
+            <section title="Prayer During the Day" doc="czestochowa-little-hour.html" />
+            <section title="Evening Prayer II" doc="czestochowa-evening-ii.html"/>
+        </chapter>
+        <chapter title="Feast of Saint Augustine">
+            <section title="Invitatory Psalm" doc="augustine-invitatory.html"/>
+            <section title="Office of Readings" doc="augustine-readings.html"/>
+            <section title="Morning Prayer" doc="augustine-morning.html"/>
+            <section title="Prayer During the Day" doc="augustine-little-hour.html"/>
+            <section title="Evening Prayer" doc="augustine-evening.html"/>
+        </chapter>
+        <chapter title="St Thecla, Virgin and Martyr">
+            <section title="St Thecla, Virgin and Martyr" doc="thecla.html" />
+        </chapter>
+        <chapter title="Feast of Holy Guardian Angels">
+            <section title="Invitatory Psalm" doc="angels-invitatory.html"/>
+            <section title="Office of Readings" doc="angels-readings.html"/>
+            <section title="Morning Prayer" doc="angels-morning.html"/>
+            <section title="Prayer During the Day" doc="angels-little-hour.html"/>
+            <section title="Evening Prayer" doc="angels-evening.html"/>
+        </chapter>
+        <chapter title="Memorial of Mary, Mother and Mediatrix of Grace">
+            <section title="Memorial of Mary, Mother and Mediatrix of Grace" doc="mary-grace.html" />
+        </chapter>
+        <chapter title="Commemoration of all the Departed of the Order">
+            <section title="Invitatory Psalm" doc="departed-invitatory.html"/>
+            <section title="Office of Readings" doc="departed-readings.html"/>
+            <section title="Morning Prayer" doc="departed-morning.html" nobreak="nobreak"/>
+            <section title="Prayer During the Day" doc="departed-little-hour.html"/>
+            <section title="Evening Prayer" doc="departed-evening.html"/>
+        </chapter>
+        <chapter title="All the Saints of the Order">
+            <section title="Invitatory Psalm" doc="saints-invitatory.html"/>
+            <section title="Office of Readings" doc="saints-readings.html"/>
+            <section title="Morning Prayer" doc="saints-morning.html" nobreak="nobreak"/>
+            <section title="Prayer During the Day" doc="saints-little-hour.html"/>
+            <section title="Evening Prayer" doc="saints-evening.html"/>
+        </chapter>
     </chapter>
-    <chapter title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order">
-        <section title="Invitatory Psalm" doc="mary-hermits-invitatory.html"/>
-        <section title="Office of Readings" doc="mary-hermits-readings.html" />
-        <section title="Morning Prayer" doc="mary-hermits-morning.html" />
-        <section title="Prayer During the Day" doc="mary-hermits-little-hour.html" />
-        <section title="Evening Prayer" doc="mary-hermits-evening.html"/>
-    </chapter>
-    <chapter title="Memorial of St. Macarius the Great, Abbot">
-        <section title="Memorial of St. Macarius the Great, Abbot" doc="macarius.html" />
-    </chapter>
-    <chapter title="Feast of Blessed Eusebius">
-        <section title="Invitatory Psalm" doc="eusebius-invitatory.html"/>
-        <section title="Office of Readings" doc="eusebius-readings.html"/>
-        <section title="Morning Prayer" doc="eusebius-morning.html"/>
-        <section title="Prayer During the Day" doc="eusebius-little-hour.html"/>
-        <section title="Evening Prayer" doc="eusebius-evening.html"/>
-    </chapter>
-    <chapter title="Memorial of St John Cassian, Abbot">
-        <section title="Memorial of St John Cassian, Abbot" doc="john-cassian.html" />
-    </chapter>
-    <chapter title="Memorial of St. Joseph Bilczewski, Bishop">
-        <section title="Memorial of St. Joseph Bilczewski, Bishop" doc="joseph-bilczewski.html" />
-    </chapter>
-    <chapter title="Memorial of St. Mary of Egypt, Hermit">
-        <section title="Memorial of St. Mary of Egypt, Hermit" doc="mary-egypt.html" />
-    </chapter>
-    <chapter title="Memorial of St Pachomius, Abbot">
-        <section title="Memorial of St Pachomius, Abbot" doc="pachomius.html" />
-    </chapter>
-    <chapter title="Memorial of St Hedwig, Queen">
-        <section title="Memorial of St Hedwig, Queen" doc="hedwig.html" />
-    </chapter>
-    <chapter title="Solemnity of Our Lady of Czestochowa">
-        <section title="Evening Prayer I" doc="czestochowa-evening-i.html"/>
-        <section title="Invitatory Psalm" doc="czestochowa-invitatory.html"/>
-        <section title="Office of Readings" doc="czestochowa-readings.html" />
-        <section title="Morning Prayer" doc="czestochowa-morning.html" />
-        <section title="Prayer During the Day" doc="czestochowa-little-hour.html" />
-        <section title="Evening Prayer II" doc="czestochowa-evening-ii.html"/>
-    </chapter>
-    <chapter title="St Thecla, Virgin and Martyr">
-        <section title="St Thecla, Virgin and Martyr" doc="thecla.html" />
-    </chapter>
-    <chapter title="Memorial of Mary, Mother and Mediatrix of Grace">
-        <section title="Memorial of Mary, Mother and Mediatrix of Grace" doc="mary-grace.html" />
-    </chapter>
-    <chapter title="Commemoration of all the Departed of the Order">
-        <section title="Commemoration of all the Departed of the Order" doc="departed.html" />
-    </chapter>
-    <chapter title="All the Saints of the Order">
-        <section title="Invitatory Psalm" doc="saints-invitatory.html"/>
-        <section title="Office of Readings" doc="saints-readings.html"/>
-        <section title="Morning Prayer" doc="saints-morning.html" nobreak="nobreak"/>
-        <section title="Prayer During the Day" doc="saints-little-hour.html"/>
-        <section title="Evening Prayer" doc="saints-evening.html"/>
+    <chapter title="Liturgia Horarum">
+        <include file="office/calendar-la" />
+        <section title="Die 19 ianuarii - Memoria ad libitum - Sancti Macarii Magni, abbatis" doc="../../../la/src/office/macarius.html"/>
+        <section title="Die 20 ianuarii - Festum - Beati Eusebii de Strigonio, presbyteri Fundatoris Ordinis" doc="../../../la/src/office/blessed-eusebius.html"/>
+        <section title="Die 28 februarii - Memoria ad libitum - Sancti Ioannis Cassiani, abbatis" doc="../../../la/src/office/john-cassian.html"/>
+        <section title="Die 1 aprilis -  Memoria - Sanctae Mariae Aegyptiacae, eremitae" doc="../../../la/src/office/mary-egypt.html"/>
+        <section title="Die 9 maii - Memoria - Sancti Pachomii, abbatis" doc="../../../la/src/office/pachomius.html"/>
+        <section title="Die 8 iunii - Memoria ad libitum - Sanctae Edvigis" doc="../../../la/src/office/hedwig.html"/>
+        <section title="Die 24 septembris - Memoria ad libitum - Sanctae Theclae, virginis et martyris" doc="../../../la/src/office/thecla.html"/>
+        <section title="Die 30 octobris - Memoria - Beatae Mariae Virginis, Mediatricis gratiae" doc="../../../la/src/office/mary-grace.html"/>
+        <section title="Die 3 novembris In commemoratione omnium defunctorum Ordinis" doc="../../../la/src/office/departed.html"/>
+        <section title="Die 7 novembris - Memoria - Omnium Sanctorum Ordinis" doc="../../../la/src/office/saints.html"/>
     </chapter>
     <appendix>
         <chapter title="Night Prayer">
             <section title="Night Prayer I" doc="night-i.html"/>
             <section title="Night Prayer II" doc="night-ii.html"/>
         </chapter>
-        <chapter title="Recuring Texts">
+        <chapter title="Recurring Texts">
             <section title="Invitatory Pslams" doc="invitatory.html"/>
             <section title="Complementary Psalmody" doc="complementary-psalms.html"/>
         </chapter>
@@ -80,6 +117,9 @@
             <section title="The Common of Men Saints" doc="hymns-men.html" />
             <section title="Hymns for Night Prayer" doc="night-hymns.html" />
             <section title="Anthems to the Blessed Virgin" doc="anthems-bvm.html"/>
+        </chapter>
+        <chapter title="Intercessions – for Priestly and Religious Vocations">
+            <section title="Intercessions – for Priestly and Religious Vocations" doc="vocation-intercessions.html"/>
         </chapter>
     </appendix>
 

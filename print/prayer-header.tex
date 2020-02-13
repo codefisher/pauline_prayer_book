@@ -18,6 +18,7 @@
 \usepackage{needspace}
 \usepackage{xcolor}
 \usepackage{pifont}
+\usepackage{afterpage}
 
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
@@ -58,11 +59,19 @@
 	\fancyhead[CE]{#1}
 	\fancyhead[CO]{#2}
 	\fancyhead[LE,RO]{\thepage}
+    \setlength{\footskip}{0pt}
 	\fancyfoot{}}
     \pagestyle{#2}
 }
 
+\fancypagestyle{plain}{%
+  \fancyhf{}
+  \fancyfoot[CE,CO]{\thepage}
+  \renewcommand{\headrulewidth}{0pt}}
+
+\ifdefined\thechapter
 \renewcommand\thechapter{\Alph{chapter}}
+\fi
 \renewcommand\thesection{\arabic{section}}
 
 \newcommand*{\red}[1]{\textcolor{red}{#1}}
@@ -80,6 +89,10 @@
 \newcommand*{\hrline}{\par {\centering\noindent\rule{\textwidth/2}{0.4pt}\par}}
 \newcommand*{\hrlinered}{{\color{red}\par {\centering\noindent\rule{\textwidth/2}{0.4pt}\par}}}
 
+\newcommand*{\hspan}[1]{\par {\small\normalfont#1}}
+
+\newcommand*{\mybreak}{\newpage}
+
 \usepackage{changepage} %adjustwidth
 \usepackage{etoolbox}
 \AtBeginEnvironment{adjustwidth}{\partopsep\parskip}
@@ -93,22 +106,83 @@
   \nopagebreak%
 }
 
+\newcommand{\noted}[3][2em]{%
+  \nopagebreak%
+  \begin{adjustwidth}{#1}{0pt}%
+    \makebox[0pt][r]{\makebox[#1][l]{#2}}%
+    \ignorespaces #3
+  \end{adjustwidth}%
+  \nopagebreak%
+}
+
+\usepackage{wrapfig}
+
+\input xintexpr.sty\relax
+
+\newcommand{\normalbreak}{\medbreak}
+
+\newcommand{\illuminatedcap}[3][3]{%
+  \setlength{\columnsep}{0.2\baselineskip}%
+  \setlength{\intextsep}{-0.2\baselineskip}%
+  \needspace{#1\baselineskip}%
+  \lowercase{\def\temptwo{#2}}%
+  \begin{wrapfigure}[#1]{l}{#1\baselineskip}%
+      \noindent\includegraphics[height=#1\baselineskip]{alphabet/\temptwo}%
+  \end{wrapfigure}\noindent\hspace{-0.2\baselineskip}\ignorespaces\textsc{#3}%
+}
+
+\newcommand{\reading}[6]{%
+    %text, label, shorttag, ref, longref, tagline
+    \needspace{4\baselineskip}%
+    \ifx&#1&%
+        \ifx&#2&\else%
+            \noindent\textsc{\red{#2}}%
+        \fi%
+    \else%
+        \ifx&#2&%
+            #1%
+        \else%
+            \noindent\textsc{\red{#2}} \\ #1%
+        \fi%
+    \fi%
+    \ifx&#3&\else%
+        \noindent\red{#3}%
+    \fi%
+    \ifx&#4&\else%
+        \reference{#4}%
+    \fi%
+    \ifx&#5&\else%
+        \begin{center}\red{#5}\end{center}%
+    \fi%
+    \ifx&#6&\else%
+        \begin{center}\textit{\footnotesize{\red{#6}}}\end{center}%
+    \fi%
+}
+
 % add illumination to some chant
 %\newfontfamily\goudy[Ligatures=TeX]{Goudy Initialen}
 
 \input GoudyIn.fd
 \newcommand*\goudy{\usefont{U}{GoudyIn}{xl}{n}}
 
+%\makeatletter
+%\def\musicillumination{\@ifnextchar[{\@with}{\@without}}
+%\def\@with[#1]#2{\greillumination{\fontsize{#1}{#1}\selectfont \goudy #2}}
+%\def\@without#1{\greillumination{\fontsize{56pt}{56pt}\selectfont \goudy #1}}
+%\makeatother
+
 \makeatletter
+\newlength{\msize}
 \def\musicillumination{\@ifnextchar[{\@with}{\@without}}
-\def\@with[#1]#2{\greillumination{\fontsize{#1}{#1}\selectfont \goudy #2}}
-\def\@without#1{\greillumination{\fontsize{56pt}{56pt}\selectfont \goudy #1}}
+\def\@with[#1]#2{\lowercase{\def\temptwo{#2}}\greillumination{\setlength{\msize}{\dimexpr #1 * 4 / 5 \relax}\includegraphics[width=\msize]{alphabet/\temptwo}}}
+\def\@without#1{\lowercase{\def\tempone{#1}}\greillumination{\includegraphics[width=44pt]{alphabet/\tempone}}}
 \makeatother
 
 
 \newcommand\responce[1]{%
   \unskip\hfill\penalty100\relax\hspace*{0.5em}\hspace*{\fill}\mbox{\textbf{#1}}%
 }
+
 
 \usepackage{enumitem}
 
@@ -118,6 +192,7 @@
 \makeatletter
 \newenvironment{litany}
   {\list{\topsep=0pt}{%
+   \setlength{\parskip}{0pt}
    \setlength{\topsep}{0pt}%
    \setlength{\partopsep}{0pt}%
    \setlength{\leftmargin}{2em}%
@@ -125,7 +200,7 @@
    \setlength{\itemindent}{-2em}%
    \setlength{\parsep}{\parskip}}%
    \item[]}%
-  {\endlist}
+  {\endlist}%
 \makeatother
 
 \makeatletter
@@ -138,7 +213,7 @@
    \setlength{\itemindent}{-2em}%
    \setlength{\parsep}{\parskip}}%
    \item[]}%
-  {\endlist}
+  {\endlist}%
 \makeatother
 
 \usepackage{xpatch}

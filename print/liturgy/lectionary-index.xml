@@ -1,25 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <index>
-    <include file="lectionary/cover" />
-    <include file="office/calendar" />
+    <include file="lectionary/cover-short" />
     <chapter title="Readings">
         <section title="January 15 Solemnity of St. Paul the First Hermit" doc="st-paul-the-first-hermit.html"/>
         <section title="January 16 Feast of Our Lady, Queen of Hermits" doc="mary-queen-of-hermits.html"/>
         <section title="January 20 Feast of Blessed Eusebius" doc="blessed-eusebius.html"/>
         <section title="August 26 Solemnity of Our Lady of Czestochowa" doc="czestochowa.html"/>
     </chapter>
-    <appendix>
-        <chapter title="Saint Paul">
-            <section title="Renewal of Vows" doc="../mass/renewal-vows.html"/>
-            <section title="Solemnity of St. Paul the First Hermit General Intercessions"
-                     doc="../mass/st-paul-general-intercessions.html"/>
-            <section title="Blessing of Fruits" doc="../mass/st-paul-blessing-of-fruits.html"/>
-            <section title="Blessing of Children" doc="../mass/st-paul-blessing-of-children.html"/>
-        </chapter>
-        <chapter title="Our Lady Queen of Hermits">
-            <section title="Renewal of the Covenant with Mary" doc="../mass/renewal-covenant.html"/>
-        </chapter>
-        <section title="General Intercessions for Conventual Mass" doc="../mass/conventual-general-intercessions.html"/>
-    </appendix>
-
 </index>
