@@ -19,10 +19,10 @@
 musicOne = \relative c' {
   \autoBeamOff
   \time 3/4
-  c'4 c4 c4 \bar "|" a8[g8] f4 r4 \bar "|" g4 f4 d4 \bar "|" c4 r2 \bar "|" d4 e4 f4 \bar "|" d4 e4 f4 \bar "|" a2. \bar "|" g2 r4 \bar "|" \break
-  c4 c4 c4 \bar "|" a8[g8] f4 r4 \bar "|" g4 f4 d4 \bar "|" c4 r2 \bar "|" d4 e4 f4 \bar "|" g4 f4 e4 \bar "|" f2 r4 \bar "|" \break
-  \bar ".|:" g4 g4 g4 \bar "|" g4 f4 g4 \bar "|" a2. \bar "|" c2 r4 \bar "|" g4 g4 g4 \bar "|" g4 f4 g4 \bar "|" a2. \bar "|" \break
-  c4 c4 c4 \bar "|" a8[g8] f4 r4 \bar "|" g4 e4 d4 \bar "|" c2 r4 \bar "|" d4 e4 f4 \bar "|" g4 f4 e4 \bar "|" f2. \bar ":|."
+  c'4 c4 c4 \bar "|" a8[g8] f2 \bar "|" g4 f4 d4 \bar "|" c2. \bar "|" d4 e4 f4 \bar "|" d4 e4 f4 \bar "|" a2. \bar "|" g2. \bar "|" \break
+  c4 c4 c4 \bar "|" a8[g8] f2 \bar "|" g4 f4 d4 \bar "|" c2. \bar "|" d4 e4 f4 \bar "|" g4 f4 e4 \bar "|" f2. \bar "|" \break
+  \bar ".|:" g4 g4 g4 \bar "|" g4 f4 g4 \bar "|" a2. \bar "|" c2. \bar "|" g4 g4 g4 \bar "|" g4 f4 g4 \bar "|" a2. \bar "|" \break
+  c4 c4 c4 \bar "|" a8[g8] f2 \bar "|" g4 e4 d4 \bar "|" c2. \bar "|" d4 e4 f4 \bar "|" g4 f4 e4 \bar "|" f2. \bar ":|."
 }
 
 verseOne = \lyricmode {

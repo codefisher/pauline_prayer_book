@@ -27,12 +27,12 @@ musicOne = \relative c' {
   c8( [b8]) a8( [g8]) a8 f8 \bar "|" e4 d4 c4\fermata \bar "|." \break
 }
 verseOne = \lyricmode {
-  De -- ci -- a -- na Ter -- ret Mul -- tum
+  De -- ci -- a -- na ter -- ret mul -- tum
   Sae -- va per -- se -- cu -- ti -- o,
 }
 
 verseTwo = \lyricmode {
-  Hinc pe -- ric -- la dec -- lin -- a -- bo
+  Hinc pe -- ric -- la dec -- li -- na -- bo
   E -- lon -- gan -- do fu -- gi -- ens,
   Ac in sil -- vis la -- ti -- ta -- bo
   So -- li De -- o ser -- vi -- ens.

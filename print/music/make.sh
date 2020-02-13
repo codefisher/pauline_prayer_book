@@ -13,7 +13,7 @@ cd images
 
 #needed since on Android having width and height cause sizing problesm
 #this removes them and leaves just the viewBox attribute for sizing
-sed -i -r 's/^(<svg .* )width=".*pt" height=".*pt"/\1/' *.svg
+sed -i -r -E 's/^(<svg .* )width=".*pt" height=".*pt"/\1/' *.svg
 
 #for f in *.svg ; do
 #cp "$f" "../../../android_prayer_book/app/src/main/assets/prayers/music/$f"; done
