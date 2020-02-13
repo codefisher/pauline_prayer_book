@@ -78,16 +78,19 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order" doc="office/mary-hermits.html" />
         <menuitem title="Memorial of St. Macarius the Great, Abbot" doc="office/macarius.html"/>
         <menuitem title="Feast of Blessed Eusebius, Priest, Founder of the Order" doc="office/eusebius.html" />
-        <menuitem title="Memorial of St John Cassian, Abbot" doc="office/john-cassian.html" />
+        <menuitem title="Memorial of St. John Cassian, Abbot" doc="office/john-cassian.html" />
         <menuitem title="Memorial of St. Joseph Bilczewski, Bishop" doc="office/joseph-bilczewski.html" />
         <menuitem title="Memorial of St. Mary of Egypt, Hermit" doc="office/mary-egypt.html" />
-        <menuitem title="Memorial of St Pachomius, Abbot" doc="office/pachomius.html" />
-        <menuitem title="Memorial of St Hedwig, Queen" doc="office/hidwig.html" />
+        <menuitem title="Memorial of St. Pachomius, Abbot" doc="office/pachomius.html" />
+        <menuitem title="Feast Mary, Mother of the Church" doc="office/mother-church.html" />
+        <menuitem title="Memorial of St. Hedwig, Queen" doc="office/hidwig.html" />
         <menuitem title="Solemnity of Our Lady of Czestochowa" doc="office/czestochowa.html" />
-        <menuitem title="Memorial of St Thecla, Virgin and Martyr" doc="office/thecla.html" />
+        <menuitem title="Feast of St. Augustine" doc="office/augustine.html" />
+        <menuitem title="Memorial of St. Thecla, Virgin and Martyr" doc="office/thecla.html" />
+        <menuitem title="Feast of The Holy Guardian Angels" doc="office/angels.html" />
         <menuitem title="Memorial of Mary, Mother and Mediatrix of Grace" doc="office/mary-grace.html" />
         <menuitem title="Commemoration of all the Departed of the Order" doc="office/departed.html" />
-        <menuitem title="All the Saints of the Order, Invitatory" doc="office/saints.html" />
+        <menuitem title="All the Saints of the Order" doc="office/saints.html" />
     </menu>
 
     <menu title="Mass">
@@ -95,16 +98,26 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order" doc="mass/mary-queen-of-hermits.html" />
         <menuitem title="Memorial of St. Macarius the Great, Abbot" doc="mass/macarius.html"/>
         <menuitem title="Feast of Blessed Eusebius, Priest, Founder of the Order" doc="mass/blessed-eusebius.html" />
-        <menuitem title="Memorial of St John Cassian, Abbot" doc="mass/john-cassian.html" />
+        <menuitem title="Memorial of St. John Cassian, Abbot" doc="mass/john-cassian.html" />
         <menuitem title="Memorial of St. Joseph Bilczewski, Bishop" doc="mass/joseph-bilczewski.html" />
         <menuitem title="Memorial of St. Mary of Egypt, Hermit" doc="mass/mary-egypt.html" />
-        <menuitem title="Memorial of St Pachomius, Abbot" doc="mass/pachomius.html" />
-        <menuitem title="Memorial of St Hedwig, Queen" doc="mass/hidwig.html" />
+        <menuitem title="Memorial of St. Pachomius, Abbot" doc="mass/pachomius.html" />
+        <menuitem title="Feast Mary, Mother of the Church" doc="mass/mother-church.html" />
+        <menuitem title="Memorial of St. Hedwig, Queen" doc="mass/hidwig.html" />
         <menuitem title="Solemnity of Our Lady of Czestochowa" doc="mass/czestochowa.html" />
-        <menuitem title="Memorial of St Thecla, Virgin and Martyr" doc="mass/thecla.html" />
+        <menuitem title="Feast of St. Augustine" doc="mass/augustine.html" />
+        <menuitem title="Memorial of St. Thecla, Virgin and Martyr" doc="mass/thecla.html" />
+        <menuitem title="Feast of The Holy Guardian Angels" doc="mass/guardian-angels.html" />
         <menuitem title="Memorial of Mary, Mother and Mediatrix of Grace" doc="mass/mary-grace.html" />
         <menuitem title="Commemoration of all the Departed of the Order" doc="mass/departed.html" />
-        <menuitem title="All the Saints of the Order, Invitatory" doc="mass/saints.html" />
+        <menuitem title="All the Saints of the Order" doc="mass/saints.html" />
         <menuitem title="General Intercessions for Conventual Mass" doc="mass/conventual-general-intercessions.html" />
+    </menu>
+    <menu title="Constitutions and Directory">
+        <menuitem title="Rule of St. Augustine" doc="constitutions/rule-augustine.html" />
+        <menuitem title="Constitutions" doc="constitutions/constitutions-index.html" />
+        <menuitem title="Directory" doc="constitutions/directory-index.html" />
+        <menuitem title="Statutes of Australian Province" doc="constitutions/statutes.html" />
+        <menuitem title="Search" doc="constitutions/search.html" />
     </menu>
 </menu>

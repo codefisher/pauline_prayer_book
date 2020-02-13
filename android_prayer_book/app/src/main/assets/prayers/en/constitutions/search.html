@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+        "http://www.w3.org/TR/REC-html40/loose.dtd">
+<html>
+<head>
+    <title>The Constitutions of the Order of St. Paul the First Hermit</title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link href="../../style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="elasticlunr.js"></script>
+    <script type="text/javascript" src="search.js"></script>
+    <style>
+        h2 {
+            text-align:left;
+            margin:1em 0 0 0;
+            font-size:1em;
+        }
+    </style>
+</head>
+<body onload="loadSearch();">
+
+<h1>Constitutions and Directory Search</h1>
+
+<form onsubmit="search(event)">
+    <div>
+        <label>
+            Search: <br/> <input type="text" id="searchbox" /> <input type="submit" value="Go" />
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="source" value="constitutions" id="constitutions-radio" checked="checked" /> Constitutions
+        </label>
+        <label>
+            <input type="radio" name="source" value="directory" id="directory-radio"  /> Directory
+        </label>
+    </div>
+</form>
+
+<div id="results">
+
+</div>
+
+</body>
