@@ -7,7 +7,7 @@ if (typeof chantPlayer == "undefined") {
     var chantPlayer = {
         play: function(songName) {
             // first try to call the ios version
-            window.location = "musicplay:" + songName.replace("-", "_");
+            window.location = "musicplay://" + songName.replace("-", "_");
             // now what could work on the desktop
             var src = MP3_PATH + songName + ".mp3";
             var oldAudio = document.getElementById('audio-element');

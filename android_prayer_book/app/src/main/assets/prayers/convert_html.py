@@ -60,21 +60,24 @@ def format_prayer(node, *args, **kwargs):
 
 Library.tag("//prayer", format_prayer)
 
-def format_player(node, *args, **kwargs):
+def format_player(node, depth=1, *args, **kwargs):
     name = node.text_content()
     if "mutiple" in node.attrib:
         mutiple = ", " + node.attrib.get("mutiple")
     else:
         mutiple = ""
+    depth_text = ""
+    if depth == 2:
+        depth_text = "../"
     return html.fromstring("""
     <div class="menu">
-        <button class="play" id="{0}-play" onclick="playSong('{0}-svg', '{0}', '../sound/{0}.json'{1});" >&nbsp;</button>
+        <button class="play" id="{0}-play" onclick="playSong('{0}-svg', '{0}', '{2}../sound/{0}.json'{1});" >&nbsp;</button>
         <button disabled="disabled" class="stop" id="{0}-stop" onclick="stopSong('{0}-svg', '{0}');" >&nbsp;</button>
     </div>
     <div>
-        <object class="img-content" id="{0}-svg" data="../music/{0}.svg" type="image/svg+xml">&nbsp;</object>
+        <object class="img-content" id="{0}-svg" data="{2}../music/{0}.svg" type="image/svg+xml">&nbsp;</object>
     </div>
-    """.format(name, mutiple))
+    """.format(name, mutiple, depth_text))
 
 Library.tag("//player", format_player)
 
@@ -119,6 +122,7 @@ else:
         return None
     def format_ebook(node, *args, **kwargs):
         root = Element("div")
+        root.attrib["class"] = "ebook"
         for n in node:
             root.append(n)
         return root
@@ -141,7 +145,21 @@ def format_litany(node, *args, **kwargs):
     if "class" in node.attrib:
         root.attrib["class"] += " " + node.attrib.get("class")
     text = (node.text if node.text else '') + ''.join(html.tostring(n).decode() for n in node)
+    text = re.sub("\n\s+\n", "\n\n", text)
+    if "includeblank" in node.attrib:
+        for row in text.strip().split("\n\n"):
+            root.append(litany_helper(row, node))
+    else:
+         litany_helper(text, node, root)
+    return root
+
+def litany_helper(text, node, root=None):
+    if root is None:
+        root = Element("div")
+        root.attrib["class"] = "litany"
     for i, row in enumerate(text.strip().split("\n")):
+        if row.strip() == "":
+            continue
         row_node = Element("div")
         row_node.attrib["class"] = "litany_item"
         if row.strip().startswith('-'):
@@ -189,6 +207,7 @@ def format_psalm(node, *args, **kwargs):
         red_node.attrib["class"] = "psalm-red"
         red_node.append(from_string(node.attrib.get("red")))
         root.append(red_node)
+    text = re.sub(r"\n[ \t]*\n", "\n\n", text)
     for stanza in text.strip().split("\n\n"):
         stanza_node = Element("div")
         stanza_node.attrib["class"] = "stanza"
@@ -198,9 +217,8 @@ def format_psalm(node, *args, **kwargs):
             line_node.attrib["class"] = "psalm-line"
             text = line
             text = text.lstrip("-")
-            text = text.replace("†", """<span class="psalm-marker">&#x2020;</span>""")
-            text = text.replace("+", """<span class="psalm-marker">&#x2020;</span>""")
-            text = text.replace("*", """<span class="psalm-marker">*</span>""")
+            text = re.sub("\s*\*", """<span class="psalm-marker">&nbsp;*</span>""", text)
+            text = re.sub("\s*(\+|†)", """<span class="psalm-marker">&nbsp;&#x2020;</span>""", text)
             for i in line:
                 if i == '-':
                     text = """<div class="indent-psalm-line">{}</div>""".format(text)
@@ -258,23 +276,23 @@ def extended_html(text, *args, **kwargs):
                 n.getparent().remove(n)
     return nodes.getroottree()
 
-def update_files(pathroot, path_output):
+def update_files(pathroot, path_output, depth=1):
     for folder in (f for f in listdir(pathroot) if isdir(join(pathroot, f))):
-        update_files(os.path.join(pathroot, folder), os.path.join(path_output, folder))
+        update_files(os.path.join(pathroot, folder), os.path.join(path_output, folder), depth=2)
     for filename in (f for f in listdir(pathroot) if isfile(join(pathroot, f))):
-        if filename == "empty.html" or filename.startswith('.'):
+        if filename == "empty.html" or filename.startswith('.') or not filename.endswith('.html'):
             continue
         with codecs.open(join(pathroot, filename), "r", encoding='utf8') as fp:
             try:
                 text = fp.read()
                 text = text.replace("ę", "&#x119;").replace("Ȩ", "&#x228;") # does not display otherwise
                 text = text.replace("...", "&hellip;")
-                text = re.sub("-(\n|\r)\s*", "", text) # copying from PDF gives words broken by -
+                text = re.sub("(-|­)(\n|\r)\s*", "", text) # copying from PDF gives words broken by - or the invisible version
             except UnicodeDecodeError as e:
                 print("Can't read: {}".format(filename))
                 exit()
             try:
-                doc = extended_html(text, path=pathroot, filename=filename)
+                doc = extended_html(text, path=pathroot, filename=filename, depth=depth)
             except Exception as e:
                 print(filename)
                 raise  e
@@ -284,6 +302,10 @@ def update_files(pathroot, path_output):
             for node in doc.xpath("//div[contains(@class, 'prayer')]"):
                 if len(re.sub("\s+", "", node.text_content())) < 100:
                     node.classes.add("short-prayer")
-        doc.write(os.path.join(path_output, filename))
+        try:
+            doc.write(os.path.join(path_output, filename))
+        except FileNotFoundError as e:
+            print(os.path.join(path_output, filename))
+            raise e
 
 update_files(pathroot, path_output)

@@ -1,5 +1,16 @@
+@media print {
+    .ebook, .menu {
+        display:none;
+    }
+}
+
 body {
     text-align: justify;
+}
+
+body.darktheme {
+    color:#ffffff;
+    background:#222222;
 }
 
 h1 {
@@ -116,6 +127,10 @@ hr.rubric {
 	width: 100%
 }
 
+.litany > .litany:not(:first-child) {
+    margin-top:1em;
+}
+
 .litany_first {
     float:left;
 }
@@ -206,4 +221,45 @@ hr {
 .reading {
     color:red;
     font-variant: small-caps;
+}
+
+
+.constitutions ol {
+  list-style: none;
+  counter-reset: constitutions-counter;
+}
+
+.constitutions ol li {
+  counter-increment: constitutions-counter;
+  position: relative;
+}
+
+.constitutions ol li::before {
+  content: "§ " counter(constitutions-counter) ".";
+  position: absolute;
+  left:-2em;
+}
+
+.constitutions ol.arabic-degree li::before {
+  content: counter(constitutions-counter) "°";
+  position: absolute;
+  left:-2em;
+}
+
+ol.Alph li::before,
+ol.alph li::before,
+ol.arabic li::before {
+  content: "";
+}
+
+ol.Alph {
+    list-style-type: upper-latin
+}
+
+ol.alph {
+    list-style-type: lower-latin
+}
+
+ol.arabic {
+    list-style-type: decimal;
 }
