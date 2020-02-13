@@ -1,77 +1,104 @@
 <html>
 <head>
     <title>Preghiere della Sera</title>
+    <script type="text/javascript" src="necrology.js"><!-- // --></script>
 </head>
 <body>
 
 <h1>Preghiere della Sera</h1>
 
+<p class="instruction">
+    Al momento opportuno, oppure al termine dei vespri, il lettore recita o intona le Invocazioni a San Paolo Primo Eremita.
+</p>
+<p class="instruction">
+    Il superiore legge il necrologio del giorno seguente e termina con la preghiera a favore dei confratelli defunti.
+</p>
+<p class="instruction">
+    Secondo dell'ordine del giorno, "Angelus" dovrebbe essere recitato all’inizio delle preghiere della sera o dopo cena.
+</p>
+
 <h2>Invocazioni a San Paolo Primo Eremita</h2>
 
 <div class="prayer-group">
     <litany responce="Prega per noi">
-        San Paolo, Padre del nostro ordine
-        San Paolo, fedele imitatore di Cristo
-        San Paolo, amante della solitudine
-        San Paolo, instancabile nella preghiera e nella penitenza
-        San Paolo, paziente nel sopportare i disagi della vita nel deserto
-        San Paolo, modello di perseveranza nella vocazione scelta
-        San Paolo, nel momento della morte pronto all’incontro con Dio
+        San Paolo, Padre del nostro Ordine,
+        San Paolo, fedele imitatore di Cristo,
+        San Paolo, uomo di fede forte e viva,
+        San Paolo, amante della solitudine,
+        San Paolo, instancabile nella preghiera e nella penitenza,
+        San Paolo, paziente nel sopportare i disagi della vita nel deserto,
+        San Paolo, modello di perseveranza nella vocazione scelta,
+        San Paolo, nel momento della morte pronto all’incontro con Dio,
     </litany>
 </div>
 
 <div class="prayer-group">
     <litany responce="Intercedi per noi">
-        Perché viviamo con fede la nostra vita religiosa
-        Perché adempiamo il comandamento dell’amore fraterno
-        Perché sappiamo pregare con perseveranza
-        Perché con la penitenza ci rendiamo partecipi dell’amore salvifico di Cristo
-        Perché non cediamo alla tentazione di una vita facile
-        Perché approfittiamo saggiamente dei doni della terra e dei mezzi che la tecnica e la cultura ci offrono
-        Perché miriamo coraggiosamente all’amore perfetto nello Spirito del Vangelo
-        Perché corrispondiamo degnamente alla nostra missione apostolica
-        Perché ricordiamo nella preghiera i fratelli che si sono allontanati da noi
-        Perché perseveriamo nell’ordine fino alla morte
+        Perché viviamo con fede la nostra vita religiosa,
+        Perché adempiamo il comandamento dell’amore fraterno,
+        Perché sappiamo pregare con perseveranza,
+        Perché con la penitenza ci rendiamo partecipi dell’amore salvifico di Cristo,
+        Perché non cediamo alla tentazione di una vita facile,
+        Perché approfittiamo saggiamente dei doni della terra e dei mezzi che la tecnica e la cultura ci offrono,
+        Perché miriamo coraggiosamente all’amore perfetto nello Spirito del Vangelo,
+        Perché siamo responsabili del nostro Ordine,
+        Perché corrispondiamo degnamente alla nostra missione apostolica,
+        Perché ricordiamo nella preghiera i fratelli che si sono allontanati da noi,
+        Perché perseveriamo nell’ordine fino alla morte,
     </litany>
 </div>
 
 <div class="prayer-group">
     <litany responce="Cristo ascoltaci noi ti preghiamo">
-        Per intercessione della Beata Vergine Regina degli Eremiti
-        Per i meriti di tutti Santi del nostro Ordine
-        Perché ti degni di aumentare la nostra comunità religiosa
-        Perché ti degni di concedere grazie abbondanti alle nostre famiglie, ai confratelli e ai benefattori
-        Perché ti degni di dare gioia eterna ai nostri confratelli e benefattori defunti
+        Per intercessione della Beata Vergine Regina degli eremiti,
+        Per i meriti di tutti Santi del nostro Ordine,
+        Perché ti degni di aumentare la nostra comunità religiosa,
+        Perché ti degni di concedere grazie abbondanti alle nostre famiglie, ai confratelli e ai benefattori,
+        Perché ti degni di dare la gioia eterna ai nostri confratelli e benefattori defunti,
     </litany>
 </div>
 
 <div class="prayer-group">
-    <prayer red="S."><strong>Preghiamo:</strong><br />
+    <prayer red="V."><strong>Preghiamo:</strong><br />
         Dio, che hai dato al nostro Padre San Paolo di raggiungere la santità nel deserto, concedi, per Sua intercessione, che, sviluppando in noi lo spirito di preghiera e di servizio, raggiungiamo la pienezza del tuo amore. Per Cristo nostro Signore.
     </prayer>
-    <prayer red="C.">Amen.</prayer>
+    <prayer red="R.">Amen.</prayer>
 </div>
+
+<p class="instruction">
+    Nella preghiera per i defunti si usi la seguente formula:
+</p>
 
 <h2>Preghiere per i defunti</h2>
 
 <div class="prayer-group">
-    <prayer class="leader" red="S.">Per i nostri confratelli defunti di cui domani ricorre l'anniversario della morte, preghiamo
+    <prayer class="leader" red="V.">Per i nostri confratelli defunti di cui domani ricorre l'anniversario della morte
 
     </prayer>
+    <table id="necrology">
+
+    </table>
+    <p id="necrology-not-found" class="instruction">
+        (Nessun dato trovato in Necrologio)
+    </p>
+    <script type="text/javascript">
+            loadNecrology();
+    </script>
+    <prayer class="leader" red="V.">Preghiamo</prayer>
     <p class="instruction">(Breve Pausa)</p>
 </div>
 
 <div class="prayer-group">
-    <prayer class="leader" red="S.">O Dio, fonte di perdono e di salvezza, per l'intercessione della Vergine Maria e di tutti i Santi, concedi ai nostri fratelli, parenti e benefattori, che sono passati da questo mondo a te, di godere la gioia perfetta nella patria celeste. Per Cristo nostro Signore.
+    <prayer class="leader" red="V.">O Dio, fonte di perdono e di salvezza, per l'intercessione della Vergine Maria e di tutti i Santi, concedi ai nostri fratelli, parenti e benefattori, che sono passati da questo mondo a te, di godere la gioia perfetta nella patria celeste. Per Cristo nostro Signore.
     </prayer>
-    <prayer red="C.">Amen.</prayer>
+    <prayer red="R.">Amen.</prayer>
 </div>
 
 <div class="prayer-group">
-    <prayer class="leader" red="S.">L'eterno riposo dona loro, o Signore </prayer>
-    <prayer red="C.">Risplenda ad essi la luce perpetua.</prayer>
-    <prayer class="leader" red="S.">Riposino in Pace.</prayer>
-    <prayer red="C.">Amen.</prayer>
+    <prayer class="leader" red="V.">L'eterno riposo dona loro, o Signore </prayer>
+    <prayer red="R.">Risplenda ad essi la luce perpetua.</prayer>
+    <prayer class="leader" red="V.">Riposino in Pace.</prayer>
+    <prayer red="R.">Amen.</prayer>
 </div>
 
 </body>

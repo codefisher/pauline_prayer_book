@@ -11,7 +11,48 @@ al Cuore Immacolato di Maria" doc="consecration-immaculate-heart.html" />
     <menuitem title="Gli Angeli" doc="angels.html" />
     <menuitem title="San Giuseppe" doc="saint-jospeh.html" />
     <menuitem title="Preghiere per le Vocazioni" doc="vocations.html" />
-    <menuitem title="Sant’Agostino" doc="saint-agustine.html" />
+    <menuitem title="Sant’Agostino" doc="saint-augustine.html" />
     <menuitem title="Novena A San Paolo Primo Eremita Patriarca Dell’Ordine Dei Monaci Paolini" doc="saint-paul-novena.html" />
     <menuitem title="Canto a San Paolo Eremita" doc="saint-paul-hymns.html" />
+
+    <menu title="Brevario">
+        <menuitem title="15 gennaio San Paolo Primo Eremita, Patrono dell’Ordine Solennità" doc="office/paul.html" />
+        <menuitem title="16 gennaio Beata Vergine Maria, Regina degli eremiti e Madre dell’Ordine Festa" doc="office/mary-hermits.html" />
+        <menuitem title="19 gennaio San Macario il Grande, abate Memoria facoltativa" doc="office/macarius.html"/>
+        <menuitem title="20 gennaio Beato Eusebio di Esztergom, sacerdote Fondatore dell’Ordine Festa" doc="office/eusebius.html" />
+        <menuitem title="28 febbraio San Giovanni Cassiano, abate Memoria" doc="office/john-cassian.html" />
+        <menuitem title="20 marzo San Giuseppe Bilczewski, vescovo Memoria facoltativa" doc="office/joseph-bilczewski.html" />
+        <menuitem title="1 aprile Santa Maria Egiziaca, eremita Memoria" doc="office/mary-egypt.html" />
+        <menuitem title="9 maggio San Pacomio, abate Memoria" doc="office/pachomius.html" />
+        <menuitem title="Maria Vergine Immagine E Madre Della Chiesa Lunedi dopo Pentecoste Festa" doc="office/mother-church.html" />
+        <menuitem title="8 giugno Santa Edvige Memoria facoltativa" doc="office/hidwig.html" />
+        <menuitem title="26 Agosto Beata Maria Vergine di Czestochowa Festa" doc="office/czestochowa.html" />
+        <menuitem title="28 agosto Sant’Agostino Vescovo, Dottore della Chiesa, e donatore della regola dell’ordine Festa" doc="office/augustine.html" />
+        <menuitem title="24 settembre Santa Tecla, Vergine e martire Memoria facoltativa" doc="office/thecla.html" />
+        <menuitem title="2 ottobre Santi Angeli Custodi Festa" doc="office/angels.html" />
+        <menuitem title="30 Ottobre Maria Vergine Madre E Mediatrice Di Grazia Memoria" doc="office/mary-grace.html" />
+        <menuitem title="3 novembre Commemorazione Di Tutti I Defunti Dell’ordine" doc="office/departed.html" />
+        <menuitem title="7 novembre Tutti I Santi Dell’ordine Memoria" doc="office/saints.html" />
+    </menu>
+
+    <menu title="Messe Proprie">
+        <menuitem title="15 gennaio San Paolo Primo Eremita, Patrono dell’Ordine Solennità" doc="mass/st-paul-the-first-hermit.html" />
+        <menuitem title="16 gennaio Beata Vergine Maria, Regina degli eremiti e Madre dell’Ordine Festa" doc="mass/mary-queen-of-hermits.html" />
+        <menuitem title="19 gennaio San Macario il Grande, abate Memoria facoltativa" doc="mass/macarius.html"/>
+        <menuitem title="20 gennaio Beato Eusebio di Esztergom, sacerdote Fondatore dell’Ordine Festa" doc="mass/blessed-eusebius.html" />
+        <menuitem title="28 febbraio San Giovanni Cassiano, abate Memoria" doc="mass/john-cassian.html" />
+        <menuitem title="20 marzo San Giuseppe Bilczewski, vescovo Memoria facoltativa" doc="mass/joseph-bilczewski.html" />
+        <menuitem title="1 aprile Santa Maria Egiziaca, eremita Memoria" doc="mass/mary-egypt.html" />
+        <menuitem title="9 maggio San Pacomio, abate Memoria" doc="mass/pachomius.html" />
+        <menuitem title="Maria Vergine Immagine E Madre Della Chiesa Lunedi dopo Pentecoste Festa" doc="mass/mother-church.html" />
+        <menuitem title="8 giugno Santa Edvige Memoria facoltativa" doc="mass/hidwig.html" />
+        <menuitem title="26 Agosto Beata Maria Vergine di Czestochowa Festa" doc="mass/czestochowa.html" />
+        <menuitem title="28 agosto Sant’Agostino Vescovo, Dottore della Chiesa, e donatore della regola dell’ordine Festa" doc="mass/augustine.html" />
+        <menuitem title="24 settembre Santa Tecla, Vergine e martire Memoria facoltativa" doc="mass/thecla.html" />
+        <menuitem title="2 ottobre Santi Angeli Custodi Festa" doc="mass/guardian-angels.html" />
+        <menuitem title="30 Ottobre Maria Vergine Madre E Mediatrice Di Grazia Memoria" doc="mass/mary-grace.html" />
+        <menuitem title="3 novembre Commemorazione Di Tutti I Defunti Dell’ordine" doc="mass/departed.html" />
+        <menuitem title="7 novembre Tutti I Santi Dell’ordine Memoria" doc="mass/saints.html" />
+        <menuitem title="Le Preghiere dei fedeli per la Messa quotidiana del Convenuto di Jasna Góra" doc="mass/conventual-general-intercessions.html" />
+    </menu>
 </menu>
