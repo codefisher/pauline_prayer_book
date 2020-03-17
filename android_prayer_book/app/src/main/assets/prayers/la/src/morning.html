@@ -1,9 +1,14 @@
 <html>
 <head>
     <title>Orationes Matutinae</title>
-    <script type="text/javascript" src="../toggle.js"><!-- // --></script>
+    <script type="text/javascript" src="../scripts/easter.js"></script>
+    <script type="text/javascript" src="../scripts/toggle.js"></script>
 </head>
-<body onload="setup();">
+<body lang="la" onload="toggleSeason();">
+
+<div id="today">&nbsp;</div>
+
+<div class="filler">&nbsp;</div>
 
 <h1>2. Orationes Matutinae</h1>
 
@@ -114,6 +119,7 @@
     <prayer red="R.">Amen.</prayer>
 </div>
 
+<hr class="rubric" />
 
 <div class="prayer-group">
     <prayer class="leader" red="V.">Gloria Patri et Filio, et Spiritui Sancto,
@@ -149,13 +155,6 @@
             ad Dominum Iesum Christum.
         </prayer>
     </div>
-
-    <div class="prayer-group">
-        <prayer class="leader" red="V.">In omni tribulatione et angustia nostra. Alleluia.
-        </prayer>
-        <prayer red="R.">Succurre nobis, piissima Virgo Maria! Alleluia.
-        </prayer>
-    </div>
 </div>
 
 <div id="mary-lent">
@@ -186,13 +185,15 @@
             S. Cyrilli Alexandrlae Archiepiscopi, Omilia IV. P.G. LXXVII, 991
         </p>
         </div>
+</div>
 
-        <div class="prayer-group">
-            <prayer class="leader" red="V.">In omni tribulatione et angustia nostra.
-            </prayer>
-            <prayer red="R.">Succurre nobis, piissima Virgo Maria!
-            </prayer>
-        </div>
+<hr class="rubric" />
+
+<div class="prayer-group">
+    <prayer class="leader" red="V.">In omni tribulatione et angustia nostra.  <span class="rubric">(</span>Alleluia<span class="rubric">)</span>.
+    </prayer>
+    <prayer red="R.">Succurre nobis, piissima Virgo Maria!  <span class="rubric">(</span>Alleluia<span class="rubric">)</span>.
+    </prayer>
 </div>
 
 <div class="prayer-group">
@@ -215,6 +216,8 @@
         Amen.
     </prayer>
 </div>
+
+<h2>Orationes ante Meditatio</h2>
 
 <div class="prayer-group">
     <prayer class="leader" red="V.">Veni, Sancte Spiritus,
@@ -247,6 +250,52 @@
     <prayer red="R.">Ora pro nobis.
     </prayer>
 </div>
+
+<div class="filler">&nbsp;</div>
+
+<div class="filler">&nbsp;</div>
+
+<div class="filler">&nbsp;</div>
+
+<div class="filler">&nbsp;</div>
+
+<h2>Orationes post Meditatio</h2>
+
+<div class="prayer-group">
+    <prayer class="leader" red="V.">Sub tuum praesidium,</prayer>
+    <prayer red="R.">
+        confugimus,
+        Sancta Dei Genetrix.
+        Nostras deprecationes ne despicias
+        in necessitatibus nostris,
+        sed a periculis cunctis
+        libera nos semper,
+        Virgo gloriosa et benedicta.
+        Domina nostra, Mediatrix nostra, Advocata nostra,
+        tuo Filio nos reconcilia,
+        tuo Filio nos recommenda,
+        tuo Filio nos representa.
+    </prayer>
+</div>
+
+<p class="instruction">
+    vel:
+</p>
+
+<div class="prayer-group">
+    <prayer class="leader" red="L.">Maria, Mater Gratiae,</prayer>
+    <prayer lines="lines" red="All">
+        Mater, Misericordiae,
+        Tu nos ab hoste protege,
+        et mortis hora suscipe.
+
+        Jesu, Tibi sit gloria,
+        Qui natus es de Virgine.
+        Cum Patre et Almo Spiritu
+        in sempiterna saecula. Amen.
+    </prayer>
+</div>
+
 
 </body>
 </html>

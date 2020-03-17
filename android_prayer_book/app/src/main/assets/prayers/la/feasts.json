@@ -1,0 +1,161 @@
+{
+  "paul-novena": {
+    "name": "Novena Sancti Pauli Primi Eremitae",
+    "link": "saint-paul-novena.html",
+    "day": "Novena prima sollemnitatem S. Pauli I Eremitae"
+  },
+  "0115": {
+    "name": "Sancti Pauli Primi Eremitæ Patroni Ordinis",
+    "link": "saints/paul.html",
+    "type": "Sollemnitas"
+  },
+  "paul-external": {
+    "name": "External Solemnity of St. Paul the First Hermit",
+    "link": "saints/paul.html",
+    "type": "Sollemnitas",
+    "day": "In prima dominica post sollemnitatem S. Pauli I Eremitae"
+  },
+  "0116": {
+    "name": "Beatæ Mariæ Virginis Reginæ Eremitarum et Matris Ordinis",
+    "link": "saints/queen-hermits.html",
+    "type": "Festum"
+  },
+  "0117": {
+    "name": "S. Antonii Abbatis",
+    "link": "saints/anthony.html",
+    "type": "Festum"
+  },
+  "0119": {
+    "name": "Sancti Macarii Magni, abbatis",
+    "link": "saints/macarius.html",
+    "type": "Memoria ad libitum"
+  },
+  "0120": {
+    "name": "Beati Eusebii de Strigonio, presbyteri, Fundatoris Ordinis",
+    "link": "saints/eusebius.html",
+    "type": "Festum"
+  },
+  "0225": {
+    "name": "Sancti Ioannis Cassiani, abbatis",
+    "link": "saints/john-cassian.html",
+    "type": "Memoria"
+  },
+  "0304": {
+    "name": "Sancti Casimiri",
+    "link": "saint-casimir.html",
+    "type": "Memoria"
+  },
+  "0319": {
+    "name": "Sancti Ioseph sponsi Beatæ Mariæ Virginis",
+    "link": "saint-joseph.html",
+    "type": "Sollemnitas"
+  },
+  "0320": {
+    "name": "Sancti Iosephi Bilczewski, episcopi",
+    "link": "saints/joseph-bilczewski.html",
+    "type": "Memoria ad libitum"
+  },
+  "0401": {
+    "name": "Sanctae Mariae Aegyptiacae, eremitae",
+    "link": "saints/mary-egypt.html",
+    "type": "Memoria"
+  },
+  "0509": {
+    "name": "Sancti Pachomii, abbatis",
+    "link": "saints/pachomius.html",
+    "type": "Festum"
+  },
+  "mother-church": {
+    "name": "Mariæ Virginis Matris Ecclesiæ",
+    "link": "saints/mother-church.html",
+    "type": "Festum",
+    "day": "Feria II post Dominicam Pentecostes"
+  },
+  "0608": {
+    "name": "Sanctae Edvigis",
+    "link": "saints/hedwig.html",
+    "type": "Memoria ad libitum"
+  },
+  "0826": {
+    "name": "Beatæ Mariæ Virginis Claromontanæ",
+    "link": "saints/czestochowa.html",
+    "type": "Festum"
+  },
+  "0828": {
+    "name": "Sancti Augustini, Episcopi et Ecclesiæ Doctoris",
+    "link": "saints/augustine.html",
+    "type": "Festum"
+  },
+  "0924": {
+    "name": "Sanctae Theclae, virginis et martyris",
+    "link": "saints/thecla.html",
+    "type": "Memoria ad libitum"
+  },
+  "1002": {
+    "name": "Sanctorum Angelorum Costodum",
+    "link": "saints/angels.html",
+    "type": "Festum"
+  },
+  "1030": {
+    "name": "Beatæ Mariæ Virginis, Mediatricis gratiæ",
+    "link": "saints/mary-grace.html",
+    "type": "Memoria"
+  },
+  "church-consecration": {
+    "name": "In Dedicatione ecclesiæ cuius dies dedicationis ignoratur",
+    "type": "Sollemnitas",
+    "day": "Ultima Dominica Octobris"
+  },
+  "1103": {
+    "name": "In commemoratione omnium defunctorum Ordinis",
+    "link": "saints/departed.html",
+    "type": "Memoria"
+  },
+  "1107": {
+    "name": "Omnium Sanctorum Ordinis",
+    "link": "saints/order.html",
+    "type": "Memoria"
+  },
+  "litany": [
+    [
+      {
+        "name": "Litaniae Sancti Pauli Primi Eremitae",
+        "link": "litany.html#litany"
+      }
+    ],
+    [
+      {
+        "name": "Litaniae Sanctorum Angelorum Costodum",
+        "link": "litany-guardian-angels.html#litany"
+      }
+    ],
+    [
+      {
+        "name": "Litaniae Sancti Ioseph",
+        "link": "saint-joseph.html#litany"
+      }
+    ],
+    [
+      {
+        "name": "Litaniae Sanctissimi Nominis Iesu",
+        "link": "litanies.html#holy-name-jesus"
+      },
+      {
+        "name": "Litaniae de Sacratissimo Corde Iesu",
+        "link": "litanies.html#sacred-heart"
+      }
+    ],
+    [
+      {
+        "name": "Litaniae pretiosissimi Sanguinis Domini Nostri Iesu Christi",
+        "link": "litanies.html#blood-jesus"
+      }
+    ],
+    [
+      {
+        "name": "Litaniae de Beata Maria Virgine",
+        "link": "loreto.html#litany"
+      }
+    ]
+  ]
+}

@@ -2,16 +2,39 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <title>Orationes Ordinis Fratrum Sancti Pauli Primi Eremitae</title>
+    <meta name="viewport" content="initial-scale=1.0"/>
+    <link href="../style.css" rel="stylesheet"/>
+    <script type="text/javascript" src="../scripts/easter.js"></script>
+    <script type="text/javascript" src="../scripts/calendar.js"></script>
 </head>
-<body lang="la">
-    <div style="text-align:center">
-        <h1>Orationes<br />
-            <img height="291" width="206" src="../coat-of-arms.svg" /><br/>
-            Ordinis<br /> Fratrum Sancti Pauli <br /> Primi Eremitae
-        </h1>
-        <p>
-            App Created by <br /> Fr. Joseph Maria OSPPE <br /> of the Australian Province
-        </p>
+<body lang="en" onload="setupFront();">
+<div style="text-align:center">
+    <h1>Orationes<br />
+        <img height="291" width="206" src="../coat-of-arms.svg" /><br/>
+        Ordinis<br /> Fratrum Sancti Pauli <br /> Primi Eremitae
+    </h1>
+    <div id="today">
+        <h2>Hodie</h2>
+        <div id="litany">
+            <h3>Litaniae</h3>
+            <div id="litany-box">&nbsp;</div>
+        </div>
+        <div id="today-feast">
+            <h3>Festum</h3>
+            <div id="today-feast-box">&nbsp;</div>
+        </div>
     </div>
+
+    <div id="tomorrow">
+        <h2>Cras</h2>
+        <div id="tomorrow-feast">
+            <h3>Festum</h3>
+            <div id="tomorrow-feast-box">&nbsp;</div>
+        </div>
+    </div>
+    <p>
+        App Created by <br /> Fr. Joseph Maria OSPPE <br /> of the Australian Province
+    </p>
+</div>
 </body>
 </html>

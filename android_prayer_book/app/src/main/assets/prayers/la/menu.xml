@@ -14,4 +14,84 @@
     <menuitem title="Beatæ Mariæ Virginis Claromontanæ Częstochoviensis" doc="mass-claromontanae.html" />
     <menuitem title="Vesperae Beatæ Mariæ Virginis Claromontanæ Częstochoviensis" doc="vesperae-claromontanae.html" />
     <menuitem title="Litaniae de Beata Maria Virgine “Kleczki Jasnagorskie”" doc="kleczki.html" />
+
+    <menuitem title="Calendarium Proprium Ordinis Sancti Pauli Primi Eremitæ”" doc="calendar.html" />
+
+    <menu title="Sancta Missa">
+        <menuitem title="Sollemnitas - Sancti Pauli Primi Eremitæ Patroni Ordinis" doc="mass/st-paul-the-first-hermit.html" />
+        <menuitem title="Festum - Beatæ Mariæ Virginis Reginæ Eremitarum et Matris Ordinis" doc="mass/mary-queen-of-hermits.html" />
+        <menuitem title="Memoria ad libitum - Sancti Macarii Magni, abbatis" doc="mass/macarius.html"/>
+        <menuitem title="Festum - Beati Eusebii de Strigonio, presbyteri, Fundatoris Ordinis" doc="mass/blessed-eusebius.html" />
+        <menuitem title="Memoria - Sancti Ioannis Cassiani, abbatis" doc="mass/john-cassian.html" />
+        <menuitem title="Memoria ad libitum -  Sancti Iosephi Bilczewski, episcopi" doc="mass/joseph-bilczewski.html" />
+        <menuitem title="Memoria - Sanctae Mariae Aegyptiacae, eremitae" doc="mass/mary-egypt.html" />
+        <menuitem title="Memoria -  Sancti Pachomii, abbatis" doc="mass/pachomius.html" />
+        <menuitem title="Festum - Mariæ Virginis Matris Ecclesiæ" doc="mass/mother-church.html" />
+        <menuitem title="Memoria ad libitum - Sanctae Edvigis" doc="mass/hidwig.html" />
+        <menuitem title="Festum - Beatæ Mariæ Virginis Claromontanæ" doc="mass/czestochowa.html" />
+        <menuitem title="Festum - Sancti Augustini, Episcopi et Ecclesiæ Doctoris" doc="mass/augustine.html" />
+        <menuitem title="Memoria ad libitum - Sanctae Theclae, virginis et martyris" doc="mass/thecla.html" />
+        <menuitem title="Festum - Sanctorum Angelorum Costodum" doc="mass/guardian-angels.html" />
+        <menuitem title="Memoria - Beatæ Mariæ Virginis, Mediatricis gratiæ" doc="mass/mary-grace.html" />
+        <menuitem title="Memoria - In commemoratione omnium defunctorum Ordinis" doc="mass/departed.html" />
+        <menuitem title="Memoria - Omnium Sanctorum Ordinis" doc="mass/saints.html" />
+        <menuitem title="Oratio fidelium Pro Missa conventuali" doc="mass/conventual-general-intercessions.html" />
+        <menuitem title="Beatæ Mariæ Virginis In Lesna" doc="mass/lesna.html" />
+        <menuitem title="Beatæ Mariæ Virginis Lesniovinensis" doc="mass/lesniow.html" />
+    </menu>
+
+    <menu title="Ordo Lectionum Missae">
+        <menuitem title="Sollemnitas - Sancti Pauli Primi Eremitæ Patroni Ordinis" doc="lectionary/st-paul-the-first-hermit.html" />
+        <menuitem title="Festum - Beatæ Mariæ Virginis Reginæ Eremitarum et Matris Ordinis" doc="lectionary/mary-queen-of-hermits.html" />
+        <menuitem title="Festum - Beati Eusebii de Strigonio, presbyteri, Fundatoris Ordinis" doc="lectionary/blessed-eusebius.html" />
+        <menuitem title="Festum - Beatæ Mariæ Virginis Claromontanæ" doc="lectionary/czestochowa.html" />
+        <menuitem title="Festum - Sancti Augustini, Episcopi et Ecclesiæ Doctoris" doc="lectionary/augustine.html" />
+        <menuitem title="Festum - Sanctorum Angelorum Costodum" doc="lectionary/guardian-angels.html" />
+        <menuitem title="Beatæ Mariæ Virginis In Lesna" doc="lectionary/lesna.html" />
+        <menuitem title="Beatæ Mariæ Virginis Lesniovinensis" doc="lectionary/lesniow.html" />
+    </menu>
+
+    <menu title="Divinum Officium">
+        <menuitem title="Memoria ad libitum - Sancti Macarii Magni, abbatis" doc="office/macarius.html"/>
+        <menuitem title="Festum - Beati Eusebii de Strigonio, presbyteri, Fundatoris Ordinis" doc="office/blessed-eusebius.html" />
+        <menuitem title="Memoria - Sancti Ioannis Cassiani, abbatis" doc="office/john-cassian.html" />
+        <menuitem title="Memoria ad libitum -  Sancti Iosephi Bilczewski, episcopi" doc="office/joseph-bilczewski.html" />
+        <menuitem title="Memoria - Sanctae Mariae Aegyptiacae, eremitae" doc="office/mary-egypt.html" />
+        <menuitem title="Memoria -  Sancti Pachomii, abbatis" doc="office/pachomius.html" />
+        <menuitem title="Memoria ad libitum - Sanctae Edvigis" doc="office/hidwig.html" />
+        <menuitem title="Memoria ad libitum - Sanctae Theclae, virginis et martyris" doc="office/thecla.html" />
+        <menuitem title="Memoria - Beatæ Mariæ Virginis, Mediatricis gratiæ" doc="office/mary-grace.html" />
+        <menuitem title="Memoria - In commemoratione omnium defunctorum Ordinis" doc="office/departed.html" />
+        <menuitem title="Memoria - Omnium Sanctorum Ordinis" doc="office/saints.html" />
+    </menu>
+
+    <menu title="Missa Forma Extraordinaria">
+        <menuitem title="Calendarium Proprium Ordinis Sancti Pauli Primi Eremitæ" doc="extraordinary-form/calendar.html"   />
+        <menuitem title="S. Pauli I Eremitæ" doc="extraordinary-form/st-paul.html"   />
+        <menuitem title="S. Antonii Abbatis" doc="extraordinary-form/st-anthony.html"  />
+        <menuitem title="Translatonis S. Augustino E. C. E. D." doc="extraordinary-form/st-augustine-i.html"  />
+        <menuitem title="S. Patris Augustini In Translatone secundaria" doc="extraordinary-form/st-augustine-i.html"  />
+        <menuitem title="S. Casimiri Confessoris" doc="extraordinary-form/extraordinary-form/march.html"  />
+        <menuitem title="In Conversione S. Patris Augustini In Translatone secundaria" doc="extraordinary-form/st-augustine-ii.html"  />
+        <menuitem title="S. Michaëlis Archangeli" doc="extraordinary-form/st-michael.html"  />
+        <menuitem title="Beatæ Mariæ Virginis Omnium Gratiarum Mediatricis" doc="extraordinary-form/mary-grace.html"  />
+        <menuitem title="Eucharistici Cordis Jesu" doc="extraordinary-form/heart-jesus.html"  />
+        <menuitem title="Sanctissimi Redemptoris" doc="extraordinary-form/holy-redeemer.html"  />
+        <menuitem title="Beatæ Mariæ Virginis Claromontanæ Częstochoviensis" doc="extraordinary-form/black-madonna.html"  />
+        <menuitem title="S. Augustini Ordinis nostri Legislatoris" doc="extraordinary-form/st-augustine-iii.html"  />
+        <menuitem title="S. Gerardi" doc="extraordinary-form/st-gerard.html"  />
+        <menuitem title="Septembris" doc="extraordinary-form/september.html"  />
+        <menuitem title="S. Patris Augustini In Translatone Primaria" doc="extraordinary-form/st-augustine-iv.html"  />
+        <menuitem title="In Dedicatione Basilicæ Claromontanæ et Omnium Ecclesiarum Ord." doc="extraordinary-form/dedication.html"  />
+        <menuitem title="Omnium Sanctorum Ordinis S. Pauli I Eremitæ" doc="extraordinary-form/all-saints.html"  />
+        <menuitem title="Sacrarum Reliquiarum" doc="extraordinary-form/holy-relics.html"  />
+        <menuitem title="S. P. N. Pauli I Eremitæ" doc="extraordinary-form/st-paul-ii.html"  />
+        <menuitem title="Beatæ Mariæ Virginis Claromontanæ Częstochoviensis" doc="mass-claromontanae.html"  />
+    </menu>
+
+    <menu title="Constitutiones et Directorium Generale">
+        <menuitem title="Regula Sancti Augustini" doc="constitutions/rule-augustine.html" />
+        <menuitem title="Constitutiones" doc="constitutions/constitutions-index.html" />
+        <menuitem title="Directorium" doc="constitutions/directory-index.html" />
+    </menu>
 </menu>
