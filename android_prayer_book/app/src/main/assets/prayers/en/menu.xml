@@ -73,6 +73,8 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Blessing by a Priest" doc="priest-la.html" />
     </menu>
 
+    <menuitem title="Calendar" doc="calendar.html" />
+
     <menu title="Divine Office">
         <menuitem title="Solemnity of St. Paul the First Hermit, Father of the Order" doc="office/paul.html" />
         <menuitem title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order" doc="office/mary-hermits.html" />
@@ -112,7 +114,22 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Commemoration of all the Departed of the Order" doc="mass/departed.html" />
         <menuitem title="All the Saints of the Order" doc="mass/saints.html" />
         <menuitem title="General Intercessions for Conventual Mass" doc="mass/conventual-general-intercessions.html" />
+        <menuitem title="Blessed Virgin Mary of Lesna" doc="mass/lesna.html" />
+        <menuitem title="Blessed Virgin Mary of Leśniów" doc="mass/lesniow.html" />
     </menu>
+
+    <menu title="Lectionary">
+        <menuitem title="Solemnity of St. Paul the First Hermit, Father of the Order" doc="lectionary/st-paul-the-first-hermit.html" />
+        <menuitem title="Feast of Blessed Virgin Mary, Queen of Hermits and Mother of the Order" doc="lectionary/mary-queen-of-hermits.html" />
+        <menuitem title="Feast of Blessed Eusebius, Priest, Founder of the Order" doc="lectionary/blessed-eusebius.html" />
+        <menuitem title="Feast Mary, Mother of the Church" doc="lectionary/mother-church.html" />
+        <menuitem title="Solemnity of Our Lady of Czestochowa" doc="lectionary/czestochowa.html" />
+        <menuitem title="Feast of St. Augustine" doc="lectionary/augustine.html" />
+        <menuitem title="Feast of The Holy Guardian Angels" doc="lectionary/guardian-angels.html" />
+        <menuitem title="Blessed Virgin Mary of Lesna" doc="lectionary/lesna.html" />
+        <menuitem title="Blessed Virgin Mary of Leśniów" doc="lectionary/lesniow.html" />
+    </menu>
+
     <menu title="Constitutions and Directory">
         <menuitem title="Rule of St. Augustine" doc="constitutions/rule-augustine.html" />
         <menuitem title="Constitutions" doc="constitutions/constitutions-index.html" />
@@ -120,4 +137,5 @@ of the Order" doc="renewal-covenant.html" />
         <menuitem title="Statutes of Australian Province" doc="constitutions/statutes.html" />
         <menuitem title="Search" doc="constitutions/search.html" />
     </menu>
+    <menuitem title="Necrology" doc="necrology.html" />
 </menu>

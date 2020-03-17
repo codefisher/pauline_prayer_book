@@ -1,0 +1,165 @@
+{
+  "paul-novena": {
+    "name": "Novena to St. Paul the First Hermit",
+    "link": "saint-paul-novena.html",
+    "day": "Starts 9 Days before the External Solemnity of St. Paul the First Hermit"
+  },
+  "0115": {
+    "name": "St. Paul the First Hermit",
+    "link": "saints/paul.html",
+    "type": "Solemnity"
+  },
+  "paul-external": {
+    "name": "External Solemnity of St. Paul the First Hermit",
+    "link": "saints/paul.html",
+    "type": "Solemnity",
+    "day": "Sunday after the 15th of January"
+  },
+  "0116": {
+    "name": "Blessed Virgin Mary, Queen of hermits and Mother of the Order",
+    "link": "saints/queen-hermits.html",
+    "type": "Feast"
+  },
+  "0117": {
+    "name": "St. Anthony, Abbot",
+    "link": "saints/anthony.html",
+    "type": "Feast"
+  },
+  "0119": {
+    "name": "St. Macarius the Great, Abbot",
+    "link": "saints/macarius.html",
+    "type": "Optional Memorial"
+  },
+  "0120": {
+    "name": "Bl. Eusebius, Priest, Founder of the Order",
+    "link": "saints/eusebius.html",
+    "type": "Feast"
+  },
+  "0225": {
+    "name": "St. John Cassian, Abbot",
+    "link": "saints/john-cassian.html",
+    "type": "Memorial"
+  },
+  "0304": {
+    "name": "St. Casimir",
+    "link": "saint-casimir.html",
+    "type": "Memorial"
+  },
+  "0319": {
+    "name": "St. Joseph, Husband of the Blessed Virgin Mary",
+    "link": "saint-joseph.html",
+    "type": "Solemnity"
+  },
+  "0320": {
+    "name": "St. Joseph Bilczewski, Bishop",
+    "link": "saints/joseph-bilczewski.html",
+    "type": "Optional Memorial"
+  },
+  "0401": {
+    "name": "St. Mary of Egypt, Hermit",
+    "link": "saints/mary-egypt.html",
+    "type": "Memorial"
+  },
+  "0509": {
+    "name": "St. Pachomius, Abbot",
+    "link": "saints/pachomius.html",
+    "type": "Feast"
+  },
+  "mother-church": {
+    "name": "Mary, Mother of the Church",
+    "link": "saints/mother-church.html",
+    "type": "Feast",
+    "day": "Monday after Pentecost"
+  },
+  "0608": {
+    "name": "St. Hedwig, Queen",
+    "link": "saints/hedwig.html",
+    "type": "Optional Memorial"
+  },
+  "0826": {
+    "name": "Our Lady of Częstochowa",
+    "link": "saints/czestochowa.html",
+    "type": "Solemnity"
+  },
+  "0828": {
+    "name": "St. Augustine, Bishop and Doctor of the Church",
+    "link": "saints/augustine.html",
+    "type": "Feast"
+  },
+  "0924": {
+    "name": "St. Thecla, Virgin and Martyr",
+    "link": "saints/thecla.html",
+    "type": "Optional Memorial"
+  },
+  "1002": {
+    "name": "The Holy Guardian Angels",
+    "link": "saints/angels.html",
+    "type": "Feast"
+  },
+  "1030": {
+    "name": "Mary, Mother and Mediatrix of Grace",
+    "link": "saints/mary-grace.html",
+    "type": "Memorial"
+  },
+  "church-consecration": {
+    "name": "Consecration of the Church of date is unknown",
+    "type": "Solemnity",
+    "day": "Last Sunday of October"
+  },
+  "1103": {
+    "name": "Commemoration of all the Departed of the Order",
+    "link": "saints/departed.html",
+    "type": "Memorial"
+  },
+  "1107": {
+    "name": "All the Saints of the Order",
+    "link": "saints/order.html",
+    "type": "Memorial"
+  },
+  "litany": [
+    [
+      {
+        "name": "Invocations to St. Paul the First Hermit",
+        "link": "saint-paul.html#litany"
+      }
+    ],
+    [
+      {
+        "name": "Invocations to the Guardian Angels",
+        "link": "invocations-angels.html#invocations"
+      }
+    ],
+    [
+      {
+        "name": "Litany to St. Joseph",
+        "link": "saint-joseph.html#litany"
+      }
+    ],
+    [
+      {
+        "name": "Litany to the Holy Name of Jesus",
+        "link": "litanies.html#holy-name-jesus"
+      },
+      {
+        "name": "Litany Sacred Heart of Jesus",
+        "link": "litanies.html#sacred-heart"
+      }
+    ],
+    [
+      {
+        "name": "Litany to the Sacred Blood of Jesus",
+        "link": "litanies.html#blood-jesus"
+      },
+      {
+        "name": "Litany to the Five wounds of the Lord Jesus Christ",
+        "link": "litanies.html#wounds-jesus"
+      }
+    ],
+    [
+      {
+        "name": "Litany of the Blessed Virgin Mary",
+        "link": "loreto.html#litany"
+      }
+    ]
+  ]
+}

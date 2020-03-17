@@ -1,12 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd">
+<!doctype html>
 <html>
 <head>
     <title>Morning Prayers</title>
-    <script type="text/javascript" src="../toggle.js">&lt;!-- // --&gt;</script>
+    <script type="text/javascript" src="../scripts/easter.js"></script>
+    <script type="text/javascript" src="../scripts/toggle.js"></script>
+    <script type="text/javascript" src="../scripts/calendar.js"></script>
+    <script type="text/javascript" src="../scripts/multi-lingua.js"></script>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
         <link href="../style.css" rel="stylesheet"/>
+        <meta name="viewport" content="initial-scale=1.0"/>
         </head>
-<body onload="setup();">
+<body lang="en" onload="toggleSeason(); todayFeast(); loadLanguage(['la', 'pl'])">
+
+<div id="today">
+    <h2>Today's Feast</h2>
+    <div id="today-feast-box">&#160;</div>
+</div>
 
 <h1 class="section">A. Daily Prayers</h1>
 
@@ -30,7 +39,7 @@
 <div id="angelus">
     <h2>Ordinary Time</h2>
 <div class="prayer-group short-prayer">
-    <div class="leader prayer short-prayer"><div class="prayer-red short-prayer">L.</div>The Angel of the Lord declared unto Mary,</div><div class="prayer short-prayer"><div class="prayer-red short-prayer">All</div>And she conceived of the Holy Spirit</div></div>
+    <div class="leader prayer short-prayer"><div class="prayer-red short-prayer">L.</div>The Angel of the Lord declared unto Mary,</div><div class="prayer short-prayer"><div class="prayer-red short-prayer">All</div>And she conceived of the Holy Spirit.</div></div>
 
 <p class="indented-prayer"><em>Hail Mary, full of grace, the Lord is with thee;
     blessed art thou among women,
@@ -175,12 +184,9 @@
     or:
 </p>
 
-
+<!-- TODO: if reprinting update this -->
 <div class="prayer-group">
-    <div class="leader prayer short-prayer"><div class="prayer-red short-prayer">L.</div>O, Mary, Mother of Grace,</div><div class="prayer"><div class="prayer-red short-prayer">All</div>Mother of Mercy, defend us from the enemy and welcome us in the hour of our death. To you, O Jesus,
-        born of the purest Mother and Virgin be glory and
-        honour with the Father and the Holy Spirit. Amen.
-    </div></div>
+    <div class="leader prayer short-prayer"><div class="prayer-red short-prayer">L.</div>O, Mary, Mother of Grace,</div><div class="prayer"><div class="prayer-red short-prayer">All</div><div class="prayer-line short-prayer">Mother of Mercy,</div><div class="prayer-line short-prayer">        defend us from the enemy</div><div class="prayer-line short-prayer">        and welcome us in the hour of our death.</div><div class="prayer-line short-prayer">&#160;</div><div class="prayer-line short-prayer">        To you, O Jesus,</div><div class="prayer-line short-prayer">        born of the purest Mother and Virgin</div><div class="prayer-line short-prayer">        be glory and honour with the Father</div><div class="prayer-line short-prayer">        and the Holy Spirit. Amen.</div></div></div>
 
 <p class="instruction">
     or:

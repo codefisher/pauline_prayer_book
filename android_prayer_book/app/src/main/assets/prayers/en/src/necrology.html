@@ -1,0 +1,38 @@
+<html>
+<head>
+    <title>Necrology</title>
+    <script type="text/javascript" src="../scripts/necrology.js"></script>
+    <script type="text/javascript" src="../scripts/jquery/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../scripts/jquery/jquery-ui-1.12.1.min.js"></script>
+    <link href="../scripts/jquery/jquery-ui.min.css" rel="stylesheet"/>
+</head>
+<body lang="en">
+
+<h1>Necrology</h1>
+
+<div id="necro-calendar">
+    <div class="controls">
+        <div id="quick-go">
+            <a href="#today" onclick="loadTableInc(0)">Today</a> &bull; <a href="#tomorrow" onclick="loadTableInc(1)">Tomorrow</a>
+        </div>
+        <form id="date-go">
+            <input type="text" name="day" id="day" onfocus="event.target.blur();"/>
+        </form>
+    </div>
+    <div class="controls">
+        <img class="previous" id="previous" onclick="previous();" src="../images/arrow-back.svg" />
+        <img class="next" id="next"  onclick="next();" src="../images/arrow-forward.svg" />
+    </div>
+
+    <table id="necrology">
+
+    </table>
+    <p id="necrology-not-found" class="instruction">
+        (No entries were found in the Necrology)
+    </p>
+    <script type="text/javascript">
+        setupNecrology("en");
+    </script>
+</div>
+</body>
+</html>

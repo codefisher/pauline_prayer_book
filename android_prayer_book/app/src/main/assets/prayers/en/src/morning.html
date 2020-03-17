@@ -1,9 +1,17 @@
 <html>
 <head>
     <title>Morning Prayers</title>
-    <script type="text/javascript" src="../toggle.js"><!-- // --></script>
+    <script type="text/javascript" src="../scripts/easter.js"></script>
+    <script type="text/javascript" src="../scripts/toggle.js"></script>
+    <script type="text/javascript" src="../scripts/calendar.js"></script>
+    <script type="text/javascript" src="../scripts/multi-lingua.js"></script>
 </head>
-<body onload="setup();">
+<body lang="en" onload="toggleSeason(); todayFeast(); loadLanguage(['la', 'pl'])">
+
+<div id="today">
+    <h2>Today's Feast</h2>
+    <div id="today-feast-box">&nbsp;</div>
+</div>
 
 <h1 class="section">A. Daily Prayers</h1>
 
@@ -32,7 +40,7 @@
     <h2>Ordinary Time</h2>
 <div class="prayer-group">
     <prayer class="leader" red="L.">The Angel of the Lord declared unto Mary,</prayer>
-    <prayer red="All">And she conceived of the Holy Spirit</prayer>
+    <prayer red="All">And she conceived of the Holy Spirit.</prayer>
 </div>
 
 <p class="indented-prayer"><em>Hail Mary, full of grace, the Lord is with thee;
@@ -256,13 +264,18 @@
     or:
 </p>
 
-
+<!-- TODO: if reprinting update this -->
 <div class="prayer-group">
     <prayer class="leader" red="L.">O, Mary, Mother of Grace,</prayer>
-    <prayer red="All">Mother of Mercy, defend us from the enemy and wel-
-        come us in the hour of our death. To you, O Jesus,
-        born of the purest Mother and Virgin be glory and
-        honour with the Father and the Holy Spirit. Amen.
+    <prayer lines="lines" red="All">
+        Mother of Mercy,
+        defend us from the enemy
+        and welcome us in the hour of our death.
+
+        To you, O Jesus,
+        born of the purest Mother and Virgin
+        be glory and honour with the Father
+        and the Holy Spirit. Amen.
     </prayer>
 </div>
 

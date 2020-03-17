@@ -5,8 +5,13 @@ from os.path import isfile, join, isdir
 import codecs
 import json
 import re
+import sys
+import getopt
 
-pathroot = "./"
+opts, args = getopt.getopt(sys.argv[1:], "", ["input=", "article="])
+command_opts = dict(opts)
+pathroot = command_opts.get("--input", "./")
+article_title = command_opts.get("--article", "Article")
 
 result = {
     "norms": [],
@@ -27,17 +32,18 @@ for filename in (f for f in listdir(pathroot) if isfile(join(pathroot, f))):
     with codecs.open(join(pathroot, filename), "r", encoding='utf8') as fp:
         text = fp.read()
         nodes = html.fromstring(text)
+        title_text = nodes.xpath("//title")[0].text.partition(":")[2].strip()
         for n in nodes.xpath("//body")[0]:
             if n.tag == 'h2':
                 m = re.match('(\w+) (\d+)', n.text)
                 if(m):
-                    if m.group(1) == "Article":
+                    if m.group(1) == article_title:
                         type = "articles"
                     else:
                         type = "norms"
                     if current and type:
                         add_row(result, type, current)
-                    current = {"id": int(m.group(2)), "body": "", "doc": filename}
+                    current = {"id": int(m.group(2)), "body": "", "doc": filename, "title": title_text}
             else:
                 if current:
                     current["body"] = current["body"] + " " + n.text_content()
@@ -45,5 +51,5 @@ for filename in (f for f in listdir(pathroot) if isfile(join(pathroot, f))):
             add_row(result, type, current)
 
 
-with open('index.json', 'w') as fp:
+with open(join(pathroot, "../../constitutions", 'index.json'), 'w') as fp:
     json.dump(result, fp, indent=4,)

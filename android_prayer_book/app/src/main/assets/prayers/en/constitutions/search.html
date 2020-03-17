@@ -5,13 +5,18 @@
     <title>The Constitutions of the Order of St. Paul the First Hermit</title>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link href="../../style.css" rel="stylesheet"/>
-    <script type="text/javascript" src="elasticlunr.js"></script>
-    <script type="text/javascript" src="search.js"></script>
+    <script type="text/javascript" src="../../scripts/elasticlunr.js"></script>
+    <script type="text/javascript" src="../../scripts/search-constitutions.js"></script>
+    <meta name="viewport" content="initial-scale=1.0"/>
     <style>
         h2 {
             text-align:left;
             margin:1em 0 0 0;
             font-size:1em;
+        }
+        h2 span {
+            color:#888;
+            font-weight:normal;
         }
     </style>
 </head>
@@ -22,7 +27,7 @@
 <form onsubmit="search(event)">
     <div>
         <label>
-            Search: <br/> <input type="text" id="searchbox" /> <input type="submit" value="Go" />
+            Search: <br/> <input type="text" onkeyup="search(event)" id="searchbox" /> <input type="submit" value="Go" />
         </label>
     </div>
     <div>
