@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Pauline Prayer Book</string>
+    <string name="channel_name">Pauline Prayer Book</string>
+    <string name="channel_description">Pauline Prayer Book</string>
     <string name="settings">Settings</string>
     <string name="index">Index</string>
     <string name="about">About</string>
+    <string name="print">Print</string>
     <string name="title_activity_settings">Settings</string>
     <string name="title_activity_index">Index</string>
 
+    <string name="today_feast">Today\'s Feast</string>
+    <string name="tommorrow_feast">Tomorrow\'s Feast</string>
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
@@ -33,6 +38,8 @@
     <string name="pref_settings_title">Settings</string>
     <string name="pref_font_size_default">14</string>
     <string name="pref_font_size">Font Size</string>
+    <string name="notifications">Notifications</string>
+    <string name="dark_mode">Dark Mode</string>
 
     <string-array name="pref_font_size_titles">
         <item>8</item>

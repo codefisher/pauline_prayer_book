@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Modlitewnik Pauliński</string>
+    <string name="channel_name">Modlitewnik Pauliński</string>
+    <string name="channel_description">Modlitewnik Pauliński</string>
     <string name="settings">Ustawienia</string>
     <string name="index">Indeks</string>
     <string name="about">Informacje</string>
+    <string name="print">Print</string>
     <string name="title_activity_settings">Ustawienia</string>
     <string name="title_activity_index">Indeks</string>
 
+    <string name="today_feast">Today\'s Feast</string>
+    <string name="tommorrow_feast">Tomorrow\'s Feast</string>
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
@@ -33,6 +38,8 @@
     <string name="pref_settings_title">Ustawienia</string>
     <string name="pref_font_size_default">14</string>
     <string name="pref_font_size">Rozmiar Czcionki</string>
+    <string name="notifications">Notifications</string>
+    <string name="dark_mode">Dark Mode</string>
 
     <string-array name="pref_font_size_titles">
         <item>8</item>

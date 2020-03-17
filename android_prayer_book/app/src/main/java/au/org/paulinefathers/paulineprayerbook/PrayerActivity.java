@@ -1,33 +1,31 @@
 package au.org.paulinefathers.paulineprayerbook;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.AssetFileDescriptor;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.net.MailTo;
 import android.net.Uri;
 import android.os.Build;
 import android.preference.PreferenceManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintJob;
+import android.print.PrintManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import java.io.IOException;
-
 public class PrayerActivity extends AppCompatActivity implements SharedPreferences.OnSharedPreferenceChangeListener {
 
     Integer OPTIONS_REQUEST_CODE = 109;
-    String EXTRA_DOC_NAME = "au.org.paulinefathers.paulineprayerbook.doc";
+    public final static String EXTRA_DOC_NAME = "au.org.paulinefathers.paulineprayerbook.doc";
 
     class JsPrefObject {
 
@@ -77,6 +75,8 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prayer);
 
+        NotificationEventReceiver.setupAlarm(getApplicationContext());
+
         WebView webView = (WebView) findViewById(R.id.webView);
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new JsPrefObject(), "prefObject");
@@ -89,12 +89,8 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
 
         webSettings.setAllowFileAccess(true);
         webSettings.setAllowContentAccess(true);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            webSettings.setAllowFileAccessFromFileURLs(true);
-        }
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            webSettings.setAllowUniversalAccessFromFileURLs(true);
-        }
+        webSettings.setAllowFileAccessFromFileURLs(true);
+        webSettings.setAllowUniversalAccessFromFileURLs(true);
 
         String language = getPrefSetting("language_list", getString(R.string.pref_language_default));
 
@@ -116,8 +112,27 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
                 }
                 return false;
             }
+
+            public void onPageFinished(WebView view, String url) {
+                if(getPrefSetting("dark_mode", false)) {
+                    view.loadUrl(
+                            "javascript:document.body.classList.add('darktheme');"
+                    );
+                }
+            }
         });
 
+        /* this will happen when opening notification */
+        Intent intent = getIntent();
+        if(intent != null) {
+            String doc = intent.getStringExtra(EXTRA_DOC_NAME);
+            if(doc != null) {
+                webView.loadUrl("file:///android_asset/prayers/" + language + "/" + doc);
+                return;
+            }
+        }
+
+        /* the normal startup */
         PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).registerOnSharedPreferenceChangeListener(this);
         if (savedInstanceState != null) {
             String currentPage = savedInstanceState.getString("current_page");
@@ -139,6 +154,14 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
         super.onDestroy();
     }
 
+    public void onBackPressed () {
+        WebView webView = (WebView) findViewById(R.id.webView);
+        if(webView.canGoBack()) {
+            webView.goBack();
+        } else {
+            finish();
+        }
+    }
 
     @Override
     public void onSaveInstanceState(Bundle out) {
@@ -164,6 +187,17 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
             String language = getPrefSetting("language_list", getString(R.string.pref_language_default));
             WebView webView = (WebView) findViewById(R.id.webView);
             webView.loadUrl("file:///android_asset/prayers/" + language + "/front.html");
+        } else if (key.equals("dark_mode")) {
+            WebView webView = (WebView) findViewById(R.id.webView);
+            if(getPrefSetting("dark_mode", false)) {
+                webView.loadUrl(
+                        "javascript:document.body.classList.add('darktheme');"
+                );
+            } else {
+                webView.loadUrl(
+                        "javascript:document.body.classList.remove('darktheme');"
+                );
+            }
         }
         // handle the preference change here
     }
@@ -171,6 +205,12 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
     protected String getPrefSetting(String name, String defaultValue) {
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
         String rs = prefs.getString(name, defaultValue);
+        return rs;
+    }
+
+    protected Boolean getPrefSetting(String name, Boolean defaultValue) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        Boolean rs = prefs.getBoolean(name, defaultValue);
         return rs;
     }
 
@@ -188,15 +228,17 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
         return true;
     }
 
-    protected void onActivityResult (int requestCode, int resultCode, Intent data) {
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
         try {
-            if(requestCode == OPTIONS_REQUEST_CODE && data.hasExtra(EXTRA_DOC_NAME)) {
+            if (requestCode == OPTIONS_REQUEST_CODE && data.hasExtra(EXTRA_DOC_NAME)) {
                 String doc = data.getStringExtra(EXTRA_DOC_NAME);
                 WebView webView = (WebView) findViewById(R.id.webView);
                 String language = getPrefSetting("language_list", getString(R.string.pref_language_default));
                 webView.loadUrl("file:///android_asset/prayers/" + language + "/" + doc);
             }
-        } catch (NullPointerException e ) {
+        } catch (NullPointerException e) {
             // happens when the back button is pressed without selecting anything
         }
     }
@@ -217,9 +259,28 @@ public class PrayerActivity extends AppCompatActivity implements SharedPreferenc
                 String language = getPrefSetting("language_list", getString(R.string.pref_language_default));
                 webView.loadUrl("file:///android_asset/prayers/" + language + "/about.html");
                 return true;
+            case R.id.action_print:
+                createWebPrintJob();
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    private void createWebPrintJob() {
+
+        // Get a PrintManager instance
+        PrintManager printManager = (PrintManager)this.getSystemService(Context.PRINT_SERVICE);
+
+        String jobName = getString(R.string.app_name);
+
+        // Get a print adapter instance
+        WebView webView = (WebView) findViewById(R.id.webView);
+        PrintDocumentAdapter printAdapter = webView.createPrintDocumentAdapter(jobName);
+
+        // Create a print job with name and adapter instance
+        PrintJob printJob = printManager.print(jobName, printAdapter,
+                new PrintAttributes.Builder().build());
     }
 
 

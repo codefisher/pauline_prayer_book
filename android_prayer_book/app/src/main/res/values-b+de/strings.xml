@@ -1,11 +1,16 @@
 <resources>
     <string name="app_name">Pauliner Gebete</string>
+    <string name="channel_name">Pauliner Gebete</string>
+    <string name="channel_description">Pauliner Gebete</string>
     <string name="settings">Einstellungen</string>
     <string name="index">Index</string>
     <string name="about">Über die Bewerbung</string>
+    <string name="print">Print</string>
     <string name="title_activity_settings">Einstellungen</string>
     <string name="title_activity_index">Index</string>
 
+    <string name="today_feast">Today\'s Feast</string>
+    <string name="tommorrow_feast">Tomorrow\'s Feast</string>
 
     <!-- Strings related to Settings -->
     <string-array name="pref_language_titles">
@@ -33,6 +38,8 @@
     <string name="pref_settings_title">Einstellungen</string>
     <string name="pref_font_size_default">14</string>
     <string name="pref_font_size">Schriftgröße</string>
+    <string name="notifications">Notifications</string>
+    <string name="dark_mode">Dark Mode</string>
 
     <string-array name="pref_font_size_titles">
         <item>8</item>

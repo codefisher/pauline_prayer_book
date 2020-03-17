@@ -52,11 +52,24 @@ public class IndexActivity extends ListActivity {
     }
 
     ArrayAdapter<MenuItem> menuAdapter;
+    ArrayList<ArrayAdapter<MenuItem>> menuAdapters = new ArrayList<ArrayAdapter<MenuItem>>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.setUpMenu();
+    }
 
+    public void onBackPressed () {
+        if(menuAdapters.isEmpty()) {
+            finish();
+        } else {
+            menuAdapter = menuAdapters.remove(menuAdapters.size()-1);
+            setListAdapter(menuAdapter);
+        }
+    }
+
+    public void setUpMenu() {
         ArrayList<MenuItem> menuitems = null;
         XmlPullParserFactory pullParserFactory;
         try {
@@ -81,8 +94,6 @@ public class IndexActivity extends ListActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-
     }
 
     private ArrayList<MenuItem> parseXML(XmlPullParser parser) throws XmlPullParserException,IOException {
@@ -144,10 +155,11 @@ public class IndexActivity extends ListActivity {
         MenuItem item = (MenuItem)menuAdapter.getItem(position);
         if(item.getDoc() != null) {
             Intent intent = new Intent();
-            intent.putExtra("au.org.paulinefathers.paulineprayerbook.doc", item.getDoc());
+            intent.putExtra(PrayerActivity.EXTRA_DOC_NAME, item.getDoc());
             setResult(RESULT_OK, intent);
             finish();
         } else { // opens submenu
+            menuAdapters.add(menuAdapter);
             menuAdapter = new ArrayAdapter<MenuItem>(this, android.R.layout.simple_list_item_1, item.getChildren());
             setListAdapter(menuAdapter);
         }
