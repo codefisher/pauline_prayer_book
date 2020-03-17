@@ -6,14 +6,15 @@ var getJSON = function(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
     xhr.responseType = 'json';
-    xhr.onload = function() {
+    xhr.onreadystatechange = function() {
       var status = xhr.status;
-      if (status === 200) {
+      if (this.readyState == 4 && (this.status == 200 || this.status == 0)) { // Safari always gives 0
         callback(null, xhr.response);
       } else {
         callback(status, xhr.response);
       }
     };
+    xhr.overrideMimeType("application/json");
     xhr.send();
 };
 
@@ -35,7 +36,8 @@ function goToArt(event) {
     var artNum = document.getElementById('art-number').value;
     for (const art of index_data['articles']){
         if(art['id'] == artNum) {
-            document.location = art['doc'] + '#art' + artNum;
+            alert(art['doc'] + '#art' + artNum);
+            //document.location = art['doc'] + '#art' + artNum;
         }
     }
 }
@@ -45,7 +47,8 @@ function goToNorm(event) {
     var normNum = document.getElementById('norm-number').value;
     for (const norm of index_data['norms']){
         if(norm['id'] == normNum) {
-            document.location = norm['doc'] + '#norm' + normNum;
+            alert(norm['doc'] + '#norm' + normNum);
+            //document.location = norm['doc'] + '#norm' + normNum;
         }
     }
 }
@@ -54,7 +57,7 @@ function loadSearch() {
     getJSON('index.json',
         function(err, data) {
             if (err !== null) {
-                // fail
+                return // fail
             } else {
                 index_data = data;
             }
@@ -62,6 +65,7 @@ function loadSearch() {
             art_index = elasticlunr(function () {
                 this.addField('body');
                 this.setRef('id');
+                this.addField('title');
             });
 
             for (const art of index_data['articles']){
@@ -71,6 +75,7 @@ function loadSearch() {
            norm_index = elasticlunr(function () {
                this.addField('body');
                this.setRef('id');
+               this.addField('title');
            });
 
            for (const art of index_data['norms']){
@@ -119,6 +124,9 @@ function search(event) {
         a.setAttribute('href', href);
         a.textContent = title + value['ref'];
         h2.appendChild(a);
+        var span = document.createElement('span');
+        span.textContent = row_data["title"];
+        h2.appendChild(span);
         row.appendChild(h2);
 
         var row_text = document.createElement('div');
