@@ -13,6 +13,65 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    override func buildMenu(with builder: UIMenuBuilder) {
+        guard builder.system == .main else { return }
+        builder.remove(menu: .format)
+        
+        let printSelector = #selector(ViewController.printPage)
+        let printPage = UIKeyCommand(
+          title: NSLocalizedString("Print", comment: ""),
+          image: nil,
+          action: printSelector,
+          input: "p",
+          modifierFlags: [.command],
+          propertyList: nil)
+        
+        let menuPrint = UIMenu(
+          title: "",
+          image: nil,
+          identifier: nil,
+          options: .displayInline,
+          children: [printPage])
+        
+        builder.insertChild(menuPrint, atStartOfMenu: .file)
+        
+        let aboutSelector = #selector(ViewController.openAbout)
+        let openAbout = UIKeyCommand(
+          title: NSLocalizedString("About", comment: ""),
+          image: nil,
+          action: aboutSelector,
+          input: "a",
+          modifierFlags: [.command],
+          propertyList: nil)
+        
+        let menuAbout = UIMenu(
+          title: "",
+          image: nil,
+          identifier: nil,
+          options: .displayInline,
+          children: [openAbout])
+        
+        builder.insertChild(menuAbout, atEndOfMenu: .help)
+        
+        let settingSelector = #selector(ViewController.goSettings)
+        let goSettings = UIKeyCommand(
+          title: NSLocalizedString("Settings", comment: ""),
+          image: nil,
+          action: settingSelector,
+          input: "s",
+          modifierFlags: [.command],
+          propertyList: nil)
+        
+        let menuSettings = UIMenu(
+          title: "",
+          image: nil,
+          identifier: nil,
+          options: .displayInline,
+          children: [goSettings])
+        
+        builder.insertChild(menuSettings, atStartOfMenu: .file)
+        
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         // Override point for customization after application launch.
