@@ -132,24 +132,14 @@ class MenuViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
 
     override func willMove(toParent parent: UIViewController?) {
         super.willMove(toParent: parent)
-        if parent == nil && self.languageChange {
-            let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-            let view = nav.viewControllers[0] as! ViewController
-            view.languageChanged()
+        if parent == nil {
+            let view = self.navigationController!.viewControllers[0] as! ViewController
+            if self.languageChange {
+                view.languageChanged()
+            } else {
+                view.reload()
+            }
         }
-    }
-    @IBAction func about(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-        let view = nav.viewControllers[0] as! ViewController
-        view.loadPage(page: "about")
-    }
-    
-    @IBAction func openAbout(_ sender: Any) {
-        navigationController?.popViewController(animated: true)
-        let nav  = UIApplication.shared.keyWindow?.rootViewController as! UINavigationController
-        let view = nav.viewControllers[0] as! ViewController
-        view.loadPage(page: "about")
     }
     
 }

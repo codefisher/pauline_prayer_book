@@ -5,14 +5,11 @@
 /* Class = "UILabel"; text = "Prayer Language"; ObjectID = "E6K-sx-SMt"; */
 "E6K-sx-SMt.text" = "Lingua delle Preghiere";
 
-/* Class = "UIBarButtonItem"; title = "Settings"; ObjectID = "MIi-tQ-cQg"; */
-"MIi-tQ-cQg.title" = "Impostazioni";
-
-/* Class = "UIButton"; normalTitle = "About"; ObjectID = "WRG-eJ-jFT"; */
-"WRG-eJ-jFT.normalTitle" = "Informazioni";
-
 /* Class = "UIBarButtonItem"; title = "Index"; ObjectID = "eWL-4x-dhf"; */
 "eWL-4x-dhf.title" = "Indice";
 
 /* Class = "UINavigationItem"; title = "Pauline Prayer Book"; ObjectID = "nEH-7Z-7cR"; */
 "nEH-7Z-7cR.title" = "Preghiere Dell’Paulini";
+
+/* Class = "UILabel"; text = "Theme"; ObjectID = "xo6-rw-lZ0"; */
+"xo6-rw-lZ0.text" = "Theme";

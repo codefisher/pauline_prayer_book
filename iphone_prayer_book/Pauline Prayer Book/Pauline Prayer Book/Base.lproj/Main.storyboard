@@ -19,18 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iav-t3-zpe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iav-t3-zpe">
+                                <rect key="frame" x="0.0" y="42" width="375" height="618"/>
                                 <subviews>
-                                    <wkWebView contentMode="scaleToFill" id="a5w-jp-yHM">
+                                    <view contentMode="scaleToFill" id="uHR-hZ-VgY">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="574"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <wkWebViewConfiguration key="configuration">
-                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
-                                            <wkPreferences key="preferences"/>
-                                        </wkWebViewConfiguration>
-                                    </wkWebView>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                     <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="phU-Vj-nTD">
                                         <rect key="frame" x="0.0" y="574" width="375" height="44"/>
                                         <items>
@@ -40,7 +36,7 @@
                                                 </connections>
                                             </barButtonItem>
                                             <barButtonItem style="plain" systemItem="flexibleSpace" id="hSV-Op-CMF"/>
-                                            <barButtonItem title="Settings" id="MIi-tQ-cQg">
+                                            <barButtonItem image="ellipsis" catalog="system" id="MIi-tQ-cQg">
                                                 <connections>
                                                     <action selector="menuButton:" destination="BYZ-38-t0r" id="CVp-U4-9ve"/>
                                                 </connections>
@@ -50,7 +46,6 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="iav-t3-zpe" secondAttribute="trailing" id="CqT-fG-roO"/>
                             <constraint firstItem="iav-t3-zpe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="IX3-Zj-hPD"/>
@@ -62,7 +57,10 @@
                     <navigationItem key="navigationItem" title="Pauline Prayer Book" id="nEH-7Z-7cR"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="webview" destination="a5w-jp-yHM" id="1Vx-CP-KIs"/>
+                        <outlet property="indexButton" destination="eWL-4x-dhf" id="XSY-g9-JN7"/>
+                        <outlet property="toolbar" destination="phU-Vj-nTD" id="gcw-LM-ZKX"/>
+                        <outlet property="topBar" destination="nEH-7Z-7cR" id="flH-Ja-cf9"/>
+                        <outlet property="webContentView" destination="uHR-hZ-VgY" id="61U-d4-TdQ"/>
                         <segue destination="CKS-tC-6S1" kind="show" identifier="MenuItemTableViewController" id="oHS-AR-rix"/>
                         <segue destination="ZD0-eX-Ygb" kind="show" identifier="MenuViewControler" id="94g-DM-afD"/>
                     </connections>
@@ -80,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="7Ub-vP-aj8" customClass="MenuTableViewCell" customModule="Pauline_Prayer_Book" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuTableViewCell" translatesAutoresizingMaskIntoConstraints="NO" id="7Ub-vP-aj8" customClass="MenuTableViewCell" customModule="Pauline_Prayer_Book" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Ub-vP-aj8" translatesAutoresizingMaskIntoConstraints="NO" id="jug-Mg-rEV">
@@ -89,7 +87,7 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuP-fl-DvX">
                                             <rect key="frame" x="8" y="8" width="0.0" height="0.0"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -115,10 +113,10 @@
             </objects>
             <point key="canvasLocation" x="2045.5999999999999" y="158.77061469265368"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--App Navigation Controller-->
         <scene sceneID="Ja5-qR-H3r">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="45N-Sm-1Qc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="45N-Sm-1Qc" customClass="AppNavigationController" customModule="Pauline_Prayer_Book" sceneMemberID="viewController">
                     <toolbarItems/>
                     <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xqX-aP-aZP">
@@ -152,7 +150,7 @@
                                     <constraint firstAttribute="height" constant="32" id="W0h-ye-KhA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFI-vB-0FQ">
@@ -167,7 +165,7 @@
                                     <constraint firstAttribute="height" constant="35" id="zn2-Y7-3af"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="il1-me-KSd">
@@ -176,9 +174,8 @@
                                     <constraint firstAttribute="height" constant="149" id="uXI-eK-pLS"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo6-rw-lZ0">
-                                <rect key="frame" x="4" y="450" width="54" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Theme" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xo6-rw-lZ0">
+                                <rect key="frame" x="4" y="450" width="54" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -197,31 +194,23 @@
                                     <action selector="themeChanged:" destination="ZD0-eX-Ygb" eventType="valueChanged" id="4et-x6-MUF"/>
                                 </connections>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WRG-eJ-jFT">
-                                <rect key="frame" x="27" y="534" width="320" height="31"/>
-                                <state key="normal" title="About"/>
-                                <connections>
-                                    <action selector="about:" destination="ZD0-eX-Ygb" eventType="touchUpInside" id="yfN-So-x2h"/>
-                                    <action selector="openAbout:" destination="ZD0-eX-Ygb" eventType="touchUpInside" id="n3X-w7-njH"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="AFI-vB-0FQ" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leading" id="0JY-mx-gG2"/>
                             <constraint firstItem="il1-me-KSd" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leading" id="968-ec-cky"/>
                             <constraint firstItem="6sj-Q8-RPH" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" constant="-12" id="Bmv-VZ-toR"/>
                             <constraint firstAttribute="trailing" secondItem="E6K-sx-SMt" secondAttribute="trailing" id="DTd-0O-lBJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6sj-Q8-RPH" secondAttribute="trailing" constant="-12" id="F4K-1m-ZPs"/>
-                            <constraint firstItem="w9B-1e-Bdl" firstAttribute="centerX" secondItem="WRG-eJ-jFT" secondAttribute="centerX" id="Ig7-Cg-NyK"/>
-                            <constraint firstItem="WRG-eJ-jFT" firstAttribute="top" secondItem="w9B-1e-Bdl" secondAttribute="bottom" constant="29" id="NOu-0q-jeb"/>
+                            <constraint firstItem="w9B-1e-Bdl" firstAttribute="centerX" secondItem="il1-me-KSd" secondAttribute="centerX" id="HZB-iA-Scx"/>
                             <constraint firstItem="w9B-1e-Bdl" firstAttribute="top" secondItem="il1-me-KSd" secondAttribute="bottom" constant="32" id="Tzj-aO-2ba"/>
-                            <constraint firstItem="WRG-eJ-jFT" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" constant="12" id="Zle-Qe-pAr"/>
+                            <constraint firstItem="xo6-rw-lZ0" firstAttribute="top" secondItem="il1-me-KSd" secondAttribute="bottom" constant="8" id="XGr-wH-trb"/>
                             <constraint firstItem="il1-me-KSd" firstAttribute="top" secondItem="6sj-Q8-RPH" secondAttribute="bottom" constant="8" id="c78-Pz-E9Z"/>
                             <constraint firstItem="E6K-sx-SMt" firstAttribute="leading" secondItem="bDX-EM-gT4" secondAttribute="leadingMargin" constant="-12" id="jCz-bh-PFh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="WRG-eJ-jFT" secondAttribute="trailing" constant="12" id="q9m-7K-LWl"/>
+                            <constraint firstItem="xo6-rw-lZ0" firstAttribute="leading" secondItem="6sj-Q8-RPH" secondAttribute="leading" id="okI-rO-VvR"/>
                             <constraint firstItem="AFI-vB-0FQ" firstAttribute="top" secondItem="E6K-sx-SMt" secondAttribute="bottom" id="qhf-iG-fD8"/>
                             <constraint firstAttribute="trailing" secondItem="il1-me-KSd" secondAttribute="trailing" id="r5U-TX-Ld7"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xo6-rw-lZ0" secondAttribute="trailing" constant="20" symbolic="YES" id="sei-oe-AQu"/>
                             <constraint firstAttribute="trailing" secondItem="AFI-vB-0FQ" secondAttribute="trailing" id="xBn-zQ-oJ2"/>
                             <constraint firstItem="AFI-vB-0FQ" firstAttribute="top" secondItem="bDX-EM-gT4" secondAttribute="top" constant="104" id="y3D-Gj-Tli"/>
                             <constraint firstItem="6sj-Q8-RPH" firstAttribute="top" secondItem="AFI-vB-0FQ" secondAttribute="bottom" constant="8" symbolic="YES" id="yQi-od-PPU"/>
@@ -239,6 +228,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ellipsis" catalog="system" width="64" height="18"/>
         <image name="moon.fill" catalog="system" width="64" height="60"/>
         <image name="sun.min.fill" catalog="system" width="64" height="60"/>
     </resources>
